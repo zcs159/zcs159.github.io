@@ -1,8 +1,624 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Markdown中Latex的应用</title>
+    <url>/2020/05/03/Markdown%E4%B8%ADLatex%E7%9A%84%E5%BA%94%E7%94%A8/</url>
+    <content><![CDATA[<blockquote>
+<p>Latex在markdown的相关应用，及特殊符号</p>
+</blockquote>
+<a id="more"></a>
+
+<h1 id="1-Markdown中使用LaTX基础语法"><a href="#1-Markdown中使用LaTX基础语法" class="headerlink" title="1 Markdown中使用LaTX基础语法"></a>1 Markdown中使用LaTX基础语法</h1><p>LaTeX公式有两种，一种是用在正文中的，一种是单独显示的。</p>
+<ul>
+<li>行内公式：用<code>$formual$</code>表示，例如<code>$\sum\limits_{i=0}^{n}i^2$</code>表示$\sum\limits_{i=0}^{n}i^2$</li>
+<li>独立公式：用<code>$$formual$$</code>表示，例如<code>$$\sum_{i=0}^{n}i^2$$</code>表示</li>
+</ul>
+<p>$$<br>\sum_{i=0}^{n}i^2<br>$$</p>
+<blockquote>
+<p>以下几个字符# $ % &amp; ~ _ ^ \ {}有特殊意义，当表示这些字符是，需要转义，即在每个字符前加上\，对于\，可用<code>$\backslash$</code>命令得到$\backslash$</p>
+</blockquote>
+<h1 id="2-常用数学表达命令"><a href="#2-常用数学表达命令" class="headerlink" title="2 常用数学表达命令"></a>2 常用数学表达命令</h1><h3 id="2-1-上下标表示"><a href="#2-1-上下标表示" class="headerlink" title="2.1 上下标表示"></a>2.1 上下标表示</h3><ul>
+<li>上标：用<code>^</code>后的内容表示上标，例如<code>$x^{(i)}、y^{(i)}$</code>表示$x^{(i)}$、$y^{(i)}$</li>
+<li>下标：用<code>_</code>后的内容表示下表，例如<code>$x_{(i)}、y_{(i)}$</code>表示$x_{(i)}$、$y_{(i)}$</li>
+<li>上下标混用：例如<code>$x_1^2$</code>、<code>$x^{y^{z}}$</code>、<code>$x^{y_z}$</code>表示$x_1^2$、$x^{y^{z}}$、$x^{y_{z}}$</li>
+</ul>
+<blockquote>
+<p>当角标位置看起来不明显时，可以强制改变角标层次或者在角标前面加上改变其大小的命令（如<code>\tiny</code>、<code>\samll</code>、<code>\normalsize</code>、<code>\large</code>、<code>\Large</code>、<code>\LARGE</code>），例如：<code>$y_N$</code>、<code>$y_{_N}$</code>、<code>$y_{\samll{N}}$</code>表示$y_N$、$y_{<em>N}$、$y</em>{\small{N}}$</p>
+<p>并且支持中文作为角标，例如：<code>${\partial f}_{\tiny 极大值}$</code>、<code>${\partial f}_{\large 极大值}$</code>表示${\partial f}<em>{\tiny 极大值}$、${\partial f}</em>{\large 极大值}$</p>
+</blockquote>
+<h3 id="2-2-分数形式"><a href="#2-2-分数形式" class="headerlink" title="2.2 分数形式"></a>2.2 分数形式</h3><p>分式命令：</p>
+<ul>
+<li><code>$\dfrac{}{}$</code>，表示该分式是以displaystyle设置的，例如<code>$\dfrac{f}{x}$</code>表示$\dfrac{y}{x}$</li>
+<li><code>$\tfrac{}{}$</code>、表示分式是以teststyle设置的，例如<code>$\tfrac{y}{x}$</code>表示$\tfrac{y}{x}$</li>
+<li><code>$\frac{}{}$</code>、表示分式根据环境设置样式，例如<code>$\frac{y}{x}$</code>表示$\frac{y}{x}$</li>
+<li><code>${} \over {}$</code>、例如<code>${y} \over {x}$</code>表示${y} \over {x}$</li>
+</ul>
+<p>连分式<code>$x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}$</code>表示$$<br>$$<br>x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}<br>$$<br>可以使用<code>$\displaystyle$</code>表示分式，例如：</p>
+<p><code>$$x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}$$</code>表示：<br>$$<br>x_0+\dfrac{1}{x_1+\dfrac{1}{x_2+\dfrac{1}{x_3+\dfrac{1}{x_4}}}}<br>$$</p>
+<blockquote>
+<p>分数线长度值是预设为分子分母的最大长度，如果想要分数线再长一点，可以在分子或分母两端添加一些间隔，例如<code>$\frac{1}{2}$</code>、<code>$\frac{\;1\;}{\;2\;}$</code>表示$\frac{1}{2}$、$\frac{;1;}{;2;}$</p>
+</blockquote>
+<h3 id="2-3-根式"><a href="#2-3-根式" class="headerlink" title="2.3 根式"></a>2.3 根式</h3><ul>
+<li>二次根式命令: <code>\sqrt{表达式}</code> 、 例如：<code>$\sqrt{x}$</code>表示 $\sqrt{x}$</li>
+<li>n次根式命令：<code>\sqrt[n]{表达式}</code>、例如：<code>$\sqrt[n]{x}$</code>表示$\sqrt[n]{x}$</li>
+</ul>
+<blockquote>
+<p>被开方表达式字符高度不一致，即根号上面的横线可能不在同一条直线上，可以在被开方表达式插入一个只有高度没有宽度的数学支柱<code>$\mathstrut$</code>、例如：<code>$\sqrt{a}+\sqrt{b}+\sqrt{c}$</code>、<code>$\sqrt{\mathstrut a}+\sqrt{\mathstrut b}+\sqrt{\mathstrut c}$</code>表示</p>
+<p>$\sqrt{a}+\sqrt{b}+\sqrt{c}$、$\sqrt{\mathstrut a}+\sqrt{\mathstrut b}+\sqrt{\mathstrut c}$</p>
+</blockquote>
+<blockquote>
+<p>当开方次数的位置显得略低时，可以将开方改为上标，并拉近与根式的水平距离，即将命令中的 <code>[n]</code>改为 <code>[^n \!]</code>(其中 ^ 表示是上标，! 表示缩小间隔)、例如：<code>$ \sqrt{1+\sqrt[p]{1+\sqrt[p]{1+a}}} $</code>、<code>$ \sqrt{1+\sqrt[^p \!]{1+\sqrt[^p \!]{1+a}}} $</code></p>
+<p>$ \sqrt{1+\sqrt[p]{1+\sqrt[p]{1+a}}} $ , $ \sqrt{1+\sqrt[^p !]{1+\sqrt[^p !]{1+a}}} $</p>
+</blockquote>
+<h3 id="2-4-向量"><a href="#2-4-向量" class="headerlink" title="2.4 向量"></a>2.4 向量</h3><p>使用<code>\vec{矢量}</code>来产生一个矢量，也可以使用<code>\overrightarrow</code>等命令自定义字母上方的符号，例如<code>$$\vec{x} \quad \overleftarrow{xy} \quad \overleftrightarrow{xy} \quad \overrightarrow{xy}$$</code>（<code>\quad</code>表示退一格）<br>$$<br>\vec{x} \quad \overleftarrow{xy} \quad \overleftrightarrow{xy} \quad \overrightarrow{xy}<br>$$</p>
+<h3 id="2-5定界符-自适应放大命令"><a href="#2-5定界符-自适应放大命令" class="headerlink" title="2.5定界符 - 自适应放大命令"></a>2.5定界符 - 自适应放大命令</h3><p>自适应放大命令：<code>\left</code>和<code>\right</code>、此命令放在左右定界符前，随着公式内容自动调整符号大小，例如：<code>$\left(\frac{1}{xyz}\right)$</code>表示$\left(\frac{1}{xyz}\right)$</p>
+<blockquote>
+<p>另一种表达方式：<code>$() \big(\big) \Big(\Big) \Bigg(\Bigg)$</code>表示：$() \big(\big) \Big(\Big) \Bigg(\Bigg)$</p>
+<p><code>\left</code>和<code>\right</code>需成对使用，只需一边时，可用<code>\left.</code>或<code>\right.</code>进行配对，例如：<code>$\left.\frac{1}{2}x^2\right|_0^1$</code>表示$\left.\frac{1}{2}x^2\right|_0^1$</p>
+</blockquote>
+<h3 id="2-6-空白间距-占位宽度"><a href="#2-6-空白间距-占位宽度" class="headerlink" title="2.6 空白间距-占位宽度"></a>2.6 空白间距-占位宽度</h3><p><code>\quad</code>代表当前字体下接近字符<code>M</code>的宽度</p>
+<table>
+<thead>
+<tr>
+<th>符号</th>
+<th>命令</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>没有空格</td>
+<td><code>$ab$</code></td>
+<td>$ab$</td>
+</tr>
+<tr>
+<td>紧贴，缩进$\frac{1}{6}$m宽度</td>
+<td><code>$a\!b$</code></td>
+<td>$a!b$</td>
+</tr>
+<tr>
+<td>小空格</td>
+<td><code>$a\,b$</code></td>
+<td>$a,b$</td>
+</tr>
+<tr>
+<td>$\frac{1}{3}$个空格</td>
+<td><code>$a\ b$</code></td>
+<td>$a\ b$</td>
+</tr>
+<tr>
+<td>中等空格</td>
+<td><code>$a\:b$</code>或<code>$a\;b$</code></td>
+<td>$a;b$</td>
+</tr>
+<tr>
+<td>一个空格</td>
+<td><code>$a \quad b$</code></td>
+<td>$a \quad b$</td>
+</tr>
+<tr>
+<td>两个空格</td>
+<td><code>$a \qquad b$</code></td>
+<td>$a \qquad b$</td>
+</tr>
+</tbody></table>
+<h3 id="2-7-省略号"><a href="#2-7-省略号" class="headerlink" title="2.7 省略号"></a>2.7 省略号</h3><p>省略号用<code>\dots \cdots \vdots \ddots</code>表示，<code>\dots</code>和<code>cdots</code>的纵向位置不同，前者用于有下标的序列，例如：<code>$$x_1,x_2,\dots,x_n \quad 1,2\cdots,n \quad \vdots \quad \ddots$$</code>表示<br>$$<br>x_1,x_2,\dots,x_n \quad 1,2\cdots,n \quad \vdots \quad \ddots<br>$$</p>
+<h3 id="2-8-多行公式"><a href="#2-8-多行公式" class="headerlink" title="2.8 多行公式"></a>2.8 多行公式</h3><p><strong>长公式</strong></p>
+<p>无需对齐可使用<code>multline</code>，需对齐使用<code>split</code>，用<code>\\</code>和<code>&amp;</code>来分行和设置对齐的位置，例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;multline&#125;</span><br><span class="line">x&#x3D;a+b+c+&#123;&#125; \\</span><br><span class="line">d+e+f+g</span><br><span class="line">\end&#123;multline&#125;$$</span><br></pre></td></tr></table></figure>
+
+<p>$$<br>\begin{multline}<br>x=a+b+c+{} \<br>d+e+f+g<br>\end{multline}<br>$$</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;split&#125;</span><br><span class="line">x&#x3D;&amp;a+b+c+ \\</span><br><span class="line">&amp;d+e+f+g</span><br><span class="line">\end&#123;split&#125;$$</span><br></pre></td></tr></table></figure>
+
+<p>$$<br>\begin{split}<br>x=&amp;a+b+c+ \<br>&amp;d+e+f+g<br>\end{split}<br>$$</p>
+<p><strong>公式组</strong></p>
+<p>不需要对齐的公式组用<code>gather</code>，需对齐使用<code>align</code>，例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;gather&#125;</span><br><span class="line">a&#x3D;b+c+d \\</span><br><span class="line">x&#x3D;y+z</span><br><span class="line">\end&#123;gather&#125;$$</span><br></pre></td></tr></table></figure>
+
+<p>$$<br>\begin{gather}<br>a=b+c+d \<br>x=y+z<br>\end{gather}<br>$$</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;align&#125;</span><br><span class="line">a&amp;&#x3D;b+c+d \\</span><br><span class="line">x&amp;&#x3D;y+z</span><br><span class="line">\end&#123;align&#125;$$</span><br></pre></td></tr></table></figure>
+
+<p>$$<br>\begin{align}<br>a&amp;=b+c+d \<br>x&amp;=y+z<br>\end{align}<br>$$</p>
+<p><strong>分支公式</strong></p>
+<p>分段函数通常用<code>cases</code>，例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$y&#x3D;\begin&#123;cases&#125;</span><br><span class="line">-x,\quad &amp;x \leq 0 \\</span><br><span class="line">x, &amp;x&gt;0</span><br><span class="line">\end&#123;cases&#125;$$</span><br></pre></td></tr></table></figure>
+
+<p>$$<br>y=\begin{cases}<br>-x, \quad &amp;x \leq 0 \<br>x, &amp;x&gt;0<br>\end{cases}<br>$$</p>
+<p><strong>公式编号</strong></p>
+<p>可以通过命令<code>\tag{n}</code>手动为公式编号，例如：</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">S(r_k) &#x3D; \sum_&#123;r_k \ne r_i&#125; \text&#123;exp&#125;(\frac&#123;-D_s(r_k,r_k)&#125;&#123;\sigma_s^2&#125;)</span><br><span class="line">\tag&#123;1&#125;$$</span><br></pre></td></tr></table></figure>
+
+<p>$$<br>S(r_k) = \sum_{r_k \ne r_i} \text{exp}(\frac{-D_s(r_k,r_k)}{\sigma_s^2})<br>\tag{1}<br>$$</p>
+<h3 id="2-9-上下水平线"><a href="#2-9-上下水平线" class="headerlink" title="2.9 上下水平线"></a>2.9 上下水平线</h3><ul>
+<li><p><code>\overline{表达式}</code>：在表达式上方画出水平线，例如：<code>$\overline{x+y}$</code>表示：$\overline{x+y}$</p>
+</li>
+<li><p><code>\underline{表达式}</code>：在表达式下方画出水平线，例如：<code>$\underline{x+y}$</code>表示：$\underline{x+y}$</p>
+</li>
+</ul>
+<h3 id="2-10-上下大括号"><a href="#2-10-上下大括号" class="headerlink" title="2.10 上下大括号"></a>2.10 上下大括号</h3><ul>
+<li><p><code>\overbrace{表达式}</code>：在表达式上方画出一个水平的大括号，例如：<code>$\overbrace{1+2+3+\cdots+100}^{100}$</code>表示：$\overbrace{1+2+3+\cdots+100}^{100}$</p>
+</li>
+<li><p><code>\underbrace{表达式}</code>：在表达式下方画出一个水平大括号，例如：</p>
+</li>
+</ul>
+<p><code>$\underbrace{1+2+3+\cdots+100}_{100}$</code>表示：$\underbrace{1+2+3+\cdots+100}_{100}$</p>
+<h3 id="2-11-矩阵"><a href="#2-11-矩阵" class="headerlink" title="2.11 矩阵"></a>2.11 矩阵</h3><p>生成矩阵的命令中每一行以 <code>\\</code> 结束，矩阵的元素之间用 &amp; 来分隔开，例如</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;matrix&#125;</span><br><span class="line">x_&#123;_&#123;11&#125;&#125; &amp; x_&#123;_&#123;12&#125;&#125; &amp; \dots &amp; x_&#123;_&#123;1n&#125;&#125; \\</span><br><span class="line">x_&#123;_&#123;21&#125;&#125; &amp; x_&#123;_&#123;22&#125;&#125; &amp; \dots &amp; x_&#123;_&#123;2n&#125;&#125; \\</span><br><span class="line">\vdots &amp; \vdots &amp; \ddots  &amp; \vdots  \\</span><br><span class="line">x_&#123;_&#123;m1&#125;&#125; &amp; x_&#123;_&#123;m2&#125;&#125; &amp; \dots &amp; x_&#123;_&#123;mn&#125;&#125; \\</span><br><span class="line">\end&#123;matrix&#125;$$</span><br></pre></td></tr></table></figure>
+
+<p>$$<br>\begin{matrix}<br>x_{<em>{11}} &amp; x</em>{<em>{12}} &amp; \dots &amp; x</em>{<em>{1n}} \<br>x</em>{<em>{21}} &amp; x</em>{<em>{22}} &amp; \dots &amp; x</em>{<em>{2n}} \<br>\vdots &amp; \vdots &amp; \ddots  &amp; \vdots  \<br>x</em>{<em>{m1}} &amp; x</em>{<em>{m2}} &amp; \dots &amp; x</em>{_{mn}} \<br>\end{matrix}<br>$$</p>
+<p>带各类不同边界的矩阵:</p>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;pmatrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;pmatrix&#125; \quad</span><br><span class="line">\begin&#123;bmatrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;bmatrix&#125; \quad</span><br><span class="line">\left[ \begin&#123;matrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;matrix&#125; \right] \quad</span><br><span class="line">\begin&#123;Bmatrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;Bmatrix&#125; \quad</span><br><span class="line">\left\&#123; \begin&#123;matrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;matrix&#125; \right\&#125; \quad</span><br><span class="line">\begin&#123;vmatrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;vmatrix&#125; \quad</span><br><span class="line">\begin&#123;Vmatrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;Vmatrix&#125; \quad</span><br><span class="line">\left[ \begin&#123;array&#125; &#123;c|c&#125; a &amp; b \\ c &amp; d \\ \end&#123;array&#125; \right]</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
+
+<p>$$<br>\begin{pmatrix} a &amp; b \ c &amp; d \ \end{pmatrix} \quad<br>\begin{bmatrix} a &amp; b \ c &amp; d \ \end{bmatrix} \quad<br>\left[ \begin{matrix} a &amp; b \ c &amp; d \ \end{matrix} \right] \quad<br>\begin{Bmatrix} a &amp; b \ c &amp; d \ \end{Bmatrix}  \<br>\left{ \begin{matrix} a &amp; b \ c &amp; d \ \end{matrix} \right} \quad<br>\begin{vmatrix} a &amp; b \ c &amp; d \ \end{vmatrix} \quad<br>\begin{Vmatrix} a &amp; b \ c &amp; d \ \end{Vmatrix} \quad<br>\left[ \begin{array} {c|c} a &amp; b \ c &amp; d \ \end{array} \right]<br>$$</p>
+<h3 id="2-12-Norm-范数符号"><a href="#2-12-Norm-范数符号" class="headerlink" title="2.12 Norm-范数符号"></a>2.12 Norm-范数符号</h3><p>范数命令：<code>\parallel</code></p>
+<p>例如：<code>$\parallel x \parallel _2 $</code>表示$\parallel x \parallel _2$</p>
+<h3 id="2-13-堆积符号"><a href="#2-13-堆积符号" class="headerlink" title="2.13 堆积符号"></a>2.13 堆积符号</h3><ul>
+<li><code>\stackrel{上位符号}{基位符号}</code>：基位符号大，上位符号小，例如:</li>
+</ul>
+<p><code>$ \vec{x}\stackrel{\mathrm{def}}{=}{x_1,\dots,x_n} $</code>表示$ \vec{x}\stackrel{\mathrm{def}}{=}{x_1,\dots,x_n} $</p>
+<ul>
+<li><p><code>{上位公式 \choose 下位公式}</code>：上下符号一样大，上下符号被包括在圆弧内，例如：<code>$ {n+1 \choose k}={n \choose k}+{n \choose k-1} $</code>表示$ {n+1 \choose k}={n \choose k}+{n \choose k-1} $</p>
+</li>
+<li><p><code>{上位公式 \atop 下位公式}</code> : 上下符号一样大，例如：<code>$ \sum\limits_{k_0,k_1,\ldots&gt;0 \atop k_0+k_1+\cdots=n}A_k $</code>表示$ \sum\limits_{k_0,k_1,\ldots&gt;0 \atop k_0+k_1+\cdots=n}A_k $</p>
+</li>
+</ul>
+<h3 id="2-14-给公式加一个方框"><a href="#2-14-给公式加一个方框" class="headerlink" title="2.14 给公式加一个方框"></a>2.14 给公式加一个方框</h3><p><code>\boxed</code>命令给公式加一个方框，例如：<code>$$\boxed{E=mc^2}$$</code>表示<br>$$<br>\boxed{E=mc^2}<br>$$</p>
+<h3 id="2-15-字体转换"><a href="#2-15-字体转换" class="headerlink" title="2.15 字体转换"></a>2.15 字体转换</h3><p>若要对公式的某一部分字符进行字体转换，可以用<code>{\字体 {需转换的部分字符}}</code>命令，其中 <code>\字体</code> 部分可以参照下表选择合适的字体，一般情况下，公式默认为意大利体。</p>
+<table>
+<thead>
+<tr>
+<th>命令</th>
+<th>说明</th>
+<th>效果</th>
+</tr>
+</thead>
+<tbody><tr>
+<td><code>\rm</code></td>
+<td>罗马体</td>
+<td>${\rm {D}}$</td>
+</tr>
+<tr>
+<td><code>\cal</code></td>
+<td>花体</td>
+<td>${\cal {D}}$</td>
+</tr>
+<tr>
+<td><code>\it</code></td>
+<td>意大利体</td>
+<td>${\it {D}}$</td>
+</tr>
+<tr>
+<td><code>\Bbb</code></td>
+<td>黑板粗体</td>
+<td>${\Bbb {D}}$</td>
+</tr>
+<tr>
+<td><code>bf</code></td>
+<td>粗体</td>
+<td>${\bf {D}}$</td>
+</tr>
+<tr>
+<td><code>\mit</code></td>
+<td>数学斜体</td>
+<td>${\mit {D}}$</td>
+</tr>
+<tr>
+<td><code>\sf</code></td>
+<td>等线体</td>
+<td>${\sf {D}}$</td>
+</tr>
+<tr>
+<td><code>\scr</code></td>
+<td>手写体</td>
+<td>${\scr {D}}$</td>
+</tr>
+<tr>
+<td><code>\tt</code></td>
+<td>打字机体</td>
+<td>${\tt {D}}$</td>
+</tr>
+<tr>
+<td><code>\frak</code></td>
+<td>旧德式字体</td>
+<td>${\frak {D}}$</td>
+</tr>
+</tbody></table>
+<h1 id="3-LaTeX常用数学符号整理"><a href="#3-LaTeX常用数学符号整理" class="headerlink" title="3 LaTeX常用数学符号整理"></a>3 LaTeX常用数学符号整理</h1><h3 id="表3-1-数学模式重音符号"><a href="#表3-1-数学模式重音符号" class="headerlink" title="表3.1 数学模式重音符号"></a>表3.1 数学模式重音符号</h3><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>命令</th>
+<th>符号</th>
+<th>命令</th>
+<th>符号</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$ \hat{a} $</td>
+<td><code>$ \hat{a} $</code></td>
+<td>$ \check{a} $</td>
+<td><code>$ \check{a} $</code></td>
+<td>$ \tilde{a} $</td>
+<td><code>$ \tilde{a} $</code></td>
+</tr>
+<tr>
+<td>$ \grave{a} $</td>
+<td><code>$ \grave{a} $</code></td>
+<td>$ \dot{a} $</td>
+<td><code>$ \dot{a} $</code></td>
+<td>$ \ddot{a} $</td>
+<td><code>$ \ddot{a} $</code></td>
+</tr>
+<tr>
+<td>$ \bar{a} $</td>
+<td><code>$ \bar{a} $</code></td>
+<td>$ \vec{a} $</td>
+<td><code>$ \vec{a} $</code></td>
+<td>$ \widehat{A} $</td>
+<td><code>$ \widehat{A} $</code></td>
+</tr>
+<tr>
+<td>$ \acute{a} $</td>
+<td><code>$ \acute{a} $</code></td>
+<td>$ \breve{a} $</td>
+<td><code>$ \breve{a} $</code></td>
+<td>$ \widetilde{A} $</td>
+<td><code>$ \widetilde{A} $</code></td>
+</tr>
+</tbody></table>
+<h3 id="表3-2-希腊字母"><a href="#表3-2-希腊字母" class="headerlink" title="表3.2 希腊字母"></a>表3.2 希腊字母</h3><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>命令</th>
+<th>符号</th>
+<th>命令</th>
+<th>符号</th>
+<th>命令</th>
+<th>符号</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$ \alpha $</td>
+<td><code>$ \alpha $</code></td>
+<td>$ \theta $</td>
+<td><code>$ \theta $</code></td>
+<td>$ o $</td>
+<td><code>$ o $</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$ \beta $</td>
+<td><code>$ \beta $</code></td>
+<td>$ \vartheta $</td>
+<td><code>$ \vartheta $</code></td>
+<td>$ \pi $</td>
+<td><code>$ \pi $</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$ \gamma $</td>
+<td><code>$ \gamma $</code></td>
+<td>$ \iota $</td>
+<td><code>$ \iota $</code></td>
+<td>$ \varpi $</td>
+<td><code>$ \varpi $</code></td>
+<td>$ \upsilon $</td>
+<td><code>$ \upsilon $</code></td>
+</tr>
+<tr>
+<td>$ \delta $</td>
+<td><code>$ \delta $</code></td>
+<td>$ \kappa $</td>
+<td><code>$ \kappa $</code></td>
+<td>$ \rho $</td>
+<td><code>$ \rho $</code></td>
+<td>$ \phi $</td>
+<td><code>$ \phi $</code></td>
+</tr>
+<tr>
+<td>$ \epsilon $</td>
+<td><code>$ \epsilon $</code></td>
+<td>$ \lambda $</td>
+<td><code>$ \lambda $</code></td>
+<td>$ \varrho $</td>
+<td><code>$ \varrho $</code></td>
+<td>$ \varphi $</td>
+<td><code>$ \varphi $</code></td>
+</tr>
+<tr>
+<td>$ \varepsilon $</td>
+<td><code>$ \varepsilon $</code></td>
+<td>$ \mu $</td>
+<td><code>$ \mu $</code></td>
+<td>$ \sigma $</td>
+<td><code>$ \sigma $</code></td>
+<td>$ \chi $</td>
+<td><code>$ \chi $</code></td>
+</tr>
+<tr>
+<td>$ \zeta $</td>
+<td><code>$ \zeta $</code></td>
+<td>$ \nu $</td>
+<td><code>$ \nu $</code></td>
+<td>$ \varsigma $</td>
+<td><code>$ \varsigma $</code></td>
+<td>$ \psi $</td>
+<td><code>$ \psi $</code></td>
+</tr>
+<tr>
+<td>$ \eta $</td>
+<td><code>$ \eta $</code></td>
+<td>$ \xi $</td>
+<td><code>$ \xi $</code></td>
+<td>$ \tau $</td>
+<td><code>$ \tau $</code></td>
+<td>$ \omega$</td>
+<td><code>$ \omega$</code></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>1.如果使用大写希腊字母，把命令的首字母变成大写即可，例如：<code>$\Gamma$</code>表示：$\Gamma$</p>
+<p>2.如果使用斜体大写希腊字母，再再大写希腊字母的LaTeX命令前加上var,例如：<code>$\varGamma$</code>表示$\varGamma$</p>
+</blockquote>
+<h3 id="表3-3-二元关系符"><a href="#表3-3-二元关系符" class="headerlink" title="表3.3 二元关系符"></a>表3.3 二元关系符</h3><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>命令</th>
+<th>符号</th>
+<th>命令</th>
+<th>符号</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$ &lt; $</td>
+<td><code>$ &lt; $</code></td>
+<td>$ &gt; $</td>
+<td><code>$ &gt; $</code></td>
+<td>$ = $</td>
+<td><code>$ = $</code></td>
+</tr>
+<tr>
+<td>$ \leq $</td>
+<td><code>$ \leq $</code>或 <code>$ \le $</code></td>
+<td>$ \geq $</td>
+<td><code>$ \geq $</code>或<code>$ \ge $</code></td>
+<td>$ \equiv $</td>
+<td><code>$ \equiv $</code></td>
+</tr>
+<tr>
+<td>$ \ll $</td>
+<td><code>$ \ll $</code></td>
+<td>$ \gg $</td>
+<td><code>$ \gg $</code></td>
+<td>$ \doteq $</td>
+<td><code>$ \doteq $</code></td>
+</tr>
+<tr>
+<td>$ \prec $</td>
+<td><code>$ \prec $</code></td>
+<td>$ \succ $</td>
+<td><code>$ \succ $</code></td>
+<td>$ \sim $</td>
+<td><code>$ \sim $</code></td>
+</tr>
+<tr>
+<td>$ \preceq $</td>
+<td><code>$ \preceq $</code></td>
+<td>$ \succeq $</td>
+<td><code>$ \succeq $</code></td>
+<td>$ \simeq $</td>
+<td><code>$ \simeq $</code></td>
+</tr>
+<tr>
+<td>$ \subset $</td>
+<td><code>$ \subset $</code></td>
+<td>$ \supset $</td>
+<td><code>$ \supset $</code></td>
+<td>$ \approx $</td>
+<td><code>$ \approx $</code></td>
+</tr>
+<tr>
+<td>$ \subseteq $</td>
+<td><code>$ \subseteq $</code></td>
+<td>$ \supseteq $</td>
+<td><code>$ \supseteq $</code></td>
+<td>$ \cong $</td>
+<td><code>$ \cong $</code></td>
+</tr>
+<tr>
+<td>$ \sqsubset $</td>
+<td><code>$ \sqsubset $</code></td>
+<td>$ \sqsupset $</td>
+<td><code>$ \sqsupset $</code></td>
+<td>$ \Join $</td>
+<td><code>$ \Join $</code></td>
+</tr>
+<tr>
+<td>$ \sqsubseteq $</td>
+<td><code>$ \sqsubseteq $</code></td>
+<td>$ \sqsupseteq $</td>
+<td><code>$ \sqsupseteq $</code></td>
+<td>$ \bowtie $</td>
+<td><code>$ \bowtie $</code></td>
+</tr>
+<tr>
+<td>$ \in $</td>
+<td><code>$ \in $</code></td>
+<td>$ \ni $</td>
+<td><code>$ \ni $</code>或 <code>$ \owns $</code></td>
+<td>$ \propto $</td>
+<td><code>$ \propto $</code></td>
+</tr>
+<tr>
+<td>$ \vdash $</td>
+<td><code>$ \vdash $</code></td>
+<td>$ \dashv $</td>
+<td><code>$ \dashv $</code></td>
+<td>$ \models $</td>
+<td><code>$ \models $</code></td>
+</tr>
+<tr>
+<td>$ \mid $</td>
+<td><code>$ \mid $</code></td>
+<td>$ \parallel $</td>
+<td><code>$ \parallel $</code></td>
+<td>$ \perp $</td>
+<td><code>$ \perp $</code></td>
+</tr>
+<tr>
+<td>$ \smile $</td>
+<td><code>$ \smile $</code></td>
+<td>$ \frown $</td>
+<td><code>$ \frown $</code></td>
+<td>$ \asymp $</td>
+<td><code>$ \asymp $</code></td>
+</tr>
+<tr>
+<td>$ : $</td>
+<td><code>$ : $</code></td>
+<td>$ \notin $</td>
+<td><code>$ \notin $</code></td>
+<td>$ \neq $</td>
+<td><code>$ \neq $</code>或 <code>$ \ne $</code></td>
+</tr>
+</tbody></table>
+<blockquote>
+<p>可以在上述符号的相应命令前加上<code>\not</code>，得到其否定形式，例如：<code>$\not\subset$</code>表示$\not\subset$</p>
+</blockquote>
+<h3 id="表3-4-二元运算符"><a href="#表3-4-二元运算符" class="headerlink" title="表3.4 二元运算符"></a>表3.4 二元运算符</h3><table>
+<thead>
+<tr>
+<th>符号</th>
+<th>命令</th>
+<th>符号</th>
+<th>命令</th>
+<th>符号</th>
+<th>命令</th>
+</tr>
+</thead>
+<tbody><tr>
+<td>$ \unlhd $</td>
+<td><code>$ \unlhd $</code></td>
+<td>$ - $</td>
+<td><code>$ - $</code></td>
+<td></td>
+<td></td>
+</tr>
+<tr>
+<td>$ + $</td>
+<td><code>$ + $</code></td>
+<td>$ \mp $</td>
+<td><code>$ \mp $</code></td>
+<td>$ \triangleleft $</td>
+<td><code>$ \triangleleft $</code></td>
+</tr>
+<tr>
+<td>$ \pm $</td>
+<td><code>$ \pm $</code></td>
+<td>$ \div $</td>
+<td><code>$ \div $</code></td>
+<td>$ \triangleright $</td>
+<td><code>$ \triangleright $</code></td>
+</tr>
+<tr>
+<td>$ \cdot $</td>
+<td><code>$ \cdot $</code></td>
+<td>$ \setminus $</td>
+<td><code>$ \setminus $</code></td>
+<td>$ \star $</td>
+<td><code>$ \star $</code></td>
+</tr>
+<tr>
+<td>$ \times $</td>
+<td><code>$ \times $</code></td>
+<td>$ \cap $</td>
+<td><code>$ \cap $</code></td>
+<td>$ \ast $</td>
+<td><code>$ \ast $</code></td>
+</tr>
+<tr>
+<td>$ \cup $</td>
+<td><code>$ \cup $</code></td>
+<td>$ \sqcap $</td>
+<td><code>$ \sqcap $</code></td>
+<td>$ \circ $</td>
+<td><code>$ \circ $</code></td>
+</tr>
+<tr>
+<td>$ \sqcup $</td>
+<td><code>$ \sqcup $</code></td>
+<td>$ \land $</td>
+<td><code>$ \land $</code>或<code>$\wedege$</code></td>
+<td>$ \bullet $</td>
+<td><code>$ \bullet $</code></td>
+</tr>
+<tr>
+<td>$ \vee $</td>
+<td><code>$ \vee $</code></td>
+<td>$ \ominus $</td>
+<td><code>$ \ominus $</code></td>
+<td>$ \diamond $</td>
+<td><code>$ \diamond $</code></td>
+</tr>
+<tr>
+<td>$ \oplus $</td>
+<td><code>$ \oplus $</code></td>
+<td>$ \oslash $</td>
+<td><code>$ \oslash $</code></td>
+<td>$ \uplus $</td>
+<td><code>$ \uplus $</code></td>
+</tr>
+<tr>
+<td>$ \odot $</td>
+<td><code>$ \odot $</code></td>
+<td>$ \bigcirc $</td>
+<td><code>$ \bigcirc $</code></td>
+<td>$ \amalg $</td>
+<td><code>$ \amalg $</code></td>
+</tr>
+<tr>
+<td>$ \otimes $</td>
+<td><code>$ \otimes $</code></td>
+<td>$ \bigtriangledown $</td>
+<td><code>$ \bigtriangledown $</code></td>
+<td>$ \dagger $</td>
+<td><code>$ \dagger $</code></td>
+</tr>
+<tr>
+<td>$ \bigtriangleup $</td>
+<td><code>$ \bigtriangleup $</code></td>
+<td>$ \rhd $</td>
+<td><code>$ \rhd $</code></td>
+<td>$ \ddagger $</td>
+<td><code>$ \ddagger $</code></td>
+</tr>
+<tr>
+<td>$ \lhd $</td>
+<td><code>$ \lhd $</code></td>
+<td>$ \unrhd $</td>
+<td><code>$ \unrhd $</code></td>
+<td>$ \wr $</td>
+<td><code>$ \wr $</code></td>
+</tr>
+</tbody></table>
+]]></content>
+      <categories>
+        <category>Latex</category>
+      </categories>
+      <tags>
+        <tag>Latex</tag>
+        <tag>Markdown</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>Git的基础使用</title>
-    <url>/2020/05/02/Git%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8/</url>
+    <url>/2020/05/02/Git%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8(%E4%B8%80)/</url>
     <content><![CDATA[<blockquote>
 <p>关于Git的学习，参考书目《Github入门与实践》</p>
 </blockquote>
