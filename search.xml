@@ -141,9 +141,30 @@
 <p>下图就是当前fix-B分支的状态：</p>
 <img data-src="https://s1.ax1x.com/2020/05/03/Jzpnqf.png" alt="Jzpnqf.png" style="zoom:50%;" />
 
+<ul>
+<li>推进至feature-A分支合并后的状态</li>
+</ul>
+<p>git log只能查看以当前状态为终点的历史日志，使用git relog命令可查看回溯历史之前的哈希值，再用git reset –hard命令恢复到历史回溯前的状态</p>
+<img data-src="https://s1.ax1x.com/2020/05/03/JzpaZT.png" alt="JzpaZT.png" style="zoom:50%;" />
 
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git checkout master</span><br><span class="line"></span><br><span class="line">$ git reset --hard 359bd0b</span><br><span class="line">HEAD is now at 359bd0b Merge branch <span class="string">'feature-A'</span></span><br></pre></td></tr></table></figure>
 
-]]></content>
+<p>回溯后：</p>
+<img data-src="https://s1.ax1x.com/2020/05/03/JzpgL6.png" alt="JzpgL6.png" style="zoom:50%;" />
+
+<ul>
+<li>消除冲突</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git merge --no-ff fix-B</span><br><span class="line">Auto-merging README.md</span><br><span class="line">CONFLICT (content): Merge conflict <span class="keyword">in</span> README.md</span><br><span class="line">Recorded preimage <span class="keyword">for</span> <span class="string">'README.md'</span></span><br><span class="line">Automatic merge failed; fix conflicts and <span class="keyword">then</span> commit the result.</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>为解决上述冲突可用编译器打开README.md文件，修改文件内容成我们想要的样子即可，再进行提交</p>
+</blockquote>
+<ul>
+<li>git commit –amend：修改提交信息</li>
+</ul>
+<p>执行命令后，编译器会启动，修改提交信息成我们想要的即可</p>
+<h2 id="git-rebase-i：压缩历史"><a href="#git-rebase-i：压缩历史" class="headerlink" title="git rebase -i：压缩历史"></a>git rebase -i：压缩历史</h2>]]></content>
       <categories>
         <category>Git</category>
       </categories>
