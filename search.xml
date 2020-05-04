@@ -8,7 +8,7 @@
 </blockquote>
 <a id="more"></a>
 
-<h1 id="1-Markdown中使用LaTX基础语法"><a href="#1-Markdown中使用LaTX基础语法" class="headerlink" title="1 Markdown中使用LaTX基础语法"></a>1 Markdown中使用LaTX基础语法</h1><p>LaTeX公式有两种，一种是用在正文中的，一种是单独显示的。</p>
+<h2 id="1-Markdown中使用LaTX基础语法"><a href="#1-Markdown中使用LaTX基础语法" class="headerlink" title="1 Markdown中使用LaTX基础语法"></a>1 Markdown中使用LaTX基础语法</h2><p>LaTeX公式有两种，一种是用在正文中的，一种是单独显示的。</p>
 <ul>
 <li>行内公式：用<code>$formual$</code>表示，例如<code>$\sum\limits_{i=0}^{n}i^2$</code>表示$\sum\limits_{i=0}^{n}i^2$</li>
 <li>独立公式：用<code>$$formual$$</code>表示，例如<code>$$\sum_{i=0}^{n}i^2$$</code>表示</li>
@@ -17,7 +17,7 @@
 <blockquote>
 <p>以下几个字符# $ % &amp; ~ _ ^ \ {}有特殊意义，当表示这些字符是，需要转义，即在每个字符前加上\，对于\，可用<code>$\backslash$</code>命令得到$\backslash$</p>
 </blockquote>
-<h1 id="2-常用数学表达命令"><a href="#2-常用数学表达命令" class="headerlink" title="2 常用数学表达命令"></a>2 常用数学表达命令</h1><h3 id="2-1-上下标表示"><a href="#2-1-上下标表示" class="headerlink" title="2.1 上下标表示"></a>2.1 上下标表示</h3><ul>
+<h2 id="2-常用数学表达命令"><a href="#2-常用数学表达命令" class="headerlink" title="2 常用数学表达命令"></a>2 常用数学表达命令</h2><h3 id="2-1-上下标表示"><a href="#2-1-上下标表示" class="headerlink" title="2.1 上下标表示"></a>2.1 上下标表示</h3><ul>
 <li>上标：用<code>^</code>后的内容表示上标，例如<code>$x^{(i)}、y^{(i)}$</code>表示$x^{(i)}$、$y^{(i)}$</li>
 <li>下标：用<code>_</code>后的内容表示下表，例如<code>$x_{(i)}、y_{(i)}$</code>表示$x_{(i)}$、$y_{(i)}$</li>
 <li>上下标混用：例如<code>$x_1^2$</code>、<code>$x^{y^{z}}$</code>、<code>$x^{y_z}$</code>表示$x_1^2$、$x^{y^{z}}$、$x^{y_{z}}$</li>
@@ -222,7 +222,7 @@
 <td>${\frak {D}}$</td>
 </tr>
 </tbody></table>
-<h1 id="3-LaTeX常用数学符号整理"><a href="#3-LaTeX常用数学符号整理" class="headerlink" title="3 LaTeX常用数学符号整理"></a>3 LaTeX常用数学符号整理</h1><h3 id="表3-1-数学模式重音符号"><a href="#表3-1-数学模式重音符号" class="headerlink" title="表3.1 数学模式重音符号"></a>表3.1 数学模式重音符号</h3><table>
+<h2 id="3-LaTeX常用数学符号整理"><a href="#3-LaTeX常用数学符号整理" class="headerlink" title="3 LaTeX常用数学符号整理"></a>3 LaTeX常用数学符号整理</h2><h3 id="表3-1-数学模式重音符号"><a href="#表3-1-数学模式重音符号" class="headerlink" title="表3.1 数学模式重音符号"></a>表3.1 数学模式重音符号</h3><table>
 <thead>
 <tr>
 <th>符号</th>
