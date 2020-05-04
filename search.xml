@@ -829,15 +829,14 @@
       </tags>
   </entry>
   <entry>
-    <title>《鸟哥的Linux私房菜》</title>
+    <title>《鸟哥的Linux私房菜》Day1</title>
     <url>/2020/05/04/%E3%80%8A%E9%B8%9F%E5%93%A5%E7%9A%84Linux%E7%A7%81%E6%88%BF%E8%8F%9C%E3%80%8B/</url>
     <content><![CDATA[<blockquote>
-<p>《鸟哥的Linux私房菜》读书笔记</p>
+<p>《鸟哥的Linux私房菜》学习第一天，加油！！！</p>
 </blockquote>
 <a id="more"></a>
 
-<p><font size=20>Day 1</font></p>
-<h1 id="第零章-计算机概论"><a href="#第零章-计算机概论" class="headerlink" title="第零章 计算机概论"></a>第零章 计算机概论</h1><p><strong>1.计算机硬件五大单元</strong></p>
+<h1 id="第零章-计算机概论"><a href="#第零章-计算机概论" class="headerlink" title="第零章 计算机概论"></a>第零章 计算机概论</h1><h2 id="计算机通识"><a href="#计算机通识" class="headerlink" title="计算机通识"></a>计算机通识</h2><p><strong>1.计算机硬件五大单元</strong></p>
 <blockquote>
 <p>计算器：接受用户输入指令与数据，经由中央处理器的数学与逻辑单元运算处理后，以产生或储存成有用的信息</p>
 </blockquote>
@@ -903,7 +902,7 @@
 <p>可使一个实体CPU，提供两个逻辑线程</p>
 <p><strong>6.内存</strong></p>
 <p>个人计算机的主存储器主要组件位<strong>动态随机存取内存</strong>（Dynamic Random Access Memory,DRAM）</p>
-]]></content>
+<h2 id="数据表达方式"><a href="#数据表达方式" class="headerlink" title="数据表达方式"></a>数据表达方式</h2>]]></content>
       <categories>
         <category>Linux</category>
       </categories>
