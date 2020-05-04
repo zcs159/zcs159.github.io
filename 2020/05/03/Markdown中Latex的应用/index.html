@@ -244,131 +244,61 @@
 <p>Latex在markdown的相关应用，及特殊符号</p>
 </blockquote>
 <a id="more"></a>
-<h2 id="1-markdown中使用latx基础语法"><a class="markdownIt-Anchor" href="#1-markdown中使用latx基础语法"></a> 1 Markdown中使用LaTX基础语法</h2>
-<p>LaTeX公式有两种，一种是用在正文中的，一种是单独显示的。</p>
+<h2 id="1-Markdown中使用LaTX基础语法"><a href="#1-Markdown中使用LaTX基础语法" class="headerlink" title="1 Markdown中使用LaTX基础语法"></a>1 Markdown中使用LaTX基础语法</h2><p>LaTeX公式有两种，一种是用在正文中的，一种是单独显示的。</p>
 <ul>
-<li>行内公式：用<code>$formual$</code>表示，例如<code>$\sum\limits_{i=0}^{n}i^2$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></msubsup><msup><mi>i</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\sum\limits_{i=0}^{n}i^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.329066em;vertical-align:-0.9776689999999999em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.3513970000000004em;"><span style="top:-2.122331em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.0000050000000003em;"><span class="pstrut" style="height:3em;"></span><span><span class="mop op-symbol small-op">∑</span></span></span><span style="top:-3.950005em;margin-left:0em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9776689999999999em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">i</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></li>
-<li>独立公式：用<code>$$formual$$</code>表示，例如<code>$$\sum_{i=0}^{n}i^2$$</code>表示</li>
+<li>行内公式：用<script type="math/tex">formual</script>表示，例如<script type="math/tex">\sum\limits_{i=0}^{n}i^2</script>表示$\sum\limits_{i=0}^{n}i^2$</li>
+<li>独立公式：用$$$formual$$$表示，例如$$$\sum_{i=0}^{n}i^2$$$表示</li>
 </ul>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><munderover><mo>∑</mo><mrow><mi>i</mi><mo>=</mo><mn>0</mn></mrow><mi>n</mi></munderover><msup><mi>i</mi><mn>2</mn></msup></mrow><annotation encoding="application/x-tex">\sum_{i=0}^{n}i^2
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.929066em;vertical-align:-1.277669em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.6513970000000002em;"><span style="top:-1.872331em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">i</span><span class="mrel mtight">=</span><span class="mord mtight">0</span></span></span></span><span style="top:-3.050005em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span><span style="top:-4.3000050000000005em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.277669em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">i</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span></span></p>
-<blockquote>
-<p>以下几个字符# $ % &amp; ~ _ ^ \ {}有特殊意义，当表示这些字符是，需要转义，即在每个字符前加上\，对于\，可用<code>$\backslash$</code>命令得到<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">\</mi></mrow><annotation encoding="application/x-tex">\backslash</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord">\</span></span></span></span></p>
+<script type="math/tex; mode=display">
+\sum_{i=0}^{n}i^2</script><blockquote>
+<p>以下几个字符# $ % &amp; ~ _ ^ \ {}有特殊意义，当表示这些字符是，需要转义，即在每个字符前加上\，对于\，可用<script type="math/tex">\backslash</script>命令得到$\backslash$</p>
 </blockquote>
-<h2 id="2-常用数学表达命令"><a class="markdownIt-Anchor" href="#2-常用数学表达命令"></a> 2 常用数学表达命令</h2>
-<h3 id="21-上下标表示"><a class="markdownIt-Anchor" href="#21-上下标表示"></a> 2.1 上下标表示</h3>
-<ul>
-<li>上标：用<code>^</code>后的内容表示上标，例如<code>$x^{(i)}、y^{(i)}$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">x^{(i)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8879999999999999em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span>、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>y</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msup></mrow><annotation encoding="application/x-tex">y^{(i)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0824399999999998em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8879999999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span></span></span></span></span></span></span></span></li>
-<li>下标：用<code>_</code>后的内容表示下表，例如<code>$x_{(i)}、y_{(i)}$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msub></mrow><annotation encoding="application/x-tex">x_{(i)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7857599999999999em;vertical-align:-0.3551999999999999em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"><span></span></span></span></span></span></span></span></span></span>、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mrow><mo stretchy="false">(</mo><mi>i</mi><mo stretchy="false">)</mo></mrow></msub></mrow><annotation encoding="application/x-tex">y_{(i)}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7857599999999999em;vertical-align:-0.3551999999999999em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.34480000000000005em;"><span style="top:-2.5198em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mopen mtight">(</span><span class="mord mathdefault mtight">i</span><span class="mclose mtight">)</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3551999999999999em;"><span></span></span></span></span></span></span></span></span></span></li>
-<li>上下标混用：例如<code>$x_1^2$</code>、<code>$x^{y^{z}}$</code>、<code>$x^{y_z}$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mi>x</mi><mn>1</mn><mn>2</mn></msubsup></mrow><annotation encoding="application/x-tex">x_1^2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0622159999999998em;vertical-align:-0.24810799999999997em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-2.4518920000000004em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.24810799999999997em;"><span></span></span></span></span></span></span></span></span></span>、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><msup><mi>y</mi><mi>z</mi></msup></msup></mrow><annotation encoding="application/x-tex">x^{y^{z}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.87998em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.87998em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.7385428571428572em;"><span style="top:-2.931em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.04398em;">z</span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span>、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msup><mi>x</mi><msub><mi>y</mi><mi>z</mi></msub></msup></mrow><annotation encoding="application/x-tex">x^{y_{z}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.664392em;vertical-align:0em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.664392em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.16454285714285719em;"><span style="top:-2.357em;margin-left:-0.03588em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.04398em;">z</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></span></li>
+<h2 id="2-常用数学表达命令"><a href="#2-常用数学表达命令" class="headerlink" title="2 常用数学表达命令"></a>2 常用数学表达命令</h2><h3 id="2-1-上下标表示"><a href="#2-1-上下标表示" class="headerlink" title="2.1 上下标表示"></a>2.1 上下标表示</h3><ul>
+<li>上标：用<code>^</code>后的内容表示上标，例如<script type="math/tex">x^{(i)}、y^{(i)}</script>表示$x^{(i)}$、$y^{(i)}$</li>
+<li>下标：用<code>_</code>后的内容表示下表，例如<script type="math/tex">x_{(i)}、y_{(i)}</script>表示$x<em>{(i)}$、$y</em>{(i)}$</li>
+<li>上下标混用：例如<script type="math/tex">x_1^2</script>、<script type="math/tex">x^{y^{z}}</script>、<script type="math/tex">x^{y_z}</script>表示$x<em>1^2$、$x^{y^{z}}$、$x^{y</em>{z}}$</li>
 </ul>
 <blockquote>
-<p>当角标位置看起来不明显时，可以强制改变角标层次或者在角标前面加上改变其大小的命令（如<code>\tiny</code>、<code>\samll</code>、<code>\normalsize</code>、<code>\large</code>、<code>\Large</code>、<code>\LARGE</code>），例如：<code>$y_N$</code>、<code>$y_{_N}$</code>、<code>$y_{\samll{N}}$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mi>N</mi></msub></mrow><annotation encoding="application/x-tex">y_N</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.32833099999999993em;"><span style="top:-2.5500000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span>、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><msub><mrow></mrow><mi>N</mi></msub></msub></mrow><annotation encoding="application/x-tex">y_{_N}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.680865em;vertical-align:-0.250305em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.09136em;"><span style="top:-2.35em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3567071428571427em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathdefault mtight" style="margin-right:0.10903em;">N</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.14329285714285717em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.250305em;"><span></span></span></span></span></span></span></span></span></span>、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>y</mi><mstyle mathsize="0.9em"><mi>N</mi></mstyle></msub></mrow><annotation encoding="application/x-tex">y_{\small{N}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.7007570000000001em;vertical-align:-0.270197em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.629803em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.9em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord sizing reset-size3 size5"><span class="mord mathdefault" style="margin-right:0.10903em;">N</span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.270197em;"><span></span></span></span></span></span></span></span></span></span></p>
-<p>并且支持中文作为角标，例如：<code>${\partial f}_{\tiny 极大值}$</code>、<code>${\partial f}_{\large 极大值}$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mi mathvariant="normal">∂</mi><mi>f</mi></mrow><mstyle mathsize="0.5em"><mi mathvariant="normal">极</mi><mi mathvariant="normal">大</mi><mi mathvariant="normal">值</mi></mstyle></msub></mrow><annotation encoding="application/x-tex">{\partial f}_{\tiny 极大值}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.93858em;vertical-align:-0.24414em;"></span><span class="mord"><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:-0.24414em;"><span style="top:-2.25586em;margin-right:0.05em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord cjk_fallback sizing reset-size3 size1">极</span><span class="mord cjk_fallback sizing reset-size3 size1">大</span><span class="mord cjk_fallback sizing reset-size3 size1">值</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.24414em;"><span></span></span></span></span></span></span></span></span></span>、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mrow><mi mathvariant="normal">∂</mi><mi>f</mi></mrow><mstyle mathsize="1.2em"><mi mathvariant="normal">极</mi><mi mathvariant="normal">大</mi><mi mathvariant="normal">值</mi></mstyle></msub></mrow><annotation encoding="application/x-tex">{\partial f}_{\large 极大值}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.93858em;vertical-align:-0.24414em;"></span><span class="mord"><span class="mord"><span class="mord" style="margin-right:0.05556em;">∂</span><span class="mord mathdefault" style="margin-right:0.10764em;">f</span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:-0.24414em;"><span style="top:-2.9558600000000004em;margin-right:0.05em;"><span class="pstrut" style="height:3.2em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord cjk_fallback sizing reset-size3 size7">极</span><span class="mord cjk_fallback sizing reset-size3 size7">大</span><span class="mord cjk_fallback sizing reset-size3 size7">值</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.24414em;"><span></span></span></span></span></span></span></span></span></span></p>
+<p>当角标位置看起来不明显时，可以强制改变角标层次或者在角标前面加上改变其大小的命令（如<code>\tiny</code>、<code>\samll</code>、<code>\normalsize</code>、<code>\large</code>、<code>\Large</code>、<code>\LARGE</code>），例如：<script type="math/tex">y_N</script>、<script type="math/tex">y_{_N}</script>、<script type="math/tex">y_{\samll{N}}</script>表示$y<em>N$、$y</em>{<em>N}$、$y</em>{\small{N}}$</p>
+<p>并且支持中文作为角标，例如：<script type="math/tex">{\partial f}_{\tiny 极大值}</script>、<script type="math/tex">{\partial f}_{\large 极大值}</script>表示${\partial f}<em>{\tiny 极大值}$、${\partial f}</em>{\large 极大值}$</p>
 </blockquote>
-<h3 id="22-分数形式"><a class="markdownIt-Anchor" href="#22-分数形式"></a> 2.2 分数形式</h3>
-<p>分式命令：</p>
+<h3 id="2-2-分数形式"><a href="#2-2-分数形式" class="headerlink" title="2.2 分数形式"></a>2.2 分数形式</h3><p>分式命令：</p>
 <ul>
-<li><code>$\dfrac{}{}$</code>，表示该分式是以displaystyle设置的，例如<code>$\dfrac{f}{x}$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mstyle displaystyle="true" scriptlevel="0"><mfrac><mi>y</mi><mi>x</mi></mfrac></mstyle></mrow><annotation encoding="application/x-tex">\dfrac{y}{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.7935599999999998em;vertical-align:-0.686em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.1075599999999999em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">x</span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.686em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
-<li><code>$\tfrac{}{}$</code>、表示分式是以teststyle设置的，例如<code>$\tfrac{y}{x}$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mi>y</mi><mi>x</mi></mfrac></mrow><annotation encoding="application/x-tex">\tfrac{y}{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0925em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7475em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
-<li><code>$\frac{}{}$</code>、表示分式根据环境设置样式，例如<code>$\frac{y}{x}$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mi>y</mi><mi>x</mi></mfrac></mrow><annotation encoding="application/x-tex">\frac{y}{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0925em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7475em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
-<li><code>${} \over {}$</code>、例如<code>${y} \over {x}$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mi>y</mi><mi>x</mi></mfrac></mrow><annotation encoding="application/x-tex">{y} \over {x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.0925em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7475em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.446108em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></li>
+<li><script type="math/tex">\dfrac{}{}</script>，表示该分式是以displaystyle设置的，例如<script type="math/tex">\dfrac{f}{x}</script>表示$\dfrac{y}{x}$</li>
+<li><script type="math/tex">\tfrac{}{}</script>、表示分式是以teststyle设置的，例如<script type="math/tex">\tfrac{y}{x}</script>表示$\tfrac{y}{x}$</li>
+<li><script type="math/tex">\frac{}{}</script>、表示分式根据环境设置样式，例如<script type="math/tex">\frac{y}{x}</script>表示$\frac{y}{x}$</li>
+<li><script type="math/tex">{} \over {}</script>、例如<script type="math/tex">{y} \over {x}</script>表示${y} \over {x}$</li>
 </ul>
-<p>连分式<code>$x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}$</code>表示$$</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>x</mi><mn>3</mn></msub><mo>+</mo><mfrac><mn>1</mn><msub><mi>x</mi><mn>4</mn></msub></mfrac></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow><annotation encoding="application/x-tex">x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:3.265558em;vertical-align:-1.944118em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.2648919999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.59898em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-left:0em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size3 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8443142857142858em;"><span style="top:-2.4397571428571427em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3447999999999998em;margin-left:0em;margin-right:0.1em;"><span class="pstrut" style="height:2.64444em;"></span><span class="mord mtight">3</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29964em;"><span></span></span></span></span></span></span><span class="mbin mtight">+</span><span class="mord mtight"><span class="mopen nulldelimiter sizing reset-size1 size6"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.03144em;"><span style="top:-2.468em;"><span class="pstrut" style="height:3em;"></span><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3447999999999998em;margin-left:0em;margin-right:0.1em;"><span class="pstrut" style="height:2.64444em;"></span><span class="mord mtight">4</span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.29964em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.2255em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.387em;"><span class="pstrut" style="height:3em;"></span><span class="mord mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.83164em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size1 size6"></span></span></span></span></span><span style="top:-3.2255000000000003em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line mtight" style="border-bottom-width:0.049em;"></span></span><span style="top:-3.384em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.1542714285714286em;"><span></span></span></span></span></span><span class="mclose nulldelimiter sizing reset-size3 size6"></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.20901em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.944118em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
-<p>可以使用<code>$\displaystyle$</code>表示分式，例如：</p>
-<p><code>$$x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}$$</code>表示：</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mn>0</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>x</mi><mn>1</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>x</mi><mn>2</mn></msub><mo>+</mo><mfrac><mn>1</mn><mrow><msub><mi>x</mi><mn>3</mn></msub><mo>+</mo><mfrac><mn>1</mn><msub><mi>x</mi><mn>4</mn></msub></mfrac></mrow></mfrac></mrow></mfrac></mrow></mfrac></mrow><annotation encoding="application/x-tex">x_0+\dfrac{1}{x_1+\dfrac{1}{x_2+\dfrac{1}{x_3+\dfrac{1}{x_4}}}}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.73333em;vertical-align:-0.15em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:5.79176em;vertical-align:-4.47032em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.11em;"><span class="pstrut" style="height:3.32144em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.11em;"><span class="pstrut" style="height:3.32144em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.1100000000000003em;"><span class="pstrut" style="height:3.32144em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">3</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.32144em;"><span style="top:-2.3139999999999996em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">4</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.8360000000000001em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.55144em;"><span class="pstrut" style="height:3.32144em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.99844em;"><span class="pstrut" style="height:3.32144em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.04744em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.55144em;"><span class="pstrut" style="height:3.32144em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.99844em;"><span class="pstrut" style="height:3.32144em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:3.25888em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span><span style="top:-3.5514400000000004em;"><span class="pstrut" style="height:3.32144em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.99844em;"><span class="pstrut" style="height:3.32144em;"></span><span class="mord"><span class="mord">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:4.47032em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
+<p>连分式<script type="math/tex">x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}</script>表示$$</p>
+<script type="math/tex; mode=display">
+x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}</script><p>可以使用<script type="math/tex">\displaystyle</script>表示分式，例如：</p>
+<script type="math/tex; mode=display">$x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}$$$表示：</script><p>x_0+\dfrac{1}{x_1+\dfrac{1}{x_2+\dfrac{1}{x_3+\dfrac{1}{x_4}}}}</p>
+<script type="math/tex; mode=display">
+
+> 分数线长度值是预设为分子分母的最大长度，如果想要分数线再长一点，可以在分子或分母两端添加一些间隔，例如$$\frac{1}{2}$$、$$\frac{\;1\;}{\;2\;}$$表示$\frac{1}{2}$、$\frac{\;1\;}{\;2\;}$
+
+### 2.3 根式
+
+- 二次根式命令: `\sqrt{表达式}` 、 例如：` $\sqrt{x}$ `表示 $\sqrt{x}$
+- n次根式命令：`\sqrt[n]{表达式}`、例如：$$\sqrt[n]{x}$$表示$\sqrt[n]{x}$
+
+> 被开方表达式字符高度不一致，即根号上面的横线可能不在同一条直线上，可以在被开方表达式插入一个只有高度没有宽度的数学支柱$$\mathstrut$$、例如：$$\sqrt{a}+\sqrt{b}+\sqrt{c}$$、$$\sqrt{\mathstrut a}+\sqrt{\mathstrut b}+\sqrt{\mathstrut c}$$表示
+>
+> $\sqrt{a}+\sqrt{b}+\sqrt{c}$、$\sqrt{\mathstrut a}+\sqrt{\mathstrut b}+\sqrt{\mathstrut c}$
+
+> 当开方次数的位置显得略低时，可以将开方改为上标，并拉近与根式的水平距离，即将命令中的 `[n] `改为 `[^n \!]`(其中 ^ 表示是上标，! 表示缩小间隔)、例如：$$ \sqrt{1+\sqrt[p]{1+\sqrt[p]{1+a}}} $$、$$ \sqrt{1+\sqrt[^p \!]{1+\sqrt[^p \!]{1+a}}}</script><p>&gt;</p>
 <blockquote>
-<p>分数线长度值是预设为分子分母的最大长度，如果想要分数线再长一点，可以在分子或分母两端添加一些间隔，例如<code>$\frac{1}{2}$</code>、<code>$\frac{\;1\;}{\;2\;}$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{2}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>、<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mrow><mtext>  </mtext><mn>1</mn><mtext>  </mtext></mrow><mrow><mtext>  </mtext><mn>2</mn><mtext>  </mtext></mrow></mfrac></mrow><annotation encoding="application/x-tex">\frac{\;1\;}{\;2\;}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mspace mtight" style="margin-right:0.3252777777777778em;"></span><span class="mord mtight">2</span><span class="mspace mtight" style="margin-right:0.3252777777777778em;"></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mspace mtight" style="margin-right:0.3252777777777778em;"></span><span class="mord mtight">1</span><span class="mspace mtight" style="margin-right:0.3252777777777778em;"></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></p>
+<p>$ \sqrt{1+\sqrt[p]{1+\sqrt[p]{1+a}}} $ , $ \sqrt{1+\sqrt<sup><a href="#fn_p \!" id="reffn_p \!">p \!</a></sup>{1+\sqrt<sup><a href="#fn_p \!" id="reffn_p \!">p \!</a></sup>{1+a}}} $</p>
 </blockquote>
-<h3 id="23-根式"><a class="markdownIt-Anchor" href="#23-根式"></a> 2.3 根式</h3>
-<ul>
-<li>二次根式命令: <code>\sqrt{表达式}</code> 、 例如：<code>$\sqrt{x}$</code>表示 <span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mi>x</mi></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault">x</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
--10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
--50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
-35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
--221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
-s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
-s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span></span></li>
-<li>n次根式命令：<code>\sqrt[n]{表达式}</code>、例如：<code>$\sqrt[n]{x}$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mroot><mi>x</mi><mi>n</mi></mroot></mrow><annotation encoding="application/x-tex">\sqrt[n]{x}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="root"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.5516160000000001em;"><span style="top:-2.836336em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">n</span></span></span></span></span></span></span></span><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault">x</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
--10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
--50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
-35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
--221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
-s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
-s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span></span></li>
-</ul>
+<h3 id="2-4-向量"><a href="#2-4-向量" class="headerlink" title="2.4 向量"></a>2.4 向量</h3><p>使用<code>\vec{矢量}</code>来产生一个矢量，也可以使用<code>\overrightarrow</code>等命令自定义字母上方的符号，例如$$$\vec{x} \quad \overleftarrow{xy} \quad \overleftrightarrow{xy} \quad \overrightarrow{xy}$$$（<code>\quad</code>表示退一格）</p>
+<script type="math/tex; mode=display">
+\vec{x} \quad \overleftarrow{xy} \quad \overleftrightarrow{xy} \quad \overrightarrow{xy}</script><h3 id="2-5定界符-自适应放大命令"><a href="#2-5定界符-自适应放大命令" class="headerlink" title="2.5定界符 - 自适应放大命令"></a>2.5定界符 - 自适应放大命令</h3><p>自适应放大命令：<code>\left</code>和<code>\right</code>、此命令放在左右定界符前，随着公式内容自动调整符号大小，例如：<script type="math/tex">\left(\frac{1}{xyz}\right)</script>表示$\left(\frac{1}{xyz}\right)$</p>
 <blockquote>
-<p>被开方表达式字符高度不一致，即根号上面的横线可能不在同一条直线上，可以在被开方表达式插入一个只有高度没有宽度的数学支柱<code>$\mathstrut$</code>、例如：<code>$\sqrt{a}+\sqrt{b}+\sqrt{c}$</code>、<code>$\sqrt{\mathstrut a}+\sqrt{\mathstrut b}+\sqrt{\mathstrut c}$</code>表示</p>
-<p><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msqrt><mi>a</mi></msqrt><mo>+</mo><msqrt><mi>b</mi></msqrt><mo>+</mo><msqrt><mi>c</mi></msqrt></mrow><annotation encoding="application/x-tex">\sqrt{a}+\sqrt{b}+\sqrt{c}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault">a</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
--10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
--50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
-35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
--221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
-s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
-s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.10777999999999999em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.93222em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault">b</span></span></span><span style="top:-2.89222em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
--10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
--50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
-35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
--221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
-s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
-s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.10777999999999999em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span></span><span class="base"><span class="strut" style="height:1.04em;vertical-align:-0.23972em;"></span><span class="mord sqrt"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.8002800000000001em;"><span class="svg-align" style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord" style="padding-left:0.833em;"><span class="mord mathdefault">c</span></span></span><span style="top:-2.76028em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="min-width:0.853em;height:1.08em;"><svg width='400em' height='1.08em' viewBox='0 0 400000 1080' preserveAspectRatio='xMinYMin slice'><path d='M95,702c-2.7,0,-7.17,-2.7,-13.5,-8c-5.8,-5.3,-9.5,
--10,-9.5,-14c0,-2,0.3,-3.3,1,-4c1.3,-2.7,23.83,-20.7,67.5,-54c44.2,-33.3,65.8,
--50.3,66.5,-51c1.3,-1.3,3,-2,5,-2c4.7,0,8.7,3.3,12,10s173,378,173,378c0.7,0,
-35.3,-71,104,-213c68.7,-142,137.5,-285,206.5,-429c69,-144,104.5,-217.7,106.5,
--221c5.3,-9.3,12,-14,20,-14H400000v40H845.2724s-225.272,467,-225.272,467
-s-235,486,-235,486c-2.7,4.7,-9,7,-19,7c-6,0,-10,-1,-12,-3s-194,-422,-194,-422
-s-65,47,-65,47z M834 80H400000v40H845z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.23972em;"><span></span></span></span></span></span></span></span></span>、<span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \mathstrut at position 7: \sqrt{\̲m̲a̲t̲h̲s̲t̲r̲u̲t̲ ̲a}+\sqrt{\maths…'>\sqrt{\mathstrut a}+\sqrt{\mathstrut b}+\sqrt{\mathstrut c}</span></p>
+<p>另一种表达方式：<script type="math/tex">() \big(\big) \Big(\Big) \Bigg(\Bigg)</script>表示：$() \big(\big) \Big(\Big) \Bigg(\Bigg)$</p>
+<p><code>\left</code>和<code>\right</code>需成对使用，只需一边时，可用<code>\left.</code>或<code>\right.</code>进行配对，例如：<script type="math/tex">\left.\frac{1}{2}x^2\right|_0^1</script>表示$\left.\frac{1}{2}x^2\right|_0^1$</p>
 </blockquote>
-<blockquote>
-<p>当开方次数的位置显得略低时，可以将开方改为上标，并拉近与根式的水平距离，即将命令中的 <code>[n]</code>改为 <code>[^n \!]</code>(其中 ^ 表示是上标，! 表示缩小间隔)、例如：<code>$ \sqrt{1+\sqrt[p]{1+\sqrt[p]{1+a}}} $</code>、<code>$ \sqrt{1+\sqrt[^p \!]{1+\sqrt[^p \!]{1+a}}} $</code></p>
-<p>$ \sqrt{1+\sqrt[p]{1+\sqrt[p]{1+a}}} $ , $ \sqrt{1+\sqrt[^p !]{1+\sqrt[^p !]{1+a}}} $</p>
-</blockquote>
-<h3 id="24-向量"><a class="markdownIt-Anchor" href="#24-向量"></a> 2.4 向量</h3>
-<p>使用<code>\vec{矢量}</code>来产生一个矢量，也可以使用<code>\overrightarrow</code>等命令自定义字母上方的符号，例如<code>$$\vec{x} \quad \overleftarrow{xy} \quad \overleftrightarrow{xy} \quad \overrightarrow{xy}$$</code>（<code>\quad</code>表示退一格）</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mi>x</mi><mo>⃗</mo></mover><mspace width="1em"/><mover accent="true"><mrow><mi>x</mi><mi>y</mi></mrow><mo stretchy="true">←</mo></mover><mspace width="1em"/><mover accent="true"><mrow><mi>x</mi><mi>y</mi></mrow><mo stretchy="true">↔</mo></mover><mspace width="1em"/><mover accent="true"><mrow><mi>x</mi><mi>y</mi></mrow><mo stretchy="true">→</mo></mover></mrow><annotation encoding="application/x-tex">\vec{x} \quad \overleftarrow{xy} \quad \overleftrightarrow{xy} \quad \overrightarrow{xy}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.147em;vertical-align:-0.19444em;"></span><span class="mord accent"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.714em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">x</span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="accent-body" style="left:-0.20772em;"><span class="overlay" style="height:0.714em;width:0.471em;"><svg width='0.471em' height='0.714em' style='width:0.471em' viewBox='0 0 471 714' preserveAspectRatio='xMinYMin'><path d='M377 20c0-5.333 1.833-10 5.5-14S391 0 397 0c4.667 0 8.667 1.667 12 5
-3.333 2.667 6.667 9 10 19 6.667 24.667 20.333 43.667 41 57 7.333 4.667 11
-10.667 11 18 0 6-1 10-3 12s-6.667 5-14 9c-28.667 14.667-53.667 35.667-75 63
--1.333 1.333-3.167 3.5-5.5 6.5s-4 4.833-5 5.5c-1 .667-2.5 1.333-4.5 2s-4.333 1
--7 1c-4.667 0-9.167-1.833-13.5-5.5S337 184 337 178c0-12.667 15.667-32.333 47-59
-H213l-171-1c-8.667-6-13-12.333-13-19 0-4.667 4.333-11.333 13-20h359
-c-16-25.333-24-45-24-59z'/></svg></span></span></span></span></span></span></span><span class="mspace" style="margin-right:1em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9525600000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span><span class="svg-align" style="top:-3.43056em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg width='400em' height='0.522em' viewBox='0 0 400000 522' preserveAspectRatio='xMinYMin slice'><path d='M400000 241H110l3-3c68.7-52.7 113.7-120
- 135-202 4-14.7 6-23 6-25 0-7.3-7-11-21-11-8 0-13.2.8-15.5 2.5-2.3 1.7-4.2 5.8
--5.5 12.5-1.3 4.7-2.7 10.3-4 17-12 48.7-34.8 92-68.5 130S65.3 228.3 18 247
-c-10 4-16 7.7-18 11 0 8.7 6 14.3 18 17 47.3 18.7 87.8 47 121.5 85S196 441.3 208
- 490c.7 2 1.3 5 2 9s1.2 6.7 1.5 8c.3 1.3 1 3.3 2 6s2.2 4.5 3.5 5.5c1.3 1 3.3
- 1.8 6 2.5s6 1 10 1c14 0 21-3.7 21-11 0-2-2-10.3-6-25-20-79.3-65-146.7-135-202
- l-3-3h399890zM100 241v40h399900v-40z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:1em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9525600000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span><span class="svg-align" style="top:-3.43056em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.522em;min-width:0.888em;"><span class="halfarrow-left" style="height:0.522em;"><svg width='400em' height='0.522em' viewBox='0 0 400000 522' preserveAspectRatio='xMinYMin slice'><path d='M400000 241H110l3-3c68.7-52.7 113.7-120
- 135-202 4-14.7 6-23 6-25 0-7.3-7-11-21-11-8 0-13.2.8-15.5 2.5-2.3 1.7-4.2 5.8
--5.5 12.5-1.3 4.7-2.7 10.3-4 17-12 48.7-34.8 92-68.5 130S65.3 228.3 18 247
-c-10 4-16 7.7-18 11 0 8.7 6 14.3 18 17 47.3 18.7 87.8 47 121.5 85S196 441.3 208
- 490c.7 2 1.3 5 2 9s1.2 6.7 1.5 8c.3 1.3 1 3.3 2 6s2.2 4.5 3.5 5.5c1.3 1 3.3
- 1.8 6 2.5s6 1 10 1c14 0 21-3.7 21-11 0-2-2-10.3-6-25-20-79.3-65-146.7-135-202
- l-3-3h399890zM100 241v40h399900v-40z'/></svg></span><span class="halfarrow-right" style="height:0.522em;"><svg width='400em' height='0.522em' viewBox='0 0 400000 522' preserveAspectRatio='xMaxYMin slice'><path d='M0 241v40h399891c-47.3 35.3-84 78-110 128
--16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
- 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
- 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
--40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
--12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
- 151.7 139 205zm0 0v40h399900v-40z'/></svg></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:1em;"></span><span class="mord accent"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.9525600000000001em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span><span class="svg-align" style="top:-3.43056em;"><span class="pstrut" style="height:3em;"></span><span class="hide-tail" style="height:0.522em;min-width:0.888em;"><svg width='400em' height='0.522em' viewBox='0 0 400000 522' preserveAspectRatio='xMaxYMin slice'><path d='M0 241v40h399891c-47.3 35.3-84 78-110 128
--16.7 32-27.7 63.7-33 95 0 1.3-.2 2.7-.5 4-.3 1.3-.5 2.3-.5 3 0 7.3 6.7 11 20
- 11 8 0 13.2-.8 15.5-2.5 2.3-1.7 4.2-5.5 5.5-11.5 2-13.3 5.7-27 11-41 14.7-44.7
- 39-84.5 73-119.5s73.7-60.2 119-75.5c6-2 9-5.7 9-11s-3-9-9-11c-45.3-15.3-85
--40.5-119-75.5s-58.3-74.8-73-119.5c-4.7-14-8.3-27.3-11-40-1.3-6.7-3.2-10.8-5.5
--12.5-2.3-1.7-7.5-2.5-15.5-2.5-14 0-21 3.7-21 11 0 2 2 10.3 6 25 20.7 83.3 67
- 151.7 139 205zm0 0v40h399900v-40z'/></svg></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span></span></span></span></p>
-<h3 id="25定界符-自适应放大命令"><a class="markdownIt-Anchor" href="#25定界符-自适应放大命令"></a> 2.5定界符 - 自适应放大命令</h3>
-<p>自适应放大命令：<code>\left</code>和<code>\right</code>、此命令放在左右定界符前，随着公式内容自动调整符号大小，例如：<code>$\left(\frac{1}{xyz}\right)$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo fence="true">(</mo><mfrac><mn>1</mn><mrow><mi>x</mi><mi>y</mi><mi>z</mi></mrow></mfrac><mo fence="true">)</mo></mrow><annotation encoding="application/x-tex">\left(\frac{1}{xyz}\right)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.80002em;vertical-align:-0.65002em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size2">(</span></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">x</span><span class="mord mathdefault mtight" style="margin-right:0.03588em;">y</span><span class="mord mathdefault mtight" style="margin-right:0.04398em;">z</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.481108em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size2">)</span></span></span></span></span></span></p>
-<blockquote>
-<p>另一种表达方式：<code>$() \big(\big) \Big(\Big) \Bigg(\Bigg)$</code>表示：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo stretchy="false">(</mo><mo stretchy="false">)</mo><mo fence="false">(</mo><mo fence="false">)</mo><mo fence="false">(</mo><mo fence="false">)</mo><mo fence="false">(</mo><mo fence="false">)</mo></mrow><annotation encoding="application/x-tex">() \big(\big) \Big(\Big) \Bigg(\Bigg)</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:3.0000299999999998em;vertical-align:-1.25003em;"></span><span class="mopen">(</span><span class="mclose">)</span><span class="mord"><span class="delimsizing size1">(</span></span><span class="mord"><span class="delimsizing size1">)</span></span><span class="mord"><span class="delimsizing size2">(</span></span><span class="mord"><span class="delimsizing size2">)</span></span><span class="mord"><span class="delimsizing size4">(</span></span><span class="mord"><span class="delimsizing size4">)</span></span></span></span></span></p>
-<p><code>\left</code>和<code>\right</code>需成对使用，只需一边时，可用<code>\left.</code>或<code>\right.</code>进行配对，例如：<code>$\left.\frac{1}{2}x^2\right|_0^1$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><msubsup><mrow><mfrac><mn>1</mn><mn>2</mn></mfrac><msup><mi>x</mi><mn>2</mn></msup><mo fence="true">∣</mo></mrow><mn>0</mn><mn>1</mn></msubsup></mrow><annotation encoding="application/x-tex">\left.\frac{1}{2}x^2\right|_0^1</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.4657079999999998em;vertical-align:-0.3997099999999999em;"></span><span class="minner"><span class="minner"><span class="mopen nulldelimiter"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">2</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8141079999999999em;"><span style="top:-3.063em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.86199em;"><span style="top:-2.2559899999999997em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.86199em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.35000999999999993em;"><span></span></span></span></span></span></span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.065998em;"><span style="top:-2.3002900000000004em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">0</span></span></span><span style="top:-3.31489em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3997099999999999em;"><span></span></span></span></span></span></span></span></span></span></p>
-</blockquote>
-<h3 id="26-空白间距-占位宽度"><a class="markdownIt-Anchor" href="#26-空白间距-占位宽度"></a> 2.6 空白间距-占位宽度</h3>
-<p><code>\quad</code>代表当前字体下接近字符<code>M</code>的宽度</p>
+<h3 id="2-6-空白间距-占位宽度"><a href="#2-6-空白间距-占位宽度" class="headerlink" title="2.6 空白间距-占位宽度"></a>2.6 空白间距-占位宽度</h3><p><code>\quad</code>代表当前字体下接近字符<code>M</code>的宽度</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -380,176 +310,128 @@ c-10 4-16 7.7-18 11 0 8.7 6 14.3 18 17 47.3 18.7 87.8 47 121.5 85S196 441.3 208
 <tbody>
 <tr>
 <td>没有空格</td>
-<td><code>$ab$</code></td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mi>b</mi></mrow><annotation encoding="application/x-tex">ab</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">a</span><span class="mord mathdefault">b</span></span></span></span></td>
+<td><script type="math/tex">ab</script></td>
+<td>$ab$</td>
 </tr>
 <tr>
-<td>紧贴，缩进<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mn>1</mn><mn>6</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{6}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">6</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>m宽度</td>
-<td><code>$a\!b$</code></td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mtext> ⁣</mtext><mi>b</mi></mrow><annotation encoding="application/x-tex">a\!b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:-0.16666666666666666em;"></span><span class="mord mathdefault">b</span></span></span></span></td>
+<td>紧贴，缩进$\frac{1}{6}$m宽度</td>
+<td><script type="math/tex">a\!b</script></td>
+<td>$a!b$</td>
 </tr>
 <tr>
 <td>小空格</td>
-<td><code>$a\,b$</code></td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mtext> </mtext><mi>b</mi></mrow><annotation encoding="application/x-tex">a\,b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">b</span></span></span></span></td>
+<td><script type="math/tex">a\,b</script></td>
+<td>$a\,b$</td>
 </tr>
 <tr>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mfrac><mn>1</mn><mn>3</mn></mfrac></mrow><annotation encoding="application/x-tex">\frac{1}{3}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.190108em;vertical-align:-0.345em;"></span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.845108em;"><span style="top:-2.6550000000000002em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">3</span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.394em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.345em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span>个空格</td>
-<td><code>$a\ b$</code></td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mtext> </mtext><mi>b</mi></mrow><annotation encoding="application/x-tex">a\ b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">a</span><span class="mspace"> </span><span class="mord mathdefault">b</span></span></span></span></td>
+<td>$\frac{1}{3}$个空格</td>
+<td><script type="math/tex">a\ b</script></td>
+<td>$a\ b$</td>
 </tr>
 <tr>
 <td>中等空格</td>
-<td><code>$a\:b$</code>或<code>$a\;b$</code></td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mtext>  </mtext><mi>b</mi></mrow><annotation encoding="application/x-tex">a\;b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">b</span></span></span></span></td>
+<td><script type="math/tex">a\:b</script>或<script type="math/tex">a\;b</script></td>
+<td>$a\;b$</td>
 </tr>
 <tr>
 <td>一个空格</td>
-<td><code>$a \quad b$</code></td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mspace width="1em"/><mi>b</mi></mrow><annotation encoding="application/x-tex">a \quad b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:1em;"></span><span class="mord mathdefault">b</span></span></span></span></td>
+<td><script type="math/tex">a \quad b</script></td>
+<td>$a \quad b$</td>
 </tr>
 <tr>
 <td>两个空格</td>
-<td><code>$a \qquad b$</code></td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>a</mi><mspace width="2em"/><mi>b</mi></mrow><annotation encoding="application/x-tex">a \qquad b</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord mathdefault">a</span><span class="mspace" style="margin-right:2em;"></span><span class="mord mathdefault">b</span></span></span></span></td>
+<td><script type="math/tex">a \qquad b</script></td>
+<td>$a \qquad b$</td>
 </tr>
 </tbody>
 </table>
-<h3 id="27-省略号"><a class="markdownIt-Anchor" href="#27-省略号"></a> 2.7 省略号</h3>
-<p>省略号用<code>\dots \cdots \vdots \ddots</code>表示，<code>\dots</code>和<code>cdots</code>的纵向位置不同，前者用于有下标的序列，例如：<code>$$x_1,x_2,\dots,x_n \quad 1,2\cdots,n \quad \vdots \quad \ddots$$</code>表示</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><msub><mi>x</mi><mn>1</mn></msub><mo separator="true">,</mo><msub><mi>x</mi><mn>2</mn></msub><mo separator="true">,</mo><mo>…</mo><mo separator="true">,</mo><msub><mi>x</mi><mi>n</mi></msub><mspace width="1em"/><mn>1</mn><mo separator="true">,</mo><mn>2</mn><mo>⋯</mo><mtext> </mtext><mo separator="true">,</mo><mi>n</mi><mspace width="1em"/><mi mathvariant="normal">⋮</mi><mpadded height="+0em" voffset="0em"><mspace mathbackground="black" width="0em" height="1.5em"></mspace></mpadded><mspace width="1em"/><mo>⋱</mo></mrow><annotation encoding="application/x-tex">x_1,x_2,\dots,x_n \quad 1,2\cdots,n \quad \vdots \quad \ddots
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.69444em;vertical-align:-0.19444em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">1</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">…</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">n</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mspace" style="margin-right:1em;"></span><span class="mord">1</span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord mathdefault">n</span><span class="mspace" style="margin-right:1em;"></span><span class="mord"><span class="mord">⋮</span><span class="mord rule" style="border-right-width:0em;border-top-width:1.5em;bottom:0em;"></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="minner">⋱</span></span></span></span></span></p>
-<h3 id="28-多行公式"><a class="markdownIt-Anchor" href="#28-多行公式"></a> 2.8 多行公式</h3>
-<p><strong>长公式</strong></p>
+</div>
+<h3 id="2-7-省略号"><a href="#2-7-省略号" class="headerlink" title="2.7 省略号"></a>2.7 省略号</h3><p>省略号用<code>\dots \cdots \vdots \ddots</code>表示，<code>\dots</code>和<code>cdots</code>的纵向位置不同，前者用于有下标的序列，例如：$$$x_1,x_2,\dots,x_n \quad 1,2\cdots,n \quad \vdots \quad \ddots$$$表示</p>
+<script type="math/tex; mode=display">
+x_1,x_2,\dots,x_n \quad 1,2\cdots,n \quad \vdots \quad \ddots</script><h3 id="2-8-多行公式"><a href="#2-8-多行公式" class="headerlink" title="2.8 多行公式"></a>2.8 多行公式</h3><p><strong>长公式</strong></p>
 <p>无需对齐可使用<code>multline</code>，需对齐使用<code>split</code>，用<code>\\</code>和<code>&amp;</code>来分行和设置对齐的位置，例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;multline&#125;</span><br><span class="line">x&#x3D;a+b+c+&#123;&#125; \\</span><br><span class="line">d+e+f+g</span><br><span class="line">\end&#123;multline&#125;$$</span><br></pre></td></tr></table></figure>
-<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: multline at position 7: \begin{̲m̲u̲l̲t̲l̲i̲n̲e̲}̲
-x=a+b+c+{} \\
-…'>\begin{multline}
+<script type="math/tex; mode=display">
+\begin{multline}
 x=a+b+c+{} \\
 d+e+f+g
-\end{multline}
-</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;split&#125;</span><br><span class="line">x&#x3D;&amp;a+b+c+ \\</span><br><span class="line">&amp;d+e+f+g</span><br><span class="line">\end&#123;split&#125;$$</span><br></pre></td></tr></table></figure>
-<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: split at position 7: \begin{̲s̲p̲l̲i̲t̲}̲
-x=&amp;a+b+c+ \\
-&amp;…'>\begin{split}
-x=&amp;a+b+c+ \\
-&amp;d+e+f+g
-\end{split}
-</p>
-<p><strong>公式组</strong></p>
+\end{multline}</script><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;split&#125;</span><br><span class="line">x&#x3D;&amp;a+b+c+ \\</span><br><span class="line">&amp;d+e+f+g</span><br><span class="line">\end&#123;split&#125;$$</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">
+\begin{split}
+x=&a+b+c+ \\
+&d+e+f+g
+\end{split}</script><p><strong>公式组</strong></p>
 <p>不需要对齐的公式组用<code>gather</code>，需对齐使用<code>align</code>，例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;gather&#125;</span><br><span class="line">a&#x3D;b+c+d \\</span><br><span class="line">x&#x3D;y+z</span><br><span class="line">\end&#123;gather&#125;$$</span><br></pre></td></tr></table></figure>
-<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: gather at position 7: \begin{̲g̲a̲t̲h̲e̲r̲}̲
-a=b+c+d \\
-x=y…'>\begin{gather}
+<script type="math/tex; mode=display">
+\begin{gather}
 a=b+c+d \\
 x=y+z
-\end{gather}
-</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;align&#125;</span><br><span class="line">a&amp;&#x3D;b+c+d \\</span><br><span class="line">x&amp;&#x3D;y+z</span><br><span class="line">\end&#123;align&#125;$$</span><br></pre></td></tr></table></figure>
-<p class='katex-block katex-error' title='ParseError: KaTeX parse error: No such environment: align at position 7: \begin{̲a̲l̲i̲g̲n̲}̲
-a&amp;=b+c+d \\
-x&amp;…'>\begin{align}
-a&amp;=b+c+d \\
-x&amp;=y+z
-\end{align}
-</p>
-<p><strong>分支公式</strong></p>
+\end{gather}</script><figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;align&#125;</span><br><span class="line">a&amp;&#x3D;b+c+d \\</span><br><span class="line">x&amp;&#x3D;y+z</span><br><span class="line">\end&#123;align&#125;$$</span><br></pre></td></tr></table></figure>
+<script type="math/tex; mode=display">
+\begin{align}
+a&=b+c+d \\
+x&=y+z
+\end{align}</script><p><strong>分支公式</strong></p>
 <p>分段函数通常用<code>cases</code>，例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br></pre></td><td class="code"><pre><span class="line">$$y&#x3D;\begin&#123;cases&#125;</span><br><span class="line">-x,\quad &amp;x \leq 0 \\</span><br><span class="line">x, &amp;x&gt;0</span><br><span class="line">\end&#123;cases&#125;$$</span><br></pre></td></tr></table></figure>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>y</mi><mo>=</mo><mrow><mo fence="true">{</mo><mtable rowspacing="0.3599999999999999em" columnalign="left left" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mo>−</mo><mi>x</mi><mo separator="true">,</mo><mspace width="1em"/></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>x</mi><mo>≤</mo><mn>0</mn></mrow></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>x</mi><mo separator="true">,</mo></mrow></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mrow><mi>x</mi><mo>&gt;</mo><mn>0</mn></mrow></mstyle></mtd></mtr></mtable></mrow></mrow><annotation encoding="application/x-tex">y=\begin{cases}
--x, \quad &amp;x \leq 0 \\
-x, &amp;x&gt;0
-\end{cases}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.625em;vertical-align:-0.19444em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:3.0000299999999998em;vertical-align:-1.25003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size4">{</span></span><span class="mord"><span class="mtable"><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord">−</span><span class="mord mathdefault">x</span><span class="mpunct">,</span><span class="mspace" style="margin-right:1em;"></span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="mpunct">,</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:1em;"></span><span class="col-align-l"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.69em;"><span style="top:-3.69em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">≤</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span></span></span><span style="top:-2.25em;"><span class="pstrut" style="height:3.008em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">&gt;</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.19em;"><span></span></span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span></span></span></span></span></p>
-<p><strong>公式编号</strong></p>
+<script type="math/tex; mode=display">
+y=\begin{cases}
+-x, \quad &x \leq 0 \\
+x, &x>0
+\end{cases}</script><p><strong>公式编号</strong></p>
 <p>可以通过命令<code>\tag{n}</code>手动为公式编号，例如：</p>
 <figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">S(r_k) &#x3D; \sum_&#123;r_k \ne r_i&#125; \text&#123;exp&#125;(\frac&#123;-D_s(r_k,r_k)&#125;&#123;\sigma_s^2&#125;)</span><br><span class="line">\tag&#123;1&#125;$$</span><br></pre></td></tr></table></figure>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mtable width="100%"><mtr><mtd width="50%"></mtd><mtd><mrow><mi>S</mi><mo stretchy="false">(</mo><msub><mi>r</mi><mi>k</mi></msub><mo stretchy="false">)</mo><mo>=</mo><munder><mo>∑</mo><mrow><msub><mi>r</mi><mi>k</mi></msub><mi mathvariant="normal">≠</mi><msub><mi>r</mi><mi>i</mi></msub></mrow></munder><mtext>exp</mtext><mo stretchy="false">(</mo><mfrac><mrow><mo>−</mo><msub><mi>D</mi><mi>s</mi></msub><mo stretchy="false">(</mo><msub><mi>r</mi><mi>k</mi></msub><mo separator="true">,</mo><msub><mi>r</mi><mi>k</mi></msub><mo stretchy="false">)</mo></mrow><msubsup><mi>σ</mi><mi>s</mi><mn>2</mn></msubsup></mfrac><mo stretchy="false">)</mo></mrow></mtd><mtd width="50%"></mtd><mtd><mtext>(1)</mtext></mtd></mtr></mtable><annotation encoding="application/x-tex">S(r_k) = \sum_{r_k \ne r_i} \text{exp}(\frac{-D_s(r_k,r_k)}{\sigma_s^2})
-\tag{1}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault" style="margin-right:0.05764em;">S</span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:2.865221em;vertical-align:-1.438221em;"></span><span class="mop op-limits"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.050005em;"><span style="top:-1.8478869999999998em;margin-left:0em;"><span class="pstrut" style="height:3.05em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3448em;"><span style="top:-2.3487714285714287em;margin-left:-0.02778em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15122857142857138em;"><span></span></span></span></span></span></span><span class="mrel mtight"><span class="mrel mtight"><span class="mord mtight"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-2.7em;"><span class="pstrut" style="height:2.7em;"></span><span class="rlap mtight"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel mtight"></span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span><span class="mrel mtight">=</span></span><span class="mord mtight"><span class="mord mathdefault mtight" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.3280857142857143em;"><span style="top:-2.357em;margin-left:-0.02778em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mathdefault mtight">i</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span><span style="top:-3.0500049999999996em;"><span class="pstrut" style="height:3.05em;"></span><span><span class="mop op-symbol large-op">∑</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.438221em;"><span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord text"><span class="mord">exp</span></span><span class="mopen">(</span><span class="mord"><span class="mopen nulldelimiter"></span><span class="mfrac"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.427em;"><span style="top:-2.314em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault" style="margin-right:0.03588em;">σ</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.740108em;"><span style="top:-2.4530000000000003em;margin-left:-0.03588em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">s</span></span></span><span style="top:-2.9890000000000003em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.247em;"><span></span></span></span></span></span></span></span></span><span style="top:-3.23em;"><span class="pstrut" style="height:3em;"></span><span class="frac-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3.677em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">−</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">D</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.151392em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight">s</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mopen">(</span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mpunct">,</span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mord"><span class="mord mathdefault" style="margin-right:0.02778em;">r</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.33610799999999996em;"><span style="top:-2.5500000000000003em;margin-left:-0.02778em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mathdefault mtight" style="margin-right:0.03148em;">k</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span><span class="mclose">)</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.933em;"><span></span></span></span></span></span><span class="mclose nulldelimiter"></span></span><span class="mclose">)</span></span><span class="tag"><span class="strut" style="height:2.865221em;vertical-align:-1.438221em;"></span><span class="mord text"><span class="mord">(</span><span class="mord"><span class="mord">1</span></span><span class="mord">)</span></span></span></span></span></span></p>
-<h3 id="29-上下水平线"><a class="markdownIt-Anchor" href="#29-上下水平线"></a> 2.9 上下水平线</h3>
-<ul>
-<li>
-<p><code>\overline{表达式}</code>：在表达式上方画出水平线，例如：<code>$\overline{x+y}$</code>表示：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover accent="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="true">‾</mo></mover></mrow><annotation encoding="application/x-tex">\overline{x+y}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.9777700000000003em;vertical-align:-0.19444em;"></span><span class="mord overline"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.7833300000000002em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span><span style="top:-3.7033300000000002em;"><span class="pstrut" style="height:3em;"></span><span class="overline-line" style="border-bottom-width:0.04em;"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span></span></span></p>
+<script type="math/tex; mode=display">
+S(r_k) = \sum_{r_k \ne r_i} \text{exp}(\frac{-D_s(r_k,r_k)}{\sigma_s^2})
+\tag{1}</script><h3 id="2-9-上下水平线"><a href="#2-9-上下水平线" class="headerlink" title="2.9 上下水平线"></a>2.9 上下水平线</h3><ul>
+<li><p><code>\overline{表达式}</code>：在表达式上方画出水平线，例如：<script type="math/tex">\overline{x+y}</script>表示：$\overline{x+y}$</p>
 </li>
-<li>
-<p><code>\underline{表达式}</code>：在表达式下方画出水平线，例如：<code>$\underline{x+y}$</code>表示：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><munder accentunder="true"><mrow><mi>x</mi><mo>+</mo><mi>y</mi></mrow><mo stretchy="true">‾</mo></munder></mrow><annotation encoding="application/x-tex">\underline{x+y}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.97777em;vertical-align:-0.3944400000000001em;"></span><span class="mord underline"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.5833299999999999em;"><span style="top:-2.6455599999999997em;"><span class="pstrut" style="height:3em;"></span><span class="underline-line" style="border-bottom-width:0.04em;"></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord mathdefault" style="margin-right:0.03588em;">y</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3944400000000001em;"><span></span></span></span></span></span></span></span></span></p>
+<li><p><code>\underline{表达式}</code>：在表达式下方画出水平线，例如：<script type="math/tex">\underline{x+y}</script>表示：$\underline{x+y}$</p>
 </li>
 </ul>
-<h3 id="210-上下大括号"><a class="markdownIt-Anchor" href="#210-上下大括号"></a> 2.10 上下大括号</h3>
-<ul>
-<li>
-<p><code>\overbrace{表达式}</code>：在表达式上方画出一个水平的大括号，例如：<code>$\overbrace{1+2+3+\cdots+100}^{100}$</code>表示：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mover><mover><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mo>⋯</mo><mo>+</mo><mn>100</mn></mrow><mo stretchy="true">⏞</mo></mover><mn>100</mn></mover></mrow><annotation encoding="application/x-tex">\overbrace{1+2+3+\cdots+100}^{100}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.026878em;vertical-align:-0.08333em;"></span><span class="mord mover"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.9435479999999998em;"><span style="top:-3.29244em;"><span class="pstrut" style="height:3.29244em;"></span><span class="mord mover"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.29244em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span></span></span><span class="svg-align" style="top:-3.74444em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.548em;min-width:1.6em;"><span class="brace-left" style="height:0.548em;"><svg width='400em' height='0.548em' viewBox='0 0 400000 548' preserveAspectRatio='xMinYMin slice'><path d='M6 548l-6-6v-35l6-11c56-104 135.3-181.3 238-232 57.3-28.7 117
--45 179-50h399577v120H403c-43.3 7-81 15-113 26-100.7 33-179.7 91-237 174-2.7
- 5-6 9-10 13-.7 1-7.3 1-20 1H6z'/></svg></span><span class="brace-center" style="height:0.548em;"><svg width='400em' height='0.548em' viewBox='0 0 400000 548' preserveAspectRatio='xMidYMin slice'><path d='M200428 334
-c-100.7-8.3-195.3-44-280-108-55.3-42-101.7-93-139-153l-9-14c-2.7 4-5.7 8.7-9 14
--53.3 86.7-123.7 153-211 199-66.7 36-137.3 56.3-212 62H0V214h199568c178.3-11.7
- 311.7-78.3 403-201 6-8 9.7-12 11-12 .7-.7 6.7-1 18-1s17.3.3 18 1c1.3 0 5 4 11
- 12 44.7 59.3 101.3 106.3 170 141s145.3 54.3 229 60h199572v120z'/></svg></span><span class="brace-right" style="height:0.548em;"><svg width='400em' height='0.548em' viewBox='0 0 400000 548' preserveAspectRatio='xMaxYMin slice'><path d='M400000 542l
--6 6h-17c-12.7 0-19.3-.3-20-1-4-4-7.3-8.3-10-13-35.3-51.3-80.8-93.8-136.5-127.5
-s-117.2-55.8-184.5-66.5c-.7 0-2-.3-4-1-18.7-2.7-76-4.3-172-5H0V214h399571l6 1
-c124.7 8 235 61.7 331 161 31.3 33.3 59.7 72.7 85 118l7 13v35z'/></svg></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.08333em;"><span></span></span></span></span></span></span><span style="top:-4.78488em;"><span class="pstrut" style="height:3.29244em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span><span class="mord mtight">0</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.08333em;"><span></span></span></span></span></span></span></span></span></p>
+<h3 id="2-10-上下大括号"><a href="#2-10-上下大括号" class="headerlink" title="2.10 上下大括号"></a>2.10 上下大括号</h3><ul>
+<li><p><code>\overbrace{表达式}</code>：在表达式上方画出一个水平的大括号，例如：<script type="math/tex">\overbrace{1+2+3+\cdots+100}^{100}</script>表示：$\overbrace{1+2+3+\cdots+100}^{100}$</p>
 </li>
-<li>
-<p><code>\underbrace{表达式}</code>：在表达式下方画出一个水平大括号，例如：</p>
+<li><p><code>\underbrace{表达式}</code>：在表达式下方画出一个水平大括号，例如：</p>
 </li>
 </ul>
-<p><code>$\underbrace{1+2+3+\cdots+100}_{100}$</code>表示：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><munder><munder><mrow><mn>1</mn><mo>+</mo><mn>2</mn><mo>+</mo><mn>3</mn><mo>+</mo><mo>⋯</mo><mo>+</mo><mn>100</mn></mrow><mo stretchy="true">⏟</mo></munder><mn>100</mn></munder></mrow><annotation encoding="application/x-tex">\underbrace{1+2+3+\cdots+100}_{100}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.026878em;vertical-align:-1.382438em;"></span><span class="mord munder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.6444400000000001em;"><span style="top:-1.617562em;"><span class="pstrut" style="height:3em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">0</span><span class="mord mtight">0</span></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord munder"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.64444em;"><span class="svg-align" style="top:-2.26867em;"><span class="pstrut" style="height:3em;"></span><span class="stretchy" style="height:0.548em;min-width:1.6em;"><span class="brace-left" style="height:0.548em;"><svg width='400em' height='0.548em' viewBox='0 0 400000 548' preserveAspectRatio='xMinYMin slice'><path d='M0 6l6-6h17c12.688 0 19.313.3 20 1 4 4 7.313 8.3 10 13
- 35.313 51.3 80.813 93.8 136.5 127.5 55.688 33.7 117.188 55.8 184.5 66.5.688
- 0 2 .3 4 1 18.688 2.7 76 4.3 172 5h399450v120H429l-6-1c-124.688-8-235-61.7
--331-161C60.687 138.7 32.312 99.3 7 54L0 41V6z'/></svg></span><span class="brace-center" style="height:0.548em;"><svg width='400em' height='0.548em' viewBox='0 0 400000 548' preserveAspectRatio='xMidYMin slice'><path d='M199572 214
-c100.7 8.3 195.3 44 280 108 55.3 42 101.7 93 139 153l9 14c2.7-4 5.7-8.7 9-14
- 53.3-86.7 123.7-153 211-199 66.7-36 137.3-56.3 212-62h199568v120H200432c-178.3
- 11.7-311.7 78.3-403 201-6 8-9.7 12-11 12-.7.7-6.7 1-18 1s-17.3-.3-18-1c-1.3 0
--5-4-11-12-44.7-59.3-101.3-106.3-170-141s-145.3-54.3-229-60H0V214z'/></svg></span><span class="brace-right" style="height:0.548em;"><svg width='400em' height='0.548em' viewBox='0 0 400000 548' preserveAspectRatio='xMaxYMin slice'><path d='M399994 0l6 6v35l-6 11c-56 104-135.3 181.3-238 232-57.3
- 28.7-117 45-179 50H-300V214h399897c43.3-7 81-15 113-26 100.7-33 179.7-91 237
--174 2.7-5 6-9 10-13 .7-1 7.3-1 20-1h17z'/></svg></span></span></span><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord">1</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">2</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">3</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="minner">⋯</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mbin">+</span><span class="mspace" style="margin-right:0.2222222222222222em;"></span><span class="mord">1</span><span class="mord">0</span><span class="mord">0</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.73133em;"><span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:1.382438em;"><span></span></span></span></span></span></span></span></span></p>
-<h3 id="211-矩阵"><a class="markdownIt-Anchor" href="#211-矩阵"></a> 2.11 矩阵</h3>
-<p>生成矩阵的命令中每一行以 <code>\\</code> 结束，矩阵的元素之间用 &amp; 来分隔开，例如</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;matrix&#125;</span><br><span class="line">x_&#123;_&#123;11&#125;&#125; &amp; x_&#123;_&#123;12&#125;&#125; &amp; \dots &amp; x_&#123;_&#123;1n&#125;&#125; \\</span><br><span class="line">x_&#123;_&#123;21&#125;&#125; &amp; x_&#123;_&#123;22&#125;&#125; &amp; \dots &amp; x_&#123;_&#123;2n&#125;&#125; \\</span><br><span class="line">\vdots &amp; \vdots &amp; \ddots  &amp; \vdots  \\</span><br><span class="line">x_&#123;_&#123;m1&#125;&#125; &amp; x_&#123;_&#123;m2&#125;&#125; &amp; \dots &amp; x_&#123;_&#123;mn&#125;&#125; \\</span><br><span class="line">\end&#123;matrix&#125;$$</span><br></pre></td></tr></table></figure>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mtable rowspacing="0.15999999999999992em" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>x</mi><msub><mrow></mrow><mn>11</mn></msub></msub></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>x</mi><msub><mrow></mrow><mn>12</mn></msub></msub></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo>…</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>x</mi><msub><mrow></mrow><mrow><mn>1</mn><mi>n</mi></mrow></msub></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>x</mi><msub><mrow></mrow><mn>21</mn></msub></msub></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>x</mi><msub><mrow></mrow><mn>22</mn></msub></msub></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo>…</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>x</mi><msub><mrow></mrow><mrow><mn>2</mn><mi>n</mi></mrow></msub></msub></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi mathvariant="normal">⋮</mi><mpadded height="+0em" voffset="0em"><mspace mathbackground="black" width="0em" height="1.5em"></mspace></mpadded></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi mathvariant="normal">⋮</mi><mpadded height="+0em" voffset="0em"><mspace mathbackground="black" width="0em" height="1.5em"></mspace></mpadded></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo>⋱</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi mathvariant="normal">⋮</mi><mpadded height="+0em" voffset="0em"><mspace mathbackground="black" width="0em" height="1.5em"></mspace></mpadded></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>x</mi><msub><mrow></mrow><mrow><mi>m</mi><mn>1</mn></mrow></msub></msub></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>x</mi><msub><mrow></mrow><mrow><mi>m</mi><mn>2</mn></mrow></msub></msub></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mo>…</mo></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><msub><mi>x</mi><msub><mrow></mrow><mrow><mi>m</mi><mi>n</mi></mrow></msub></msub></mstyle></mtd></mtr></mtable><annotation encoding="application/x-tex">\begin{matrix}
-x_{_{11}} &amp; x_{_{12}} &amp; \dots &amp; x_{_{1n}} \\
-x_{_{21}} &amp; x_{_{22}} &amp; \dots &amp; x_{_{2n}} \\
-\vdots &amp; \vdots &amp; \ddots  &amp; \vdots  \\
-x_{_{m1}} &amp; x_{_{m2}} &amp; \dots &amp; x_{_{mn}} \\
-\end{matrix}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:5.459999999999999em;vertical-align:-2.4799999999999995em;"></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.9799999999999995em;"><span style="top:-5.8275em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.07212000000000002em;"><span style="top:-2.35em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span></span></span><span style="top:-4.6275em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.07212000000000002em;"><span style="top:-2.35em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.7674999999999996em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord">⋮</span><span class="mord rule" style="border-right-width:0em;border-top-width:1.5em;bottom:0em;"></span></span></span></span><span style="top:-1.5675000000000006em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.07212000000000002em;"><span style="top:-2.35em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mord mtight">1</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.4799999999999995em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.9799999999999995em;"><span style="top:-5.8275em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.07212000000000002em;"><span style="top:-2.35em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span></span></span><span style="top:-4.6275em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.07212000000000002em;"><span style="top:-2.35em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.7674999999999996em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord">⋮</span><span class="mord rule" style="border-right-width:0em;border-top-width:1.5em;bottom:0em;"></span></span></span></span><span style="top:-1.5675000000000006em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.07212000000000002em;"><span style="top:-2.35em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mord mtight">2</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.4799999999999995em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.9799999999999995em;"><span style="top:-5.64em;"><span class="pstrut" style="height:3.5em;"></span><span class="mord"><span class="minner">…</span></span></span><span style="top:-4.44em;"><span class="pstrut" style="height:3.5em;"></span><span class="mord"><span class="minner">…</span></span></span><span style="top:-2.5799999999999996em;"><span class="pstrut" style="height:3.5em;"></span><span class="mord"><span class="minner">⋱</span></span></span><span style="top:-1.3800000000000006em;"><span class="pstrut" style="height:3.5em;"></span><span class="mord"><span class="minner">…</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.4799999999999995em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:2.9799999999999995em;"><span style="top:-5.8275em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.07212000000000002em;"><span style="top:-2.35em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">1</span><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span></span></span><span style="top:-4.6275em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.07212000000000002em;"><span style="top:-2.35em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.31731428571428577em;"><span style="top:-2.357em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mtight">2</span><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span></span></span><span style="top:-2.7674999999999996em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord">⋮</span><span class="mord rule" style="border-right-width:0em;border-top-width:1.5em;bottom:0em;"></span></span></span></span><span style="top:-1.5675000000000006em;"><span class="pstrut" style="height:3.6875em;"></span><span class="mord"><span class="mord"><span class="mord mathdefault">x</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:-0.03481999999999999em;"><span style="top:-2.35em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight"><span class="mord mtight"><span></span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.16454285714285719em;"><span style="top:-2.357em;margin-right:0.07142857142857144em;"><span class="pstrut" style="height:2.5em;"></span><span class="sizing reset-size3 size1 mtight"><span class="mord mtight"><span class="mord mathdefault mtight">m</span><span class="mord mathdefault mtight">n</span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.143em;"><span></span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.2501em;"><span></span></span></span></span></span></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:2.4799999999999995em;"><span></span></span></span></span></span></span></span></span></span></span></span></p>
-<p>带各类不同边界的矩阵:</p>
-<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;pmatrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;pmatrix&#125; \quad</span><br><span class="line">\begin&#123;bmatrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;bmatrix&#125; \quad</span><br><span class="line">\left[ \begin&#123;matrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;matrix&#125; \right] \quad</span><br><span class="line">\begin&#123;Bmatrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;Bmatrix&#125; \quad</span><br><span class="line">\left\&#123; \begin&#123;matrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;matrix&#125; \right\&#125; \quad</span><br><span class="line">\begin&#123;vmatrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;vmatrix&#125; \quad</span><br><span class="line">\begin&#123;Vmatrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;Vmatrix&#125; \quad</span><br><span class="line">\left[ \begin&#123;array&#125; &#123;c|c&#125; a &amp; b \\ c &amp; d \\ \end&#123;array&#125; \right]</span><br><span class="line">$$</span><br></pre></td></tr></table></figure>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mrow><mo fence="true">(</mo><mtable rowspacing="0.15999999999999992em" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>a</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>c</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>d</mi></mstyle></mtd></mtr></mtable><mo fence="true">)</mo></mrow><mspace width="1em"/><mrow><mo fence="true">[</mo><mtable rowspacing="0.15999999999999992em" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>a</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>c</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>d</mi></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow><mspace width="1em"/><mrow><mo fence="true">[</mo><mtable rowspacing="0.15999999999999992em" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>a</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>c</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>d</mi></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow><mspace width="1em"/><mrow><mo fence="true">{</mo><mtable rowspacing="0.15999999999999992em" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>a</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>c</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>d</mi></mstyle></mtd></mtr></mtable><mo fence="true">}</mo></mrow><mspace linebreak="newline"></mspace><mrow><mo fence="true">{</mo><mtable rowspacing="0.15999999999999992em" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>a</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>c</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>d</mi></mstyle></mtd></mtr></mtable><mo fence="true">}</mo></mrow><mspace width="1em"/><mrow><mo fence="true">∣</mo><mtable rowspacing="0.15999999999999992em" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>a</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>c</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>d</mi></mstyle></mtd></mtr></mtable><mo fence="true">∣</mo></mrow><mspace width="1em"/><mrow><mo fence="true">∥</mo><mtable rowspacing="0.15999999999999992em" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>a</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>c</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>d</mi></mstyle></mtd></mtr></mtable><mo fence="true">∥</mo></mrow><mspace width="1em"/><mrow><mo fence="true">[</mo><mtable rowspacing="0.15999999999999992em" columnalign="center center" columnlines="solid" columnspacing="1em"><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>a</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>b</mi></mstyle></mtd></mtr><mtr><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>c</mi></mstyle></mtd><mtd><mstyle scriptlevel="0" displaystyle="false"><mi>d</mi></mstyle></mtd></mtr></mtable><mo fence="true">]</mo></mrow></mrow><annotation encoding="application/x-tex">\begin{pmatrix} a &amp; b \\ c &amp; d \\ \end{pmatrix} \quad
-\begin{bmatrix} a &amp; b \\ c &amp; d \\ \end{bmatrix} \quad
-\left[ \begin{matrix} a &amp; b \\ c &amp; d \\ \end{matrix} \right] \quad
-\begin{Bmatrix} a &amp; b \\ c &amp; d \\ \end{Bmatrix}  \\
-\left\{ \begin{matrix} a &amp; b \\ c &amp; d \\ \end{matrix} \right\} \quad
-\begin{vmatrix} a &amp; b \\ c &amp; d \\ \end{vmatrix} \quad
-\begin{Vmatrix} a &amp; b \\ c &amp; d \\ \end{Vmatrix} \quad
-\left[ \begin{array} {c|c} a &amp; b \\ c &amp; d \\ \end{array} \right]
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:2.40003em;vertical-align:-0.95003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">(</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">a</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">b</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">)</span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">[</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">a</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">b</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">]</span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">[</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">a</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">b</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">]</span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">{</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">a</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">b</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">}</span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span></span><span class="mspace newline"></span><span class="base"><span class="strut" style="height:2.42401em;vertical-align:-0.95003em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">{</span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">a</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">b</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">}</span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.47398em;"><span style="top:-1.65598em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.26198em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.86798em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-3.47398em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500199999999999em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">a</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">b</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.47398em;"><span style="top:-1.65598em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.26198em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-2.86798em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span><span style="top:-3.47398em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∣</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500199999999999em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="minner"><span class="mopen"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.47398em;"><span style="top:-1.65598em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∥</span></span></span><span style="top:-2.26198em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∥</span></span></span><span style="top:-2.86798em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∥</span></span></span><span style="top:-3.47398em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∥</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500199999999999em;"><span></span></span></span></span></span></span><span class="mord"><span class="mtable"><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">a</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">b</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span></span></span><span class="mclose"><span class="delimsizing mult"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.47398em;"><span style="top:-1.65598em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∥</span></span></span><span style="top:-2.26198em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∥</span></span></span><span style="top:-2.86798em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∥</span></span></span><span style="top:-3.47398em;"><span class="pstrut" style="height:2.606em;"></span><span class="delimsizinginner delim-size1"><span>∥</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500199999999999em;"><span></span></span></span></span></span></span></span><span class="mspace" style="margin-right:0.16666666666666666em;"></span><span class="mspace" style="margin-right:1em;"></span><span class="minner"><span class="mopen delimcenter" style="top:0em;"><span class="delimsizing size3">[</span></span><span class="mord"><span class="mtable"><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">a</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">c</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span><span class="vertical-separator" style="height:2.4em;vertical-align:-0.95em;"></span><span class="arraycolsep" style="width:0.5em;"></span><span class="col-align-c"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.45em;"><span style="top:-3.61em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">b</span></span></span><span style="top:-2.4099999999999997em;"><span class="pstrut" style="height:3em;"></span><span class="mord"><span class="mord mathdefault">d</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.9500000000000004em;"><span></span></span></span></span></span><span class="arraycolsep" style="width:0.5em;"></span></span></span><span class="mclose delimcenter" style="top:0em;"><span class="delimsizing size3">]</span></span></span></span></span></span></span></p>
-<h3 id="212-norm-范数符号"><a class="markdownIt-Anchor" href="#212-norm-范数符号"></a> 2.12 Norm-范数符号</h3>
-<p>范数命令：<code>\parallel</code></p>
-<p>例如：<code>$\parallel x \parallel _2 $</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>∥</mo><mi>x</mi><msub><mo>∥</mo><mn>2</mn></msub></mrow><annotation encoding="application/x-tex">\parallel x \parallel _2</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mrel">∥</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span></span><span class="base"><span class="strut" style="height:1em;vertical-align:-0.25em;"></span><span class="mord mathdefault">x</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel"><span class="mrel">∥</span><span class="msupsub"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.30110799999999993em;"><span style="top:-2.5500000000000003em;margin-left:0em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.15em;"><span></span></span></span></span></span></span></span></span></span></p>
-<h3 id="213-堆积符号"><a class="markdownIt-Anchor" href="#213-堆积符号"></a> 2.13 堆积符号</h3>
-<ul>
-<li><code>\stackrel{上位符号}{基位符号}</code>：基位符号大，上位符号小，例如:</li>
-</ul>
-<p><code>$ \vec{x}\stackrel{\mathrm{def}}{=}{x_1,\dots,x_n} $</code>表示$ \vec{x}\stackrel{\mathrm{def}}{=}{x_1,\dots,x_n} $</p>
-<ul>
-<li>
-<p><code>{上位公式 \choose 下位公式}</code>：上下符号一样大，上下符号被包括在圆弧内，例如：<code>$ {n+1 \choose k}={n \choose k}+{n \choose k-1} $</code>表示$ {n+1 \choose k}={n \choose k}+{n \choose k-1} $</p>
-</li>
-<li>
-<p><code>{上位公式 \atop 下位公式}</code> : 上下符号一样大，例如：<code>$ \sum\limits_{k_0,k_1,\ldots&gt;0 \atop k_0+k_1+\cdots=n}A_k $</code>表示$ \sum\limits_{k_0,k_1,\ldots&gt;0 \atop k_0+k_1+\cdots=n}A_k $</p>
-</li>
-</ul>
-<h3 id="214-给公式加一个方框"><a class="markdownIt-Anchor" href="#214-给公式加一个方框"></a> 2.14 给公式加一个方框</h3>
-<p><code>\boxed</code>命令给公式加一个方框，例如：<code>$$\boxed{E=mc^2}$$</code>表示</p>
-<p class='katex-block'><span class="katex-display"><span class="katex"><span class="katex-mathml"><math><semantics><mrow><menclose notation="box"><mstyle scriptlevel="0" displaystyle="false"><mstyle scriptlevel="0" displaystyle="true"><mrow><mi>E</mi><mo>=</mo><mi>m</mi><msup><mi>c</mi><mn>2</mn></msup></mrow></mstyle></mstyle></menclose></mrow><annotation encoding="application/x-tex">\boxed{E=mc^2}
-</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:1.544108em;vertical-align:-0.3400000000000001em;"></span><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:1.204108em;"><span style="top:-3.544108em;"><span class="pstrut" style="height:3.544108em;"></span><span class="mord boxpad"><span class="mord"><span class="mord mathdefault" style="margin-right:0.05764em;">E</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mrel">=</span><span class="mspace" style="margin-right:0.2777777777777778em;"></span><span class="mord mathdefault">m</span><span class="mord"><span class="mord mathdefault">c</span><span class="msupsub"><span class="vlist-t"><span class="vlist-r"><span class="vlist" style="height:0.8641079999999999em;"><span style="top:-3.113em;margin-right:0.05em;"><span class="pstrut" style="height:2.7em;"></span><span class="sizing reset-size6 size3 mtight"><span class="mord mtight">2</span></span></span></span></span></span></span></span></span></span></span><span style="top:-3.2041079999999997em;"><span class="pstrut" style="height:3.544108em;"></span><span class="stretchy fbox" style="height:1.544108em;"></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.3400000000000001em;"><span></span></span></span></span></span></span></span></span></span></p>
-<h3 id="215-字体转换"><a class="markdownIt-Anchor" href="#215-字体转换"></a> 2.15 字体转换</h3>
-<p>若要对公式的某一部分字符进行字体转换，可以用<code>{\字体 {需转换的部分字符}}</code>命令，其中 <code>\字体</code> 部分可以参照下表选择合适的字体，一般情况下，公式默认为意大利体。</p>
+<script type="math/tex; mode=display">\underbrace{1+2+3+\cdots+100}_{100}$$表示：$\underbrace{1+2+3+\cdots+100}_{100}$
+
+### 2.11 矩阵
+
+生成矩阵的命令中每一行以 `\\` 结束，矩阵的元素之间用 & 来分隔开，例如
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br></pre></td><td class="code"><pre><span class="line">$$\begin&#123;matrix&#125;</span><br><span class="line">x_&#123;_&#123;11&#125;&#125; &amp; x_&#123;_&#123;12&#125;&#125; &amp; \dots &amp; x_&#123;_&#123;1n&#125;&#125; \\</span><br><span class="line">x_&#123;_&#123;21&#125;&#125; &amp; x_&#123;_&#123;22&#125;&#125; &amp; \dots &amp; x_&#123;_&#123;2n&#125;&#125; \\</span><br><span class="line">\vdots &amp; \vdots &amp; \ddots  &amp; \vdots  \\</span><br><span class="line">x_&#123;_&#123;m1&#125;&#125; &amp; x_&#123;_&#123;m2&#125;&#125; &amp; \dots &amp; x_&#123;_&#123;mn&#125;&#125; \\</span><br><span class="line">\end&#123;matrix&#125;$$</span><br></pre></td></tr></table></figure></script><p>\begin{matrix}<br>x<em>{</em>{11}} &amp; x<em>{</em>{12}} &amp; \dots &amp; x<em>{</em>{1n}} \<br>x<em>{</em>{21}} &amp; x<em>{</em>{22}} &amp; \dots &amp; x<em>{</em>{2n}} \<br>\vdots &amp; \vdots &amp; \ddots  &amp; \vdots  \<br>x<em>{</em>{m1}} &amp; x<em>{</em>{m2}} &amp; \dots &amp; x<em>{</em>{mn}} \<br>\end{matrix}</p>
+<script type="math/tex; mode=display">
+
+带各类不同边界的矩阵:
+
+<figure class="highlight plain"><table><tr><td class="gutter"><pre><span class="line">1</span><br><span class="line">2</span><br><span class="line">3</span><br><span class="line">4</span><br><span class="line">5</span><br><span class="line">6</span><br><span class="line">7</span><br><span class="line">8</span><br><span class="line">9</span><br><span class="line">10</span><br></pre></td><td class="code"><pre><span class="line">$$</span><br><span class="line">\begin&#123;pmatrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;pmatrix&#125; \quad</span><br><span class="line">\begin&#123;bmatrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;bmatrix&#125; \quad</span><br><span class="line">\left[ \begin&#123;matrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;matrix&#125; \right] \quad</span><br><span class="line">\begin&#123;Bmatrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;Bmatrix&#125; \quad</span><br><span class="line">\left\&#123; \begin&#123;matrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;matrix&#125; \right\&#125; \quad</span><br><span class="line">\begin&#123;vmatrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;vmatrix&#125; \quad</span><br><span class="line">\begin&#123;Vmatrix&#125; a &amp; b \\ c &amp; d \\ \end&#123;Vmatrix&#125; \quad</span><br><span class="line">\left[ \begin&#123;array&#125; &#123;c|c&#125; a &amp; b \\ c &amp; d \\ \end&#123;array&#125; \right]</span><br><span class="line">$$</span><br></pre></td></tr></table></figure></script><p>\begin{pmatrix} a &amp; b \ c &amp; d \ \end{pmatrix} \quad<br>\begin{bmatrix} a &amp; b \ c &amp; d \ \end{bmatrix} \quad<br>\left[ \begin{matrix} a &amp; b \ c &amp; d \ \end{matrix} \right] \quad<br>\begin{Bmatrix} a &amp; b \ c &amp; d \ \end{Bmatrix}  \<br>\left{ \begin{matrix} a &amp; b \ c &amp; d \ \end{matrix} \right} \quad<br>\begin{vmatrix} a &amp; b \ c &amp; d \ \end{vmatrix} \quad<br>\begin{Vmatrix} a &amp; b \ c &amp; d \ \end{Vmatrix} \quad<br>\left[ \begin{array} {c|c} a &amp; b \ c &amp; d \ \end{array} \right]</p>
+<script type="math/tex; mode=display">
+
+### 2.12 Norm-范数符号
+
+范数命令：`\parallel`
+
+例如：$$\parallel x \parallel _2 $$表示$\parallel x \parallel _2$
+
+### 2.13 堆积符号
+
+- `\stackrel{上位符号}{基位符号}`：基位符号大，上位符号小，例如:
+
+$$ \vec{x}\stackrel{\mathrm{def}}{=}{x_1,\dots,x_n} $$表示$ \vec{x}\stackrel{\mathrm{def}}{=}{x_1,\dots,x_n} $
+
+- `{上位公式 \choose 下位公式}`：上下符号一样大，上下符号被包括在圆弧内，例如：$$ {n+1 \choose k}={n \choose k}+{n \choose k-1} $$表示$ {n+1 \choose k}={n \choose k}+{n \choose k-1} $
+
+- `{上位公式 \atop 下位公式}` : 上下符号一样大，例如：$$ \sum\limits_{k_0,k_1,\ldots>0 \atop k_0+k_1+\cdots=n}A_k $$表示$ \sum\limits_{k_0,k_1,\ldots>0 \atop k_0+k_1+\cdots=n}A_k $
+
+### 2.14 给公式加一个方框
+
+`\boxed`命令给公式加一个方框，例如：$$$\boxed{E=mc^2}$$$表示</script><p>\boxed{E=mc^2}</p>
+<p>$$</p>
+<h3 id="2-15-字体转换"><a href="#2-15-字体转换" class="headerlink" title="2.15 字体转换"></a>2.15 字体转换</h3><p>若要对公式的某一部分字符进行字体转换，可以用<code>{\字体 {需转换的部分字符}}</code>命令，其中 <code>\字体</code> 部分可以参照下表选择合适的字体，一般情况下，公式默认为意大利体。</p>
+<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -562,57 +444,57 @@ x_{_{m1}} &amp; x_{_{m2}} &amp; \dots &amp; x_{_{mn}} \\
 <tr>
 <td><code>\rm</code></td>
 <td>罗马体</td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">D</mi></mrow><annotation encoding="application/x-tex">{\rm {D}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord mathrm">D</span></span></span></span></span></span></span></td>
+<td>${\rm {D}}$</td>
 </tr>
 <tr>
 <td><code>\cal</code></td>
 <td>花体</td>
-<td><span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \cal at position 2: {\̲c̲a̲l̲ ̲{D}}'>{\cal {D}}</span></td>
+<td>${\cal {D}}$</td>
 </tr>
 <tr>
 <td><code>\it</code></td>
 <td>意大利体</td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>D</mi></mrow><annotation encoding="application/x-tex">{\it {D}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord mathit">D</span></span></span></span></span></span></span></td>
+<td>${\it {D}}$</td>
 </tr>
 <tr>
 <td><code>\Bbb</code></td>
 <td>黑板粗体</td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="double-struck">D</mi></mrow><annotation encoding="application/x-tex">{\Bbb {D}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68889em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathbb">D</span></span></span></span></span></span></td>
+<td>${\Bbb {D}}$</td>
 </tr>
 <tr>
 <td><code>bf</code></td>
 <td>粗体</td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="bold">D</mi></mrow><annotation encoding="application/x-tex">{\bf {D}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68611em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord mathbf">D</span></span></span></span></span></span></span></td>
+<td>${\bf {D}}$</td>
 </tr>
 <tr>
 <td><code>\mit</code></td>
 <td>数学斜体</td>
-<td><span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \mit at position 2: {\̲m̲i̲t̲ ̲{D}}'>{\mit {D}}</span></td>
+<td>${\mit {D}}$</td>
 </tr>
 <tr>
 <td><code>\sf</code></td>
 <td>等线体</td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="sans-serif">D</mi></mrow><annotation encoding="application/x-tex">{\sf {D}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69444em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord mathsf">D</span></span></span></span></span></span></span></td>
+<td>${\sf {D}}$</td>
 </tr>
 <tr>
 <td><code>\scr</code></td>
 <td>手写体</td>
-<td><span class='katex-error' title='ParseError: KaTeX parse error: Undefined control sequence: \scr at position 2: {\̲s̲c̲r̲ ̲{D}}'>{\scr {D}}</span></td>
+<td>${\scr {D}}$</td>
 </tr>
 <tr>
 <td><code>\tt</code></td>
 <td>打字机体</td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="monospace">D</mi></mrow><annotation encoding="application/x-tex">{\tt {D}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.61111em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord"><span class="mord mathtt">D</span></span></span></span></span></span></span></td>
+<td>${\tt {D}}$</td>
 </tr>
 <tr>
 <td><code>\frak</code></td>
 <td>旧德式字体</td>
-<td><span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="fraktur">D</mi></mrow><annotation encoding="application/x-tex">{\frak {D}}</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.69141em;vertical-align:0em;"></span><span class="mord"><span class="mord"><span class="mord mathfrak">D</span></span></span></span></span></span></td>
+<td>${\frak {D}}$</td>
 </tr>
 </tbody>
 </table>
-<h2 id="3-latex常用数学符号整理"><a class="markdownIt-Anchor" href="#3-latex常用数学符号整理"></a> 3 LaTeX常用数学符号整理</h2>
-<h3 id="表31-数学模式重音符号"><a class="markdownIt-Anchor" href="#表31-数学模式重音符号"></a> 表3.1 数学模式重音符号</h3>
+</div>
+<h2 id="3-LaTeX常用数学符号整理"><a href="#3-LaTeX常用数学符号整理" class="headerlink" title="3 LaTeX常用数学符号整理"></a>3 LaTeX常用数学符号整理</h2><h3 id="表3-1-数学模式重音符号"><a href="#表3-1-数学模式重音符号" class="headerlink" title="表3.1 数学模式重音符号"></a>表3.1 数学模式重音符号</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -627,39 +509,40 @@ x_{_{m1}} &amp; x_{_{m2}} &amp; \dots &amp; x_{_{mn}} \\
 <tbody>
 <tr>
 <td>$ \hat{a} $</td>
-<td><code>$ \hat{a} $</code></td>
+<td><script type="math/tex">\hat{a}</script></td>
 <td>$ \check{a} $</td>
-<td><code>$ \check{a} $</code></td>
+<td><script type="math/tex">\check{a}</script></td>
 <td>$ \tilde{a} $</td>
-<td><code>$ \tilde{a} $</code></td>
+<td><script type="math/tex">\tilde{a}</script></td>
 </tr>
 <tr>
 <td>$ \grave{a} $</td>
-<td><code>$ \grave{a} $</code></td>
+<td><script type="math/tex">\grave{a}</script></td>
 <td>$ \dot{a} $</td>
-<td><code>$ \dot{a} $</code></td>
+<td><script type="math/tex">\dot{a}</script></td>
 <td>$ \ddot{a} $</td>
-<td><code>$ \ddot{a} $</code></td>
+<td><script type="math/tex">\ddot{a}</script></td>
 </tr>
 <tr>
 <td>$ \bar{a} $</td>
-<td><code>$ \bar{a} $</code></td>
+<td><script type="math/tex">\bar{a}</script></td>
 <td>$ \vec{a} $</td>
-<td><code>$ \vec{a} $</code></td>
+<td><script type="math/tex">\vec{a}</script></td>
 <td>$ \widehat{A} $</td>
-<td><code>$ \widehat{A} $</code></td>
+<td><script type="math/tex">\widehat{A}</script></td>
 </tr>
 <tr>
 <td>$ \acute{a} $</td>
-<td><code>$ \acute{a} $</code></td>
+<td><script type="math/tex">\acute{a}</script></td>
 <td>$ \breve{a} $</td>
-<td><code>$ \breve{a} $</code></td>
+<td><script type="math/tex">\breve{a}</script></td>
 <td>$ \widetilde{A} $</td>
-<td><code>$ \widetilde{A} $</code></td>
+<td><script type="math/tex">\widetilde{A}</script></td>
 </tr>
 </tbody>
 </table>
-<h3 id="表32-希腊字母"><a class="markdownIt-Anchor" href="#表32-希腊字母"></a> 表3.2 希腊字母</h3>
+</div>
+<h3 id="表3-2-希腊字母"><a href="#表3-2-希腊字母" class="headerlink" title="表3.2 希腊字母"></a>表3.2 希腊字母</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -676,91 +559,92 @@ x_{_{m1}} &amp; x_{_{m2}} &amp; \dots &amp; x_{_{mn}} \\
 <tbody>
 <tr>
 <td>$ \alpha $</td>
-<td><code>$ \alpha $</code></td>
+<td><script type="math/tex">\alpha</script></td>
 <td>$ \theta $</td>
-<td><code>$ \theta $</code></td>
+<td><script type="math/tex">\theta</script></td>
 <td>$ o $</td>
-<td><code>$ o $</code></td>
+<td><script type="math/tex">o</script></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>$ \beta $</td>
-<td><code>$ \beta $</code></td>
+<td><script type="math/tex">\beta</script></td>
 <td>$ \vartheta $</td>
-<td><code>$ \vartheta $</code></td>
+<td><script type="math/tex">\vartheta</script></td>
 <td>$ \pi $</td>
-<td><code>$ \pi $</code></td>
+<td><script type="math/tex">\pi</script></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>$ \gamma $</td>
-<td><code>$ \gamma $</code></td>
+<td><script type="math/tex">\gamma</script></td>
 <td>$ \iota $</td>
-<td><code>$ \iota $</code></td>
+<td><script type="math/tex">\iota</script></td>
 <td>$ \varpi $</td>
-<td><code>$ \varpi $</code></td>
+<td><script type="math/tex">\varpi</script></td>
 <td>$ \upsilon $</td>
-<td><code>$ \upsilon $</code></td>
+<td><script type="math/tex">\upsilon</script></td>
 </tr>
 <tr>
 <td>$ \delta $</td>
-<td><code>$ \delta $</code></td>
+<td><script type="math/tex">\delta</script></td>
 <td>$ \kappa $</td>
-<td><code>$ \kappa $</code></td>
+<td><script type="math/tex">\kappa</script></td>
 <td>$ \rho $</td>
-<td><code>$ \rho $</code></td>
+<td><script type="math/tex">\rho</script></td>
 <td>$ \phi $</td>
-<td><code>$ \phi $</code></td>
+<td><script type="math/tex">\phi</script></td>
 </tr>
 <tr>
 <td>$ \epsilon $</td>
-<td><code>$ \epsilon $</code></td>
+<td><script type="math/tex">\epsilon</script></td>
 <td>$ \lambda $</td>
-<td><code>$ \lambda $</code></td>
+<td><script type="math/tex">\lambda</script></td>
 <td>$ \varrho $</td>
-<td><code>$ \varrho $</code></td>
+<td><script type="math/tex">\varrho</script></td>
 <td>$ \varphi $</td>
-<td><code>$ \varphi $</code></td>
+<td><script type="math/tex">\varphi</script></td>
 </tr>
 <tr>
 <td>$ \varepsilon $</td>
-<td><code>$ \varepsilon $</code></td>
+<td><script type="math/tex">\varepsilon</script></td>
 <td>$ \mu $</td>
-<td><code>$ \mu $</code></td>
+<td><script type="math/tex">\mu</script></td>
 <td>$ \sigma $</td>
-<td><code>$ \sigma $</code></td>
+<td><script type="math/tex">\sigma</script></td>
 <td>$ \chi $</td>
-<td><code>$ \chi $</code></td>
+<td><script type="math/tex">\chi</script></td>
 </tr>
 <tr>
 <td>$ \zeta $</td>
-<td><code>$ \zeta $</code></td>
+<td><script type="math/tex">\zeta</script></td>
 <td>$ \nu $</td>
-<td><code>$ \nu $</code></td>
+<td><script type="math/tex">\nu</script></td>
 <td>$ \varsigma $</td>
-<td><code>$ \varsigma $</code></td>
+<td><script type="math/tex">\varsigma</script></td>
 <td>$ \psi $</td>
-<td><code>$ \psi $</code></td>
+<td><script type="math/tex">\psi</script></td>
 </tr>
 <tr>
 <td>$ \eta $</td>
-<td><code>$ \eta $</code></td>
+<td><script type="math/tex">\eta</script></td>
 <td>$ \xi $</td>
-<td><code>$ \xi $</code></td>
+<td><script type="math/tex">\xi</script></td>
 <td>$ \tau $</td>
-<td><code>$ \tau $</code></td>
+<td><script type="math/tex">\tau</script></td>
 <td>$ \omega$</td>
-<td><code>$ \omega$</code></td>
+<td><script type="math/tex">\omega</script></td>
 </tr>
 </tbody>
 </table>
+</div>
 <blockquote>
-<p>1.如果使用大写希腊字母，把命令的首字母变成大写即可，例如：<code>$\Gamma$</code>表示：<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi mathvariant="normal">Γ</mi></mrow><annotation encoding="application/x-tex">\Gamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord">Γ</span></span></span></span></p>
-<p>2.如果使用斜体大写希腊字母，再再大写希腊字母的LaTeX命令前加上var,例如：<code>$\varGamma$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mi>Γ</mi></mrow><annotation encoding="application/x-tex">\varGamma</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.68333em;vertical-align:0em;"></span><span class="mord"><span class="mord mathit">Γ</span></span></span></span></span></p>
+<p>1.如果使用大写希腊字母，把命令的首字母变成大写即可，例如：<script type="math/tex">\Gamma</script>表示：$\Gamma$</p>
+<p>2.如果使用斜体大写希腊字母，再再大写希腊字母的LaTeX命令前加上var,例如：<script type="math/tex">\varGamma</script>表示$\varGamma$</p>
 </blockquote>
-<h3 id="表33-二元关系符"><a class="markdownIt-Anchor" href="#表33-二元关系符"></a> 表3.3 二元关系符</h3>
+<h3 id="表3-3-二元关系符"><a href="#表3-3-二元关系符" class="headerlink" title="表3.3 二元关系符"></a>表3.3 二元关系符</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -775,122 +659,123 @@ x_{_{m1}} &amp; x_{_{m2}} &amp; \dots &amp; x_{_{mn}} \\
 <tbody>
 <tr>
 <td>$ &lt; $</td>
-<td><code>$ &lt; $</code></td>
+<td><script type="math/tex"><</script></td>
 <td>$ &gt; $</td>
-<td><code>$ &gt; $</code></td>
+<td><script type="math/tex">></script></td>
 <td>$ = $</td>
-<td><code>$ = $</code></td>
+<td><script type="math/tex">=</script></td>
 </tr>
 <tr>
 <td>$ \leq $</td>
-<td><code>$ \leq $</code>或 <code>$ \le $</code></td>
+<td><script type="math/tex">\leq $ `或 `$ \le</script></td>
 <td>$ \geq $</td>
-<td><code>$ \geq $</code>或<code>$ \ge $</code></td>
+<td><script type="math/tex">\geq</script>或<script type="math/tex">\ge</script></td>
 <td>$ \equiv $</td>
-<td><code>$ \equiv $</code></td>
+<td><script type="math/tex">\equiv</script></td>
 </tr>
 <tr>
 <td>$ \ll $</td>
-<td><code>$ \ll $</code></td>
+<td><script type="math/tex">\ll</script></td>
 <td>$ \gg $</td>
-<td><code>$ \gg $</code></td>
+<td><script type="math/tex">\gg</script></td>
 <td>$ \doteq $</td>
-<td><code>$ \doteq $</code></td>
+<td><script type="math/tex">\doteq</script></td>
 </tr>
 <tr>
 <td>$ \prec $</td>
-<td><code>$ \prec $</code></td>
+<td><script type="math/tex">\prec</script></td>
 <td>$ \succ $</td>
-<td><code>$ \succ $</code></td>
+<td><script type="math/tex">\succ</script></td>
 <td>$ \sim $</td>
-<td><code>$ \sim $</code></td>
+<td><script type="math/tex">\sim</script></td>
 </tr>
 <tr>
 <td>$ \preceq $</td>
-<td><code>$ \preceq $</code></td>
+<td><script type="math/tex">\preceq</script></td>
 <td>$ \succeq $</td>
-<td><code>$ \succeq $</code></td>
+<td><script type="math/tex">\succeq</script></td>
 <td>$ \simeq $</td>
-<td><code>$ \simeq $</code></td>
+<td><script type="math/tex">\simeq</script></td>
 </tr>
 <tr>
 <td>$ \subset $</td>
-<td><code>$ \subset $</code></td>
+<td><script type="math/tex">\subset</script></td>
 <td>$ \supset $</td>
-<td><code>$ \supset $</code></td>
+<td><script type="math/tex">\supset</script></td>
 <td>$ \approx $</td>
-<td><code>$ \approx $</code></td>
+<td><script type="math/tex">\approx</script></td>
 </tr>
 <tr>
 <td>$ \subseteq $</td>
-<td><code>$ \subseteq $</code></td>
+<td><script type="math/tex">\subseteq</script></td>
 <td>$ \supseteq $</td>
-<td><code>$ \supseteq $</code></td>
+<td><script type="math/tex">\supseteq</script></td>
 <td>$ \cong $</td>
-<td><code>$ \cong $</code></td>
+<td><script type="math/tex">\cong</script></td>
 </tr>
 <tr>
 <td>$ \sqsubset $</td>
-<td><code>$ \sqsubset $</code></td>
+<td><script type="math/tex">\sqsubset</script></td>
 <td>$ \sqsupset $</td>
-<td><code>$ \sqsupset $</code></td>
+<td><script type="math/tex">\sqsupset</script></td>
 <td>$ \Join $</td>
-<td><code>$ \Join $</code></td>
+<td><script type="math/tex">\Join</script></td>
 </tr>
 <tr>
 <td>$ \sqsubseteq $</td>
-<td><code>$ \sqsubseteq $</code></td>
+<td><script type="math/tex">\sqsubseteq</script></td>
 <td>$ \sqsupseteq $</td>
-<td><code>$ \sqsupseteq $</code></td>
+<td><script type="math/tex">\sqsupseteq</script></td>
 <td>$ \bowtie $</td>
-<td><code>$ \bowtie $</code></td>
+<td><script type="math/tex">\bowtie</script></td>
 </tr>
 <tr>
 <td>$ \in $</td>
-<td><code>$ \in $</code></td>
+<td><script type="math/tex">\in</script></td>
 <td>$ \ni $</td>
-<td><code>$ \ni $</code>或 <code>$ \owns $</code></td>
+<td><script type="math/tex">\ni</script>或 <script type="math/tex">\owns</script></td>
 <td>$ \propto $</td>
-<td><code>$ \propto $</code></td>
+<td><script type="math/tex">\propto</script></td>
 </tr>
 <tr>
 <td>$ \vdash $</td>
-<td><code>$ \vdash $</code></td>
+<td><script type="math/tex">\vdash</script></td>
 <td>$ \dashv $</td>
-<td><code>$ \dashv $</code></td>
+<td><script type="math/tex">\dashv</script></td>
 <td>$ \models $</td>
-<td><code>$ \models $</code></td>
+<td><script type="math/tex">\models</script></td>
 </tr>
 <tr>
 <td>$ \mid $</td>
-<td><code>$ \mid $</code></td>
+<td><script type="math/tex">\mid</script></td>
 <td>$ \parallel $</td>
-<td><code>$ \parallel $</code></td>
+<td><script type="math/tex">\parallel</script></td>
 <td>$ \perp $</td>
-<td><code>$ \perp $</code></td>
+<td><script type="math/tex">\perp</script></td>
 </tr>
 <tr>
 <td>$ \smile $</td>
-<td><code>$ \smile $</code></td>
+<td><script type="math/tex">\smile</script></td>
 <td>$ \frown $</td>
-<td><code>$ \frown $</code></td>
+<td><script type="math/tex">\frown</script></td>
 <td>$ \asymp $</td>
-<td><code>$ \asymp $</code></td>
+<td><script type="math/tex">\asymp</script></td>
 </tr>
 <tr>
 <td>$ : $</td>
-<td><code>$ : $</code></td>
+<td><script type="math/tex">:</script></td>
 <td>$ \notin $</td>
-<td><code>$ \notin $</code></td>
+<td><script type="math/tex">\notin</script></td>
 <td>$ \neq $</td>
-<td><code>$ \neq $</code>或 <code>$ \ne $</code></td>
+<td><script type="math/tex">\neq $ `或 `$ \ne</script></td>
 </tr>
 </tbody>
 </table>
+</div>
 <blockquote>
-<p>可以在上述符号的相应命令前加上<code>\not</code>，得到其否定形式，例如：<code>$\not\subset$</code>表示<span class="katex"><span class="katex-mathml"><math><semantics><mrow><mo>⊄</mo></mrow><annotation encoding="application/x-tex">\not\subset</annotation></semantics></math></span><span class="katex-html" aria-hidden="true"><span class="base"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="mrel"><span class="mord"><span class="vlist-t vlist-t2"><span class="vlist-r"><span class="vlist" style="height:0.69444em;"><span style="top:-3em;"><span class="pstrut" style="height:3em;"></span><span class="rlap"><span class="strut" style="height:0.8888799999999999em;vertical-align:-0.19444em;"></span><span class="inner"><span class="mrel"></span></span><span class="fix"></span></span></span></span><span class="vlist-s">​</span></span><span class="vlist-r"><span class="vlist" style="height:0.19444em;"><span></span></span></span></span></span></span></span><span class="base"><span class="strut" style="height:0.5782em;vertical-align:-0.0391em;"></span><span class="mrel">⊂</span></span></span></span></p>
+<p>可以在上述符号的相应命令前加上<code>\not</code>，得到其否定形式，例如：<script type="math/tex">\not\subset</script>表示$\not\subset$</p>
 </blockquote>
-<h3 id="表34-二元运算符"><a class="markdownIt-Anchor" href="#表34-二元运算符"></a> 表3.4 二元运算符</h3>
+<h3 id="表3-4-二元运算符"><a href="#表3-4-二元运算符" class="headerlink" title="表3.4 二元运算符"></a>表3.4 二元运算符</h3><div class="table-container">
 <table>
 <thead>
 <tr>
@@ -905,110 +790,111 @@ x_{_{m1}} &amp; x_{_{m2}} &amp; \dots &amp; x_{_{mn}} \\
 <tbody>
 <tr>
 <td>$ \unlhd $</td>
-<td><code>$ \unlhd $</code></td>
+<td><script type="math/tex">\unlhd</script></td>
 <td>$ - $</td>
-<td><code>$ - $</code></td>
+<td><script type="math/tex">-</script></td>
 <td></td>
 <td></td>
 </tr>
 <tr>
 <td>$ + $</td>
-<td><code>$ + $</code></td>
+<td><script type="math/tex">+</script></td>
 <td>$ \mp $</td>
-<td><code>$ \mp $</code></td>
+<td><script type="math/tex">\mp</script></td>
 <td>$ \triangleleft $</td>
-<td><code>$ \triangleleft $</code></td>
+<td><script type="math/tex">\triangleleft</script></td>
 </tr>
 <tr>
 <td>$ \pm $</td>
-<td><code>$ \pm $</code></td>
+<td><script type="math/tex">\pm</script></td>
 <td>$ \div $</td>
-<td><code>$ \div $</code></td>
+<td><script type="math/tex">\div</script></td>
 <td>$ \triangleright $</td>
-<td><code>$ \triangleright $</code></td>
+<td><script type="math/tex">\triangleright</script></td>
 </tr>
 <tr>
 <td>$ \cdot $</td>
-<td><code>$ \cdot $</code></td>
+<td><script type="math/tex">\cdot</script></td>
 <td>$ \setminus $</td>
-<td><code>$ \setminus $</code></td>
+<td><script type="math/tex">\setminus</script></td>
 <td>$ \star $</td>
-<td><code>$ \star $</code></td>
+<td><script type="math/tex">\star</script></td>
 </tr>
 <tr>
 <td>$ \times $</td>
-<td><code>$ \times $</code></td>
+<td><script type="math/tex">\times</script></td>
 <td>$ \cap $</td>
-<td><code>$ \cap $</code></td>
+<td><script type="math/tex">\cap</script></td>
 <td>$ \ast $</td>
-<td><code>$ \ast $</code></td>
+<td><script type="math/tex">\ast</script></td>
 </tr>
 <tr>
 <td>$ \cup $</td>
-<td><code>$ \cup $</code></td>
+<td><script type="math/tex">\cup</script></td>
 <td>$ \sqcap $</td>
-<td><code>$ \sqcap $</code></td>
+<td><script type="math/tex">\sqcap</script></td>
 <td>$ \circ $</td>
-<td><code>$ \circ $</code></td>
+<td><script type="math/tex">\circ</script></td>
 </tr>
 <tr>
 <td>$ \sqcup $</td>
-<td><code>$ \sqcup $</code></td>
+<td><script type="math/tex">\sqcup</script></td>
 <td>$ \land $</td>
-<td><code>$ \land $</code>或<code>$\wedege$</code></td>
+<td><script type="math/tex">\land</script>或<script type="math/tex">\wedege</script></td>
 <td>$ \bullet $</td>
-<td><code>$ \bullet $</code></td>
+<td><script type="math/tex">\bullet</script></td>
 </tr>
 <tr>
 <td>$ \vee $</td>
-<td><code>$ \vee $</code></td>
+<td><script type="math/tex">\vee</script></td>
 <td>$ \ominus $</td>
-<td><code>$ \ominus $</code></td>
+<td><script type="math/tex">\ominus</script></td>
 <td>$ \diamond $</td>
-<td><code>$ \diamond $</code></td>
+<td><script type="math/tex">\diamond</script></td>
 </tr>
 <tr>
 <td>$ \oplus $</td>
-<td><code>$ \oplus $</code></td>
+<td><script type="math/tex">\oplus</script></td>
 <td>$ \oslash $</td>
-<td><code>$ \oslash $</code></td>
+<td><script type="math/tex">\oslash</script></td>
 <td>$ \uplus $</td>
-<td><code>$ \uplus $</code></td>
+<td><script type="math/tex">\uplus</script></td>
 </tr>
 <tr>
 <td>$ \odot $</td>
-<td><code>$ \odot $</code></td>
+<td><script type="math/tex">\odot</script></td>
 <td>$ \bigcirc $</td>
-<td><code>$ \bigcirc $</code></td>
+<td><script type="math/tex">\bigcirc</script></td>
 <td>$ \amalg $</td>
-<td><code>$ \amalg $</code></td>
+<td><script type="math/tex">\amalg</script></td>
 </tr>
 <tr>
 <td>$ \otimes $</td>
-<td><code>$ \otimes $</code></td>
+<td><script type="math/tex">\otimes</script></td>
 <td>$ \bigtriangledown $</td>
-<td><code>$ \bigtriangledown $</code></td>
+<td><script type="math/tex">\bigtriangledown</script></td>
 <td>$ \dagger $</td>
-<td><code>$ \dagger $</code></td>
+<td><script type="math/tex">\dagger</script></td>
 </tr>
 <tr>
 <td>$ \bigtriangleup $</td>
-<td><code>$ \bigtriangleup $</code></td>
+<td><script type="math/tex">\bigtriangleup</script></td>
 <td>$ \rhd $</td>
-<td><code>$ \rhd $</code></td>
+<td><script type="math/tex">\rhd</script></td>
 <td>$ \ddagger $</td>
-<td><code>$ \ddagger $</code></td>
+<td><script type="math/tex">\ddagger</script></td>
 </tr>
 <tr>
 <td>$ \lhd $</td>
-<td><code>$ \lhd $</code></td>
+<td><script type="math/tex">\lhd</script></td>
 <td>$ \unrhd $</td>
-<td><code>$ \unrhd $</code></td>
+<td><script type="math/tex">\unrhd</script></td>
 <td>$ \wr $</td>
-<td><code>$ \wr $</code></td>
+<td><script type="math/tex">\wr</script></td>
 </tr>
 </tbody>
 </table>
+</div>
 
     </div>
 
@@ -1114,7 +1000,7 @@ x_{_{m1}} &amp; x_{_{m2}} &amp; \dots &amp; x_{_{mn}} \\
 
       <!--noindex-->
       <div class="post-toc-wrap sidebar-panel">
-          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-markdown中使用latx基础语法"><span class="nav-number">1.</span> <span class="nav-text"> 1 Markdown中使用LaTX基础语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-常用数学表达命令"><span class="nav-number">2.</span> <span class="nav-text"> 2 常用数学表达命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#21-上下标表示"><span class="nav-number">2.1.</span> <span class="nav-text"> 2.1 上下标表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#22-分数形式"><span class="nav-number">2.2.</span> <span class="nav-text"> 2.2 分数形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#23-根式"><span class="nav-number">2.3.</span> <span class="nav-text"> 2.3 根式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#24-向量"><span class="nav-number">2.4.</span> <span class="nav-text"> 2.4 向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#25定界符-自适应放大命令"><span class="nav-number">2.5.</span> <span class="nav-text"> 2.5定界符 - 自适应放大命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#26-空白间距-占位宽度"><span class="nav-number">2.6.</span> <span class="nav-text"> 2.6 空白间距-占位宽度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#27-省略号"><span class="nav-number">2.7.</span> <span class="nav-text"> 2.7 省略号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#28-多行公式"><span class="nav-number">2.8.</span> <span class="nav-text"> 2.8 多行公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#29-上下水平线"><span class="nav-number">2.9.</span> <span class="nav-text"> 2.9 上下水平线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#210-上下大括号"><span class="nav-number">2.10.</span> <span class="nav-text"> 2.10 上下大括号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#211-矩阵"><span class="nav-number">2.11.</span> <span class="nav-text"> 2.11 矩阵</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#212-norm-范数符号"><span class="nav-number">2.12.</span> <span class="nav-text"> 2.12 Norm-范数符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#213-堆积符号"><span class="nav-number">2.13.</span> <span class="nav-text"> 2.13 堆积符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#214-给公式加一个方框"><span class="nav-number">2.14.</span> <span class="nav-text"> 2.14 给公式加一个方框</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#215-字体转换"><span class="nav-number">2.15.</span> <span class="nav-text"> 2.15 字体转换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-latex常用数学符号整理"><span class="nav-number">3.</span> <span class="nav-text"> 3 LaTeX常用数学符号整理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表31-数学模式重音符号"><span class="nav-number">3.1.</span> <span class="nav-text"> 表3.1 数学模式重音符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表32-希腊字母"><span class="nav-number">3.2.</span> <span class="nav-text"> 表3.2 希腊字母</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表33-二元关系符"><span class="nav-number">3.3.</span> <span class="nav-text"> 表3.3 二元关系符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表34-二元运算符"><span class="nav-number">3.4.</span> <span class="nav-text"> 表3.4 二元运算符</span></a></li></ol></li></ol></div>
+          <div class="post-toc motion-element"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#1-Markdown中使用LaTX基础语法"><span class="nav-number">1.</span> <span class="nav-text">1 Markdown中使用LaTX基础语法</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#2-常用数学表达命令"><span class="nav-number">2.</span> <span class="nav-text">2 常用数学表达命令</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#2-1-上下标表示"><span class="nav-number">2.1.</span> <span class="nav-text">2.1 上下标表示</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-2-分数形式"><span class="nav-number">2.2.</span> <span class="nav-text">2.2 分数形式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-4-向量"><span class="nav-number">2.3.</span> <span class="nav-text">2.4 向量</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-5定界符-自适应放大命令"><span class="nav-number">2.4.</span> <span class="nav-text">2.5定界符 - 自适应放大命令</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-6-空白间距-占位宽度"><span class="nav-number">2.5.</span> <span class="nav-text">2.6 空白间距-占位宽度</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-7-省略号"><span class="nav-number">2.6.</span> <span class="nav-text">2.7 省略号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-8-多行公式"><span class="nav-number">2.7.</span> <span class="nav-text">2.8 多行公式</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-9-上下水平线"><span class="nav-number">2.8.</span> <span class="nav-text">2.9 上下水平线</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-10-上下大括号"><span class="nav-number">2.9.</span> <span class="nav-text">2.10 上下大括号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#2-15-字体转换"><span class="nav-number">2.10.</span> <span class="nav-text">2.15 字体转换</span></a></li></ol></li><li class="nav-item nav-level-2"><a class="nav-link" href="#3-LaTeX常用数学符号整理"><span class="nav-number">3.</span> <span class="nav-text">3 LaTeX常用数学符号整理</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#表3-1-数学模式重音符号"><span class="nav-number">3.1.</span> <span class="nav-text">表3.1 数学模式重音符号</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表3-2-希腊字母"><span class="nav-number">3.2.</span> <span class="nav-text">表3.2 希腊字母</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表3-3-二元关系符"><span class="nav-number">3.3.</span> <span class="nav-text">表3.3 二元关系符</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#表3-4-二元运算符"><span class="nav-number">3.4.</span> <span class="nav-text">表3.4 二元运算符</span></a></li></ol></li></ol></div>
       </div>
       <!--/noindex-->
 
@@ -1251,10 +1137,60 @@ x_{_{m1}} &amp; x_{_{m2}} &amp; \dots &amp; x_{_{mn}} \\
 
   
       
-<link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/katex.min.css">
-  <script src="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.js"></script>
-  <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/katex@0/dist/contrib/copy-tex.min.css">
 
+<script>
+  if (typeof MathJax === 'undefined') {
+    window.MathJax = {
+      loader: {
+          load: ['[tex]/mhchem'],
+        source: {
+          '[tex]/amsCd': '[tex]/amscd',
+          '[tex]/AMScd': '[tex]/amscd'
+        }
+      },
+      tex: {
+        inlineMath: {'[+]': [['$', '$']]},
+          packages: {'[+]': ['mhchem']},
+        tags: 'ams'
+      },
+      options: {
+        renderActions: {
+          findScript: [10, doc => {
+            document.querySelectorAll('script[type^="math/tex"]').forEach(node => {
+              const display = !!node.type.match(/; *mode=display/);
+              const math = new doc.options.MathItem(node.textContent, doc.inputJax[0], display);
+              const text = document.createTextNode('');
+              node.parentNode.replaceChild(text, node);
+              math.start = {node: text, delim: '', n: 0};
+              math.end = {node: text, delim: '', n: 0};
+              doc.math.push(math);
+            });
+          }, '', false],
+          insertedScript: [200, () => {
+            document.querySelectorAll('mjx-container').forEach(node => {
+              let target = node.parentNode;
+              if (target.nodeName.toLowerCase() === 'li') {
+                target.parentNode.classList.add('has-jax');
+              }
+            });
+          }, '', false]
+        }
+      }
+    };
+    (function () {
+      var script = document.createElement('script');
+      script.src = '//cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js';
+      script.defer = true;
+      document.head.appendChild(script);
+    })();
+  } else {
+    MathJax.startup.document.state(0);
+    MathJax.texReset();
+    MathJax.typeset();
+  }
+</script>
+
+    
 
   
 
