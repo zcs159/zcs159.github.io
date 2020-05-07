@@ -1,12 +1,221 @@
 <?xml version="1.0" encoding="utf-8"?>
 <search>
   <entry>
+    <title>Git的基础使用</title>
+    <url>/2020/05/02/Git%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8(%E4%B8%80)/</url>
+    <content><![CDATA[<p>关于Git的学习，参考书目《Github入门与实践》</p>
+<a id="more"></a>
+
+<h1 id="1-基本操作"><a href="#1-基本操作" class="headerlink" title="1.基本操作"></a>1.基本操作</h1><h2 id="git-init：初始化仓库"><a href="#git-init：初始化仓库" class="headerlink" title="git init：初始化仓库"></a>git init：初始化仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mkdir git-tutorial 	// 在当前位置建立仓库，make directions</span><br><span class="line">$ <span class="built_in">cd</span> git-tutorial 	// 移至git-tutorial仓库</span><br><span class="line">$ git init</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>初始化后生成<code>.git</code>目录，用于存储着管理当前目录内容所需的仓库数据，称作“附属于该仓库的工作树”</p>
+</blockquote>
+<h2 id="git-status：查看仓库的状态"><a href="#git-status：查看仓库的状态" class="headerlink" title="git status：查看仓库的状态"></a>git status：查看仓库的状态</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>结果显示当前所在master分支下，commit是指“记录工作树中所有文件的当前状态”</p>
+<p>此外，通过<code>touch + 文件名.后缀名</code>可创建文件，如：<code>touch README.md</code></p>
+</blockquote>
+<h2 id="git-add：向暂存区中添加文件"><a href="#git-add：向暂存区中添加文件" class="headerlink" title="git add：向暂存区中添加文件"></a>git add：向暂存区中添加文件</h2><p>未使用git add命令时，文件显示在Untracked files中，使用后文件加入暂存区（提交之前的一个临时区域），使用方法<code>git add + 文件名.后缀名</code></p>
+<h2 id="git-commit：保存仓库的历史记录"><a href="#git-commit：保存仓库的历史记录" class="headerlink" title="git commit：保存仓库的历史记录"></a>git commit：保存仓库的历史记录</h2><p>git commit命令可以将当前暂存区的文件实际保存到仓库的历史记录中，通过记录可在工作树中复原文件</p>
+<ul>
+<li>记述一行提交信息</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git commit -m <span class="string">"First commit"</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>-m参数后的“First commit”称作提交信息</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">" </span></span><br><span class="line"><span class="string">&gt;1.xxxxx</span></span><br><span class="line"><span class="string">&gt;2.xxxxx</span></span><br><span class="line"><span class="string">&gt;"</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>也可按上述方法来提交多行信息</p>
+</blockquote>
+<ul>
+<li>记述详细提交信息</li>
+</ul>
+<blockquote>
+<p>不加-m，直接执行git commit命令后，编译器会自启动，显示如下信息</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> Please enter the commit message <span class="keyword">for</span> your changes. Lines starting</span><br><span class="line"><span class="comment"># with '#' will be ignored, and an empty message aborts the commit.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># On branch master</span></span><br><span class="line"><span class="comment"># Changes to be committed:</span></span><br><span class="line"><span class="comment">#       new file:   文件名.后缀名</span></span><br></pre></td></tr></table></figure>
+
+<p>提交方式：</p>
+<p>1.第一行：简要概括更改内容</p>
+<p>2.第二行：空行</p>
+<p>3.第三行：记述更改的原因和详细内容（#表示注释）</p>
+<ul>
+<li><p>终止提交：退出编译器提交终止</p>
+</li>
+<li><p>使用git status查看提交后的转台</p>
+</li>
+</ul>
+<h2 id="git-log：查看提交日志"><a href="#git-log：查看提交日志" class="headerlink" title="git log：查看提交日志"></a>git log：查看提交日志</h2><p>可查看提交日志，以及什么人什么时间进行提交和和合并，以及简要的提交信息</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">commit 14fe633b561ca5f5a195cd86bc663b3838fab308 (HEAD -&gt; master)</span><br><span class="line">Author: zcs159 &lt;zcs1596357@163.com&gt;</span><br><span class="line">Date:   Sat May 2 20:57:18 2020 +0800</span><br><span class="line"></span><br><span class="line">    First commit</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>只显示提交信息的第一行</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --pretty=short</span><br><span class="line">commit 14fe633b561ca5f5a195cd86bc663b3838fab308 (HEAD -&gt; master)</span><br><span class="line">Author: zcs159 &lt;zcs1596357@163.com&gt;</span><br><span class="line"></span><br><span class="line">    First commit</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>加上–pretty=short即可</p>
+</blockquote>
+<ul>
+<li>只显示指定目录、文件的日志</li>
+</ul>
+<blockquote>
+<p>git log命令后加上目录名或文件名即可</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> README.md</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>显示文件的改动</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> -p</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>加上-p参数后，文件提交前后的改动便会显示，末尾可加上文件名或目录名</p>
+</blockquote>
+<h2 id="git-diff：查看更改前后的差别"><a href="#git-diff：查看更改前后的差别" class="headerlink" title="git diff：查看更改前后的差别"></a>git diff：查看更改前后的差别</h2><p>可以查看工作树、暂存区、最新提交之间的差别</p>
+<p>例如在文件README.md中添加一行<code># Git教程</code></p>
+<ul>
+<li>查看工作树和暂存区的差别</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git diff</span><br><span class="line">diff --git a/README.md b/README.md</span><br><span class="line">index e69de29..cc3d3b2 100644</span><br><span class="line">--- a/README.md</span><br><span class="line">+++ b/README.md</span><br><span class="line">@@ -0,0 +1 @@</span><br><span class="line">+<span class="comment">#  Git教程</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>由于未使用git add命令向暂存区添加任何东西，所以只显示工作树与最新提交状态的之间的差别，其中“+”表示新增行，“-”表示被删除的行</p>
+</blockquote>
+<ul>
+<li>查看工作树和最新提交的差别</li>
+</ul>
+<blockquote>
+<p>在使用<code>git add README.md</code>后，执行git diff命令发现，工作树与暂存区无区别结果什么都不会显示，要查看最新提交的差别，执行<code>git diff HEAD</code>命令</p>
+</blockquote>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git diff HEAD</span><br><span class="line">diff --git a/README.md b/README.md</span><br><span class="line">index e69de29..cc3d3b2 100644</span><br><span class="line">--- a/README.md</span><br><span class="line">+++ b/README.md</span><br><span class="line">@@ -0,0 +1 @@</span><br><span class="line">+<span class="comment">#  Git教程</span></span><br></pre></td></tr></table></figure>
+
+<p><strong>建议：在执行git commit前执行git diff HEAD，查看本次提交与上次提交之间的区别，再进行git commit提交。并且可执行git log查看是否提交成功</strong></p>
+<h1 id="2-分支的操作"><a href="#2-分支的操作" class="headerlink" title="2.分支的操作"></a>2.分支的操作</h1><p>从master分支创建分支如图所示，不同分支可以同时进行完全不同的作业，完成后再与默认分支master合并</p>
+<img data-src="https://s1.ax1x.com/2020/05/02/Jx1swF.png" alt="Jx1swF.png" style="zoom:50%;" />
+
+<img data-src="https://s1.ax1x.com/2020/05/02/Jx1reU.png" alt="Jx1reU.png" style="zoom:50%;" />
+
+<h2 id="git-branch：显示分支一览表"><a href="#git-branch：显示分支一览表" class="headerlink" title="git branch：显示分支一览表"></a>git branch：显示分支一览表</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>“*”表示当前所在分支</p>
+</blockquote>
+<ul>
+<li>git checkout -b：创建、切换分支</li>
+</ul>
+<p>也可以直接使用<code>git branch + 新分支名</code>创建分支，在使用<code>git checkout + 分支名</code>切换分支，常用命令：</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout -b feature-A	// 创建feature-A,并切换到feature-A分支</span><br><span class="line">git checkout -	// 切换到上一分支</span><br></pre></td></tr></table></figure>
+
+<h2 id="特性（Topic）分支"><a href="#特性（Topic）分支" class="headerlink" title="特性（Topic）分支"></a>特性（Topic）分支</h2><p>集中实现某一特性（主题），除此之外不进行任何作业的分支，master担任可随时发布软件的稳定分支</p>
+<img data-src="https://s1.ax1x.com/2020/05/03/JxvybF.png" alt="JxvybF.png" style="zoom:50%;" />
+
+<h2 id="git-merge：合并分支"><a href="#git-merge：合并分支" class="headerlink" title="git merge：合并分支"></a>git merge：合并分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git merge --no-gg feature-A</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>合并时先切换至master分支，再执行命令并使用<code>--no-ff</code>参数，可在历史记录中明确记录下本次分支合并，并且编译器会自启动，用于录入合并提交的信息</p>
+</blockquote>
+<h2 id="git-log-–graph：以图表形式查看分支"><a href="#git-log-–graph：以图表形式查看分支" class="headerlink" title="git log –graph：以图表形式查看分支"></a>git log –graph：以图表形式查看分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --graph</span><br><span class="line">*   commit 359bd0b86a8aa8858105bf874e661ebbf51647df (HEAD -&gt; master)</span><br><span class="line">|\  Merge: 5b0a6ff 576a4f8</span><br><span class="line">| | Author: zcs159 &lt;zcs1596357@163.com&gt;</span><br><span class="line">| | Date:   Sun May 3 09:31:10 2020 +0800</span><br><span class="line">| |</span><br><span class="line">| |     Merge branch <span class="string">'feature-A'</span></span><br><span class="line">| |</span><br><span class="line">| * commit 576a4f8494808f21afa6ccc5402f9b562de35e64 (feature-A)</span><br><span class="line">|/  Author: zcs159 &lt;zcs1596357@163.com&gt;</span><br><span class="line">|   Date:   Sun May 3 09:30:37 2020 +0800</span><br><span class="line">|</span><br><span class="line">|       Add feature-A</span><br><span class="line">|</span><br><span class="line">* commit 5b0a6ffb8bd1ba21aff89819d6bbc3b6e767a245</span><br><span class="line">  Author: zcs159 &lt;zcs1596357@163.com&gt;</span><br><span class="line">  Date:   Sun May 3 09:26:52 2020 +0800</span><br><span class="line"></span><br><span class="line">      First commit</span><br></pre></td></tr></table></figure>
+
+<h1 id="3-更改提交的操作"><a href="#3-更改提交的操作" class="headerlink" title="3.更改提交的操作"></a>3.更改提交的操作</h1><h2 id="git-reset：回溯历史版本"><a href="#git-reset：回溯历史版本" class="headerlink" title="git reset：回溯历史版本"></a>git reset：回溯历史版本</h2><p>回溯历史版本，创建一个名为fix-B的特性分支</p>
+<img data-src="https://s1.ax1x.com/2020/05/03/JxxfoQ.png" alt="JxxfoQ.png" style="zoom:50%;" />
+
+<ul>
+<li>回溯到创建feature-A分支前</li>
+</ul>
+<p>回溯到feature-A分支创建前，创建一个fix-B的特性分支，并让仓库的HEAD、暂存区、当前工作树回溯到指定状态，需用<code>git reset --hard + 哈希值</code>（哈希值是相应时间点或者说相应提交命令时产生的特定的值，且各不相同，<strong>哈希值输入四位以上即可</strong>）</p>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git reset --hard 5b0a6ffb8bd1ba21aff89819d6bbc3b6e767a245</span><br><span class="line">HEAD <span class="keyword">in</span> now at 5b0a6ff First commit</span><br></pre></td></tr></table></figure>
+
+<ul>
+<li>创建fix-B分支</li>
+</ul>
+<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout -b fix-B	&#x2F;&#x2F; 并在README.md文件中添加内容</span><br><span class="line">$ git add README.md</span><br><span class="line">$ git commit -m &quot;Fix-B&quot;</span><br></pre></td></tr></table></figure>
+
+<p>下图就是当前fix-B分支的状态：</p>
+<img data-src="https://s1.ax1x.com/2020/05/03/Jzpnqf.png" alt="Jzpnqf.png" style="zoom:50%;" />
+
+<ul>
+<li>推进至feature-A分支合并后的状态</li>
+</ul>
+<p>git log只能查看以当前状态为终点的历史日志，使用git relog命令可查看回溯历史之前的哈希值，再用git reset –hard命令恢复到历史回溯前的状态</p>
+<img data-src="https://s1.ax1x.com/2020/05/03/JzpaZT.png" alt="JzpaZT.png" style="zoom:50%;" />
+
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git checkout master</span><br><span class="line"></span><br><span class="line">$ git reset --hard 359bd0b</span><br><span class="line">HEAD is now at 359bd0b Merge branch <span class="string">'feature-A'</span></span><br></pre></td></tr></table></figure>
+
+<p>回溯后：</p>
+<img data-src="https://s1.ax1x.com/2020/05/03/JzpgL6.png" alt="JzpgL6.png" style="zoom:50%;" />
+
+<ul>
+<li>消除冲突</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git merge --no-ff fix-B</span><br><span class="line">Auto-merging README.md</span><br><span class="line">CONFLICT (content): Merge conflict <span class="keyword">in</span> README.md</span><br><span class="line">Recorded preimage <span class="keyword">for</span> <span class="string">'README.md'</span></span><br><span class="line">Automatic merge failed; fix conflicts and <span class="keyword">then</span> commit the result.</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>为解决上述冲突可用编译器打开README.md文件，修改文件内容成我们想要的样子即可，再进行提交</p>
+</blockquote>
+<ul>
+<li>git commit –amend：修改提交信息</li>
+</ul>
+<p>执行命令后，编译器会启动，修改提交信息成我们想要的即可</p>
+<h2 id="git-rebase-i：压缩历史"><a href="#git-rebase-i：压缩历史" class="headerlink" title="git rebase -i：压缩历史"></a>git rebase -i：压缩历史</h2><p>在合并特性分支之前，如果发现已提交内容存在拼写错误等（错字漏字称为typo）</p>
+<ul>
+<li><p>创建一个feature-C分支，并在README.md中留下拼写等错误，再提交</p>
+</li>
+<li><p>修改拼写错误，用编译器打开文件进行修改，再提交，可用<code>git commit -am “Fix typo”</code>直接完成添加和提交</p>
+</li>
+<li><p>更改历史</p>
+</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git rebase -i HEAD~2	//选定当前分支中包含HEAD（最新提交）在内的两个最新的历史记录为对象，并在编译器中打开</span><br><span class="line">pick 7a34294 Add feature-C</span><br><span class="line">pick 6fba227 Fix typo</span><br><span class="line"><span class="comment"># Rebase 2e7db6f..6fba227 onto 2e7db6f</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Commands:</span></span><br><span class="line"><span class="comment"># p, pick = use commit</span></span><br><span class="line"><span class="comment"># r, reword = use commit, but edit the commit message</span></span><br><span class="line"><span class="comment"># e, edit = use commit, but stop for amending</span></span><br><span class="line"><span class="comment"># s, squash = use commit, but meld into previous commit</span></span><br><span class="line"><span class="comment"># f, fixup = like "squash", but discard this commit's log message</span></span><br><span class="line"><span class="comment"># x, exec = run command (the rest of the line) using shell</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># These lines can be re-ordered; they are executed from top to bottom.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># If you remove a line here THAT COMMIT WILL BE LOST.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># However, if you remove everything, the rebase will be aborted.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Note that empty commits are commented out</span></span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>将6fba227左侧的pick部分删除改为fixup，并保存退出即可</p>
+</blockquote>
+<ul>
+<li>合并至master分支</li>
+</ul>
+<h1 id="4-推送至远程仓库"><a href="#4-推送至远程仓库" class="headerlink" title="4.推送至远程仓库"></a>4.推送至远程仓库</h1><h2 id="git-remote-add：添加远程仓库"><a href="#git-remote-add：添加远程仓库" class="headerlink" title="git remote add：添加远程仓库"></a>git remote add：添加远程仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git remote add origin git@github.com:zcs159/git-tutorial.git</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>在Github上创建仓库路径为“<a href="mailto:git@github.com">git@github.com</a>:用户名/仓库名.git”，origin为标识符，<strong>执行该命令后，git-tutorial就会设置为本地仓库的远程仓库</strong></p>
+</blockquote>
+<h2 id="git-push：推送至远程仓库"><a href="#git-push：推送至远程仓库" class="headerlink" title="git push：推送至远程仓库"></a>git push：推送至远程仓库</h2><ul>
+<li>推送至master分支</li>
+</ul>
+<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
+
+<blockquote>
+<p>推送其他分支：git push -u origin + 分支名</p>
+</blockquote>
+<h1 id="5-从远程仓库获取"><a href="#5-从远程仓库获取" class="headerlink" title="5.从远程仓库获取"></a>5.从远程仓库获取</h1><h2 id="git-clone：获取远程仓库"><a href="#git-clone：获取远程仓库" class="headerlink" title="git clone：获取远程仓库"></a>git clone：获取远程仓库</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone git@github.com：zcs159&#x2F;git-tutorial.git</span><br></pre></td></tr></table></figure>
+
+<h2 id="git-pull：获取最新的远程仓库分支"><a href="#git-pull：获取最新的远程仓库分支" class="headerlink" title="git pull：获取最新的远程仓库分支"></a>git pull：获取最新的远程仓库分支</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull origin 分支名</span><br></pre></td></tr></table></figure>
+
+
+
+
+
+
+
+<center>END</center>]]></content>
+      <categories>
+        <category>Git</category>
+      </categories>
+      <tags>
+        <tag>Git</tag>
+      </tags>
+  </entry>
+  <entry>
     <title>《鸟哥的Linux私房菜》</title>
     <url>/2020/05/04/%E3%80%8A%E9%B8%9F%E5%93%A5%E7%9A%84Linux%E7%A7%81%E6%88%BF%E8%8F%9C%E3%80%8B/</url>
-    <content><![CDATA[<blockquote>
-<p>《鸟哥的Linux私房》读书笔记</p>
-</blockquote>
+    <content><![CDATA[<p>《鸟哥的Linux私房》读书笔记</p>
 <a id="more"></a>
+
 <h1 id="第零章-计算机概论"><a href="#第零章-计算机概论" class="headerlink" title="第零章 计算机概论"></a>第零章 计算机概论</h1><h2 id="计算机通识"><a href="#计算机通识" class="headerlink" title="计算机通识"></a>计算机通识</h2><p><strong>1.计算机硬件五大单元</strong></p>
 <blockquote>
 <p>计算器：接受用户输入指令与数据，经由中央处理器的数学与逻辑单元运算处理后，以产生或储存成有用的信息</p>
@@ -30,7 +239,6 @@
 <ul>
 <li>容量单位：$1Byte=8bits$（byte字节、bit位）</li>
 </ul>
-<div class="table-container">
 <table>
 <thead>
 <tr>
@@ -41,8 +249,7 @@
 <th>Tera</th>
 </tr>
 </thead>
-<tbody>
-<tr>
+<tbody><tr>
 <td>二进制</td>
 <td>1024</td>
 <td>1024k</td>
@@ -56,9 +263,7 @@
 <td>1000M</td>
 <td>1024G</td>
 </tr>
-</tbody>
-</table>
-</div>
+</tbody></table>
 <ul>
 <li>速度单位（常用十进制）</li>
 </ul>
@@ -84,866 +289,6 @@
       <tags>
         <tag>Linux</tag>
         <tag>Reading Notes</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Markdown中Latex的应用</title>
-    <url>/2020/05/03/Markdown%E4%B8%ADLatex%E7%9A%84%E5%BA%94%E7%94%A8/</url>
-    <content><![CDATA[<blockquote>
-<p>Latex在markdown的相关应用，及特殊符号</p>
-</blockquote>
-<a id="more"></a>
-<h2 id="1-Markdown中使用LaTX基础语法"><a href="#1-Markdown中使用LaTX基础语法" class="headerlink" title="1 Markdown中使用LaTX基础语法"></a>1 Markdown中使用LaTX基础语法</h2><p>LaTeX公式有两种，一种是用在正文中的，一种是单独显示的。</p>
-<ul>
-<li>行内公式：用<script type="math/tex">formual</script>表示，例如<script type="math/tex">\sum\limits_{i=0}^{n}i^2</script>表示$\sum\limits_{i=0}^{n}i^2$</li>
-<li>独立公式：用$$$formual$$$表示，例如$$$\sum_{i=0}^{n}i^2$$$表示</li>
-</ul>
-<script type="math/tex; mode=display">
-\sum_{i=0}^{n}i^2</script><blockquote>
-<p>以下几个字符# $ % &amp; ~ _ ^ \ {}有特殊意义，当表示这些字符是，需要转义，即在每个字符前加上\，对于\，可用<script type="math/tex">\backslash</script>命令得到$\backslash$</p>
-</blockquote>
-<h2 id="2-常用数学表达命令"><a href="#2-常用数学表达命令" class="headerlink" title="2 常用数学表达命令"></a>2 常用数学表达命令</h2><h3 id="2-1-上下标表示"><a href="#2-1-上下标表示" class="headerlink" title="2.1 上下标表示"></a>2.1 上下标表示</h3><ul>
-<li>上标：用<code>^</code>后的内容表示上标，例如<script type="math/tex">x^{(i)}、y^{(i)}</script>表示$x^{(i)}$、$y^{(i)}$</li>
-<li>下标：用<code>_</code>后的内容表示下表，例如<script type="math/tex">x_{(i)}、y_{(i)}</script>表示$x<em>{(i)}$、$y</em>{(i)}$</li>
-<li>上下标混用：例如<script type="math/tex">x_1^2</script>、<script type="math/tex">x^{y^{z}}</script>、<script type="math/tex">x^{y_z}</script>表示$x<em>1^2$、$x^{y^{z}}$、$x^{y</em>{z}}$</li>
-</ul>
-<blockquote>
-<p>当角标位置看起来不明显时，可以强制改变角标层次或者在角标前面加上改变其大小的命令（如<code>\tiny</code>、<code>\samll</code>、<code>\normalsize</code>、<code>\large</code>、<code>\Large</code>、<code>\LARGE</code>），例如：<script type="math/tex">y_N</script>、<script type="math/tex">y_{_N}</script>、<script type="math/tex">y_{\samll{N}}</script>表示$y<em>N$、$y</em>{<em>N}$、$y</em>{\small{N}}$</p>
-<p>并且支持中文作为角标，例如：<script type="math/tex">{\partial f}_{\tiny 极大值}</script>、<script type="math/tex">{\partial f}_{\large 极大值}</script>表示${\partial f}<em>{\tiny 极大值}$、${\partial f}</em>{\large 极大值}$</p>
-</blockquote>
-<h3 id="2-2-分数形式"><a href="#2-2-分数形式" class="headerlink" title="2.2 分数形式"></a>2.2 分数形式</h3><p>分式命令：</p>
-<ul>
-<li><script type="math/tex">\dfrac{}{}</script>，表示该分式是以displaystyle设置的，例如<script type="math/tex">\dfrac{f}{x}</script>表示$\dfrac{y}{x}$</li>
-<li><script type="math/tex">\tfrac{}{}</script>、表示分式是以teststyle设置的，例如<script type="math/tex">\tfrac{y}{x}</script>表示$\tfrac{y}{x}$</li>
-<li><script type="math/tex">\frac{}{}</script>、表示分式根据环境设置样式，例如<script type="math/tex">\frac{y}{x}</script>表示$\frac{y}{x}$</li>
-<li><script type="math/tex">{} \over {}</script>、例如<script type="math/tex">{y} \over {x}</script>表示${y} \over {x}$</li>
-</ul>
-<p>连分式<script type="math/tex">x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}</script>表示$$</p>
-<script type="math/tex; mode=display">
-x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}</script><p>可以使用<script type="math/tex">\displaystyle</script>表示分式，例如：</p>
-<script type="math/tex; mode=display">$x_0+\frac{1}{x_1+\frac{1}{x_2+\frac{1}{x_3+\frac{1}{x_4}}}}$$$表示：</script><p>x_0+\dfrac{1}{x_1+\dfrac{1}{x_2+\dfrac{1}{x_3+\dfrac{1}{x_4}}}}</p>
-<script type="math/tex; mode=display">
-
-> 分数线长度值是预设为分子分母的最大长度，如果想要分数线再长一点，可以在分子或分母两端添加一些间隔，例如$$\frac{1}{2}$$、$$\frac{\;1\;}{\;2\;}$$表示$\frac{1}{2}$、$\frac{\;1\;}{\;2\;}$
-
-### 2.3 根式
-
-- 二次根式命令: `\sqrt{表达式}` 、 例如：` $\sqrt{x}$ `表示 $\sqrt{x}$
-- n次根式命令：`\sqrt[n]{表达式}`、例如：$$\sqrt[n]{x}$$表示$\sqrt[n]{x}$
-
-> 被开方表达式字符高度不一致，即根号上面的横线可能不在同一条直线上，可以在被开方表达式插入一个只有高度没有宽度的数学支柱$$\mathstrut$$、例如：$$\sqrt{a}+\sqrt{b}+\sqrt{c}$$、$$\sqrt{\mathstrut a}+\sqrt{\mathstrut b}+\sqrt{\mathstrut c}$$表示
->
-> $\sqrt{a}+\sqrt{b}+\sqrt{c}$、$\sqrt{\mathstrut a}+\sqrt{\mathstrut b}+\sqrt{\mathstrut c}$
-
-> 当开方次数的位置显得略低时，可以将开方改为上标，并拉近与根式的水平距离，即将命令中的 `[n] `改为 `[^n \!]`(其中 ^ 表示是上标，! 表示缩小间隔)、例如：$$ \sqrt{1+\sqrt[p]{1+\sqrt[p]{1+a}}} $$、$$ \sqrt{1+\sqrt[^p \!]{1+\sqrt[^p \!]{1+a}}}</script><p>&gt;</p>
-<blockquote>
-<p>$ \sqrt{1+\sqrt[p]{1+\sqrt[p]{1+a}}} $ , $ \sqrt{1+\sqrt<sup><a href="#fn_p \!" id="reffn_p \!">p \!</a></sup>{1+\sqrt<sup><a href="#fn_p \!" id="reffn_p \!">p \!</a></sup>{1+a}}} $</p>
-</blockquote>
-<h3 id="2-4-向量"><a href="#2-4-向量" class="headerlink" title="2.4 向量"></a>2.4 向量</h3><p>使用<code>\vec{矢量}</code>来产生一个矢量，也可以使用<code>\overrightarrow</code>等命令自定义字母上方的符号，例如$$$\vec{x} \quad \overleftarrow{xy} \quad \overleftrightarrow{xy} \quad \overrightarrow{xy}$$$（<code>\quad</code>表示退一格）</p>
-<script type="math/tex; mode=display">
-\vec{x} \quad \overleftarrow{xy} \quad \overleftrightarrow{xy} \quad \overrightarrow{xy}</script><h3 id="2-5定界符-自适应放大命令"><a href="#2-5定界符-自适应放大命令" class="headerlink" title="2.5定界符 - 自适应放大命令"></a>2.5定界符 - 自适应放大命令</h3><p>自适应放大命令：<code>\left</code>和<code>\right</code>、此命令放在左右定界符前，随着公式内容自动调整符号大小，例如：<script type="math/tex">\left(\frac{1}{xyz}\right)</script>表示$\left(\frac{1}{xyz}\right)$</p>
-<blockquote>
-<p>另一种表达方式：<script type="math/tex">() \big(\big) \Big(\Big) \Bigg(\Bigg)</script>表示：$() \big(\big) \Big(\Big) \Bigg(\Bigg)$</p>
-<p><code>\left</code>和<code>\right</code>需成对使用，只需一边时，可用<code>\left.</code>或<code>\right.</code>进行配对，例如：<script type="math/tex">\left.\frac{1}{2}x^2\right|_0^1</script>表示$\left.\frac{1}{2}x^2\right|_0^1$</p>
-</blockquote>
-<h3 id="2-6-空白间距-占位宽度"><a href="#2-6-空白间距-占位宽度" class="headerlink" title="2.6 空白间距-占位宽度"></a>2.6 空白间距-占位宽度</h3><p><code>\quad</code>代表当前字体下接近字符<code>M</code>的宽度</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>命令</th>
-<th>效果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>没有空格</td>
-<td><script type="math/tex">ab</script></td>
-<td>$ab$</td>
-</tr>
-<tr>
-<td>紧贴，缩进$\frac{1}{6}$m宽度</td>
-<td><script type="math/tex">a\!b</script></td>
-<td>$a!b$</td>
-</tr>
-<tr>
-<td>小空格</td>
-<td><script type="math/tex">a\,b</script></td>
-<td>$a\,b$</td>
-</tr>
-<tr>
-<td>$\frac{1}{3}$个空格</td>
-<td><script type="math/tex">a\ b</script></td>
-<td>$a\ b$</td>
-</tr>
-<tr>
-<td>中等空格</td>
-<td><script type="math/tex">a\:b</script>或<script type="math/tex">a\;b</script></td>
-<td>$a\;b$</td>
-</tr>
-<tr>
-<td>一个空格</td>
-<td><script type="math/tex">a \quad b</script></td>
-<td>$a \quad b$</td>
-</tr>
-<tr>
-<td>两个空格</td>
-<td><script type="math/tex">a \qquad b</script></td>
-<td>$a \qquad b$</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="2-7-省略号"><a href="#2-7-省略号" class="headerlink" title="2.7 省略号"></a>2.7 省略号</h3><p>省略号用<code>\dots \cdots \vdots \ddots</code>表示，<code>\dots</code>和<code>cdots</code>的纵向位置不同，前者用于有下标的序列，例如：$$$x_1,x_2,\dots,x_n \quad 1,2\cdots,n \quad \vdots \quad \ddots$$$表示</p>
-<script type="math/tex; mode=display">
-x_1,x_2,\dots,x_n \quad 1,2\cdots,n \quad \vdots \quad \ddots</script><h3 id="2-8-多行公式"><a href="#2-8-多行公式" class="headerlink" title="2.8 多行公式"></a>2.8 多行公式</h3><p><strong>长公式</strong></p>
-<p>无需对齐可使用<code>multline</code>，需对齐使用<code>split</code>，用<code>\\</code>和<code>&amp;</code>来分行和设置对齐的位置，例如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;multline&#125;</span><br><span class="line">x&#x3D;a+b+c+&#123;&#125; \\</span><br><span class="line">d+e+f+g</span><br><span class="line">\end&#123;multline&#125;$$</span><br></pre></td></tr></table></figure>
-<script type="math/tex; mode=display">
-\begin{multline}
-x=a+b+c+{} \\
-d+e+f+g
-\end{multline}</script><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;split&#125;</span><br><span class="line">x&#x3D;&amp;a+b+c+ \\</span><br><span class="line">&amp;d+e+f+g</span><br><span class="line">\end&#123;split&#125;$$</span><br></pre></td></tr></table></figure>
-<script type="math/tex; mode=display">
-\begin{split}
-x=&a+b+c+ \\
-&d+e+f+g
-\end{split}</script><p><strong>公式组</strong></p>
-<p>不需要对齐的公式组用<code>gather</code>，需对齐使用<code>align</code>，例如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;gather&#125;</span><br><span class="line">a&#x3D;b+c+d \\</span><br><span class="line">x&#x3D;y+z</span><br><span class="line">\end&#123;gather&#125;$$</span><br></pre></td></tr></table></figure>
-<script type="math/tex; mode=display">
-\begin{gather}
-a=b+c+d \\
-x=y+z
-\end{gather}</script><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$\begin&#123;align&#125;</span><br><span class="line">a&amp;&#x3D;b+c+d \\</span><br><span class="line">x&amp;&#x3D;y+z</span><br><span class="line">\end&#123;align&#125;$$</span><br></pre></td></tr></table></figure>
-<script type="math/tex; mode=display">
-\begin{align}
-a&=b+c+d \\
-x&=y+z
-\end{align}</script><p><strong>分支公式</strong></p>
-<p>分段函数通常用<code>cases</code>，例如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$y&#x3D;\begin&#123;cases&#125;</span><br><span class="line">-x,\quad &amp;x \leq 0 \\</span><br><span class="line">x, &amp;x&gt;0</span><br><span class="line">\end&#123;cases&#125;$$</span><br></pre></td></tr></table></figure>
-<script type="math/tex; mode=display">
-y=\begin{cases}
--x, \quad &x \leq 0 \\
-x, &x>0
-\end{cases}</script><p><strong>公式编号</strong></p>
-<p>可以通过命令<code>\tag{n}</code>手动为公式编号，例如：</p>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">S(r_k) &#x3D; \sum_&#123;r_k \ne r_i&#125; \text&#123;exp&#125;(\frac&#123;-D_s(r_k,r_k)&#125;&#123;\sigma_s^2&#125;)</span><br><span class="line">\tag&#123;1&#125;$$</span><br></pre></td></tr></table></figure>
-<script type="math/tex; mode=display">
-S(r_k) = \sum_{r_k \ne r_i} \text{exp}(\frac{-D_s(r_k,r_k)}{\sigma_s^2})
-\tag{1}</script><h3 id="2-9-上下水平线"><a href="#2-9-上下水平线" class="headerlink" title="2.9 上下水平线"></a>2.9 上下水平线</h3><ul>
-<li><p><code>\overline{表达式}</code>：在表达式上方画出水平线，例如：<script type="math/tex">\overline{x+y}</script>表示：$\overline{x+y}$</p>
-</li>
-<li><p><code>\underline{表达式}</code>：在表达式下方画出水平线，例如：<script type="math/tex">\underline{x+y}</script>表示：$\underline{x+y}$</p>
-</li>
-</ul>
-<h3 id="2-10-上下大括号"><a href="#2-10-上下大括号" class="headerlink" title="2.10 上下大括号"></a>2.10 上下大括号</h3><ul>
-<li><p><code>\overbrace{表达式}</code>：在表达式上方画出一个水平的大括号，例如：<script type="math/tex">\overbrace{1+2+3+\cdots+100}^{100}</script>表示：$\overbrace{1+2+3+\cdots+100}^{100}$</p>
-</li>
-<li><p><code>\underbrace{表达式}</code>：在表达式下方画出一个水平大括号，例如：</p>
-</li>
-</ul>
-<script type="math/tex; mode=display">\underbrace{1+2+3+\cdots+100}_{100}$$表示：$\underbrace{1+2+3+\cdots+100}_{100}$
-
-### 2.11 矩阵
-
-生成矩阵的命令` \begin{matrix}......\end{matrix}`其中每一行以 `\\` 结束，矩阵的元素之间用 & 来分隔开，例如
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\begin&#123;matrix&#125;</span><br><span class="line">1 &amp; 0 &amp; 0 \\</span><br><span class="line">0 &amp; 1 &amp; 0 \\</span><br><span class="line">0 &amp; 0 &amp; 1 \\</span><br><span class="line">\end&#123;matrix&#125;</span><br></pre></td></tr></table></figure></script><p>  \begin{matrix}<br>  1 &amp; 0 &amp; 0 \<br>  0 &amp; 1 &amp; 0 \<br>  0 &amp; 0 &amp; 1 \<br>  \end{matrix}</p>
-<script type="math/tex; mode=display">
-
-带各类不同边界的矩阵:
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\begin&#123;pmatrix&#125;</span><br><span class="line">  1 &amp; 0 &amp; 0 \\</span><br><span class="line">  0 &amp; 1 &amp; 0 \\</span><br><span class="line">  0 &amp; 0 &amp; 1 \\</span><br><span class="line"> \end&#123;pmatrix&#125;</span><br></pre></td></tr></table></figure></script><p>\begin{pmatrix}<br>  1 &amp; 0 &amp; 0 \<br>  0 &amp; 1 &amp; 0 \<br>  0 &amp; 0 &amp; 1 \<br>  \end{pmatrix}</p>
-<script type="math/tex; mode=display">
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\begin&#123;bmatrix&#125;</span><br><span class="line">  1 &amp; 0 &amp; 0 \\</span><br><span class="line">  0 &amp; 1 &amp; 0 \\</span><br><span class="line">  0 &amp; 0 &amp; 1 \\</span><br><span class="line"> \end&#123;bmatrix&#125;</span><br></pre></td></tr></table></figure></script><p>\begin{bmatrix}<br>  1 &amp; 0 &amp; 0 \<br>  0 &amp; 1 &amp; 0 \<br>  0 &amp; 0 &amp; 1 \<br>  \end{bmatrix}</p>
-<script type="math/tex; mode=display">
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\begin&#123;Bmatrix&#125;</span><br><span class="line">  1 &amp; 0 &amp; 0 \\</span><br><span class="line">  0 &amp; 1 &amp; 0 \\</span><br><span class="line">  0 &amp; 0 &amp; 1 \\</span><br><span class="line">  \end&#123;Bmatrix&#125;</span><br></pre></td></tr></table></figure></script><p>\begin{Bmatrix}<br>  1 &amp; 0 &amp; 0 \<br>  0 &amp; 1 &amp; 0 \<br>  0 &amp; 0 &amp; 1 \<br> \end{Bmatrix}</p>
-<script type="math/tex; mode=display">
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\begin&#123;vmatrix&#125;</span><br><span class="line">  1 &amp; 0 &amp; 0 \\</span><br><span class="line">  0 &amp; 1 &amp; 0 \\</span><br><span class="line">  0 &amp; 0 &amp; 1 \\</span><br><span class="line"> \end&#123;vmatrix&#125;</span><br></pre></td></tr></table></figure></script><p>\begin{vmatrix}<br>  1 &amp; 0 &amp; 0 \<br>  0 &amp; 1 &amp; 0 \<br>  0 &amp; 0 &amp; 1 \<br>  \end{vmatrix}</p>
-<script type="math/tex; mode=display">
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">\begin&#123;Vmatrix&#125;</span><br><span class="line">  1 &amp; 0 &amp; 0 \\</span><br><span class="line">  0 &amp; 1 &amp; 0 \\</span><br><span class="line">  0 &amp; 0 &amp; 1 \\</span><br><span class="line"> \end&#123;Vmatrix&#125;</span><br></pre></td></tr></table></figure></script><p>\begin{Vmatrix}<br>  1 &amp; 0 &amp; 0 \<br>  0 &amp; 1 &amp; 0 \<br>  0 &amp; 0 &amp; 1 \<br> \end{Vmatrix}</p>
-<script type="math/tex; mode=display">
-
-省略一些项，可以使用`\cdots`$\cdots$，`\ddots`$\ddots$，`\vdots`$\vdots$
-
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$$</span><br><span class="line">  \begin&#123;pmatrix&#125;</span><br><span class="line">  1 &amp; a_1 &amp; a_1^2 &amp; \cdots &amp; a_1^n\\</span><br><span class="line">  1 &amp; a_2 &amp; a_2^2 &amp; \cdots &amp; a_2^n \\</span><br><span class="line">  \vdots &amp; \vdots &amp; \ddots &amp; \vdots \\  </span><br><span class="line">  1 &amp; a_n &amp; a_n^2 &amp; \cdots &amp; a_n^n  \\</span><br><span class="line">  \end&#123;pmatrix&#125;</span><br><span class="line">$$</span><br></pre></td></tr></table></figure></script><p>  \begin{pmatrix}<br>  1 &amp; a_1 &amp; a_1^2 &amp; \cdots &amp; a_1^n\<br>  1 &amp; a_2 &amp; a_2^2 &amp; \cdots &amp; a_2^n \<br>  \vdots &amp; \vdots &amp; \ddots &amp; \vdots \<br>  1 &amp; a_n &amp; a_n^2 &amp; \cdots &amp; a_n^n  \<br>  \end{pmatrix}</p>
-<script type="math/tex; mode=display">
-
-
-
-### 2.12 Norm-范数符号
-
-范数命令：`\parallel`
-
-例如：$$\parallel x \parallel _2 $$表示$\parallel x \parallel _2$
-
-### 2.13 堆积符号
-
-- `\stackrel{上位符号}{基位符号}`：基位符号大，上位符号小，例如:
-
-$$ \vec{x}\stackrel{\mathrm{def}}{=}{x_1,\dots,x_n} $$表示$ \vec{x}\stackrel{\mathrm{def}}{=}{x_1,\dots,x_n} $
-
-- `{上位公式 \choose 下位公式}`：上下符号一样大，上下符号被包括在圆弧内，例如：$$ {n+1 \choose k}={n \choose k}+{n \choose k-1} $$表示$ {n+1 \choose k}={n \choose k}+{n \choose k-1} $
-
-- `{上位公式 \atop 下位公式}` : 上下符号一样大，例如：$$ \sum\limits_{k_0,k_1,\ldots>0 \atop k_0+k_1+\cdots=n}A_k $$表示$ \sum\limits_{k_0,k_1,\ldots>0 \atop k_0+k_1+\cdots=n}A_k $
-
-### 2.14 给公式加一个方框
-
-`\boxed`命令给公式加一个方框，例如：$$$\boxed{E=mc^2}$$$表示</script><p>\boxed{E=mc^2}</p>
-<p>$$</p>
-<h3 id="2-15-字体转换"><a href="#2-15-字体转换" class="headerlink" title="2.15 字体转换"></a>2.15 字体转换</h3><p>若要对公式的某一部分字符进行字体转换，可以用<code>{\字体 {需转换的部分字符}}</code>命令，其中 <code>\字体</code> 部分可以参照下表选择合适的字体，一般情况下，公式默认为意大利体。</p>
-<div class="table-container">
-<table>
-<thead>
-<tr>
-<th>命令</th>
-<th>说明</th>
-<th>效果</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td><code>\rm</code></td>
-<td>罗马体</td>
-<td>${\rm {D}}$</td>
-</tr>
-<tr>
-<td><code>\cal</code></td>
-<td>花体</td>
-<td>${\cal {D}}$</td>
-</tr>
-<tr>
-<td><code>\it</code></td>
-<td>意大利体</td>
-<td>${\it {D}}$</td>
-</tr>
-<tr>
-<td><code>\Bbb</code></td>
-<td>黑板粗体</td>
-<td>${\Bbb {D}}$</td>
-</tr>
-<tr>
-<td><code>bf</code></td>
-<td>粗体</td>
-<td>${\bf {D}}$</td>
-</tr>
-<tr>
-<td><code>\mit</code></td>
-<td>数学斜体</td>
-<td>${\mit {D}}$</td>
-</tr>
-<tr>
-<td><code>\sf</code></td>
-<td>等线体</td>
-<td>${\sf {D}}$</td>
-</tr>
-<tr>
-<td><code>\scr</code></td>
-<td>手写体</td>
-<td>${\scr {D}}$</td>
-</tr>
-<tr>
-<td><code>\tt</code></td>
-<td>打字机体</td>
-<td>${\tt {D}}$</td>
-</tr>
-<tr>
-<td><code>\frak</code></td>
-<td>旧德式字体</td>
-<td>${\frak {D}}$</td>
-</tr>
-</tbody>
-</table>
-</div>
-<h2 id="3-LaTeX常用数学符号整理"><a href="#3-LaTeX常用数学符号整理" class="headerlink" title="3 LaTeX常用数学符号整理"></a>3 LaTeX常用数学符号整理</h2><h3 id="表3-1-数学模式重音符号"><a href="#表3-1-数学模式重音符号" class="headerlink" title="表3.1 数学模式重音符号"></a>表3.1 数学模式重音符号</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>命令</th>
-<th>符号</th>
-<th>命令</th>
-<th>符号</th>
-<th>命令</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$ \hat{a} $</td>
-<td><script type="math/tex">\hat{a}</script></td>
-<td>$ \check{a} $</td>
-<td><script type="math/tex">\check{a}</script></td>
-<td>$ \tilde{a} $</td>
-<td><script type="math/tex">\tilde{a}</script></td>
-</tr>
-<tr>
-<td>$ \grave{a} $</td>
-<td><script type="math/tex">\grave{a}</script></td>
-<td>$ \dot{a} $</td>
-<td><script type="math/tex">\dot{a}</script></td>
-<td>$ \ddot{a} $</td>
-<td><script type="math/tex">\ddot{a}</script></td>
-</tr>
-<tr>
-<td>$ \bar{a} $</td>
-<td><script type="math/tex">\bar{a}</script></td>
-<td>$ \vec{a} $</td>
-<td><script type="math/tex">\vec{a}</script></td>
-<td>$ \widehat{A} $</td>
-<td><script type="math/tex">\widehat{A}</script></td>
-</tr>
-<tr>
-<td>$ \acute{a} $</td>
-<td><script type="math/tex">\acute{a}</script></td>
-<td>$ \breve{a} $</td>
-<td><script type="math/tex">\breve{a}</script></td>
-<td>$ \widetilde{A} $</td>
-<td><script type="math/tex">\widetilde{A}</script></td>
-</tr>
-</tbody>
-</table>
-</div>
-<h3 id="表3-2-希腊字母"><a href="#表3-2-希腊字母" class="headerlink" title="表3.2 希腊字母"></a>表3.2 希腊字母</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>命令</th>
-<th>符号</th>
-<th>命令</th>
-<th>符号</th>
-<th>命令</th>
-<th>符号</th>
-<th>命令</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$ \alpha $</td>
-<td><script type="math/tex">\alpha</script></td>
-<td>$ \theta $</td>
-<td><script type="math/tex">\theta</script></td>
-<td>$ o $</td>
-<td><script type="math/tex">o</script></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>$ \beta $</td>
-<td><script type="math/tex">\beta</script></td>
-<td>$ \vartheta $</td>
-<td><script type="math/tex">\vartheta</script></td>
-<td>$ \pi $</td>
-<td><script type="math/tex">\pi</script></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>$ \gamma $</td>
-<td><script type="math/tex">\gamma</script></td>
-<td>$ \iota $</td>
-<td><script type="math/tex">\iota</script></td>
-<td>$ \varpi $</td>
-<td><script type="math/tex">\varpi</script></td>
-<td>$ \upsilon $</td>
-<td><script type="math/tex">\upsilon</script></td>
-</tr>
-<tr>
-<td>$ \delta $</td>
-<td><script type="math/tex">\delta</script></td>
-<td>$ \kappa $</td>
-<td><script type="math/tex">\kappa</script></td>
-<td>$ \rho $</td>
-<td><script type="math/tex">\rho</script></td>
-<td>$ \phi $</td>
-<td><script type="math/tex">\phi</script></td>
-</tr>
-<tr>
-<td>$ \epsilon $</td>
-<td><script type="math/tex">\epsilon</script></td>
-<td>$ \lambda $</td>
-<td><script type="math/tex">\lambda</script></td>
-<td>$ \varrho $</td>
-<td><script type="math/tex">\varrho</script></td>
-<td>$ \varphi $</td>
-<td><script type="math/tex">\varphi</script></td>
-</tr>
-<tr>
-<td>$ \varepsilon $</td>
-<td><script type="math/tex">\varepsilon</script></td>
-<td>$ \mu $</td>
-<td><script type="math/tex">\mu</script></td>
-<td>$ \sigma $</td>
-<td><script type="math/tex">\sigma</script></td>
-<td>$ \chi $</td>
-<td><script type="math/tex">\chi</script></td>
-</tr>
-<tr>
-<td>$ \zeta $</td>
-<td><script type="math/tex">\zeta</script></td>
-<td>$ \nu $</td>
-<td><script type="math/tex">\nu</script></td>
-<td>$ \varsigma $</td>
-<td><script type="math/tex">\varsigma</script></td>
-<td>$ \psi $</td>
-<td><script type="math/tex">\psi</script></td>
-</tr>
-<tr>
-<td>$ \eta $</td>
-<td><script type="math/tex">\eta</script></td>
-<td>$ \xi $</td>
-<td><script type="math/tex">\xi</script></td>
-<td>$ \tau $</td>
-<td><script type="math/tex">\tau</script></td>
-<td>$ \omega$</td>
-<td><script type="math/tex">\omega</script></td>
-</tr>
-</tbody>
-</table>
-</div>
-<blockquote>
-<p>1.如果使用大写希腊字母，把命令的首字母变成大写即可，例如：<script type="math/tex">\Gamma</script>表示：$\Gamma$</p>
-<p>2.如果使用斜体大写希腊字母，再再大写希腊字母的LaTeX命令前加上var,例如：<script type="math/tex">\varGamma</script>表示$\varGamma$</p>
-</blockquote>
-<h3 id="表3-3-二元关系符"><a href="#表3-3-二元关系符" class="headerlink" title="表3.3 二元关系符"></a>表3.3 二元关系符</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>命令</th>
-<th>符号</th>
-<th>命令</th>
-<th>符号</th>
-<th>命令</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$ &lt; $</td>
-<td><script type="math/tex"><</script></td>
-<td>$ &gt; $</td>
-<td><script type="math/tex">></script></td>
-<td>$ = $</td>
-<td><script type="math/tex">=</script></td>
-</tr>
-<tr>
-<td>$ \leq $</td>
-<td><script type="math/tex">\leq $ `或 `$ \le</script></td>
-<td>$ \geq $</td>
-<td><script type="math/tex">\geq</script>或<script type="math/tex">\ge</script></td>
-<td>$ \equiv $</td>
-<td><script type="math/tex">\equiv</script></td>
-</tr>
-<tr>
-<td>$ \ll $</td>
-<td><script type="math/tex">\ll</script></td>
-<td>$ \gg $</td>
-<td><script type="math/tex">\gg</script></td>
-<td>$ \doteq $</td>
-<td><script type="math/tex">\doteq</script></td>
-</tr>
-<tr>
-<td>$ \prec $</td>
-<td><script type="math/tex">\prec</script></td>
-<td>$ \succ $</td>
-<td><script type="math/tex">\succ</script></td>
-<td>$ \sim $</td>
-<td><script type="math/tex">\sim</script></td>
-</tr>
-<tr>
-<td>$ \preceq $</td>
-<td><script type="math/tex">\preceq</script></td>
-<td>$ \succeq $</td>
-<td><script type="math/tex">\succeq</script></td>
-<td>$ \simeq $</td>
-<td><script type="math/tex">\simeq</script></td>
-</tr>
-<tr>
-<td>$ \subset $</td>
-<td><script type="math/tex">\subset</script></td>
-<td>$ \supset $</td>
-<td><script type="math/tex">\supset</script></td>
-<td>$ \approx $</td>
-<td><script type="math/tex">\approx</script></td>
-</tr>
-<tr>
-<td>$ \subseteq $</td>
-<td><script type="math/tex">\subseteq</script></td>
-<td>$ \supseteq $</td>
-<td><script type="math/tex">\supseteq</script></td>
-<td>$ \cong $</td>
-<td><script type="math/tex">\cong</script></td>
-</tr>
-<tr>
-<td>$ \sqsubset $</td>
-<td><script type="math/tex">\sqsubset</script></td>
-<td>$ \sqsupset $</td>
-<td><script type="math/tex">\sqsupset</script></td>
-<td>$ \Join $</td>
-<td><script type="math/tex">\Join</script></td>
-</tr>
-<tr>
-<td>$ \sqsubseteq $</td>
-<td><script type="math/tex">\sqsubseteq</script></td>
-<td>$ \sqsupseteq $</td>
-<td><script type="math/tex">\sqsupseteq</script></td>
-<td>$ \bowtie $</td>
-<td><script type="math/tex">\bowtie</script></td>
-</tr>
-<tr>
-<td>$ \in $</td>
-<td><script type="math/tex">\in</script></td>
-<td>$ \ni $</td>
-<td><script type="math/tex">\ni</script>或 <script type="math/tex">\owns</script></td>
-<td>$ \propto $</td>
-<td><script type="math/tex">\propto</script></td>
-</tr>
-<tr>
-<td>$ \vdash $</td>
-<td><script type="math/tex">\vdash</script></td>
-<td>$ \dashv $</td>
-<td><script type="math/tex">\dashv</script></td>
-<td>$ \models $</td>
-<td><script type="math/tex">\models</script></td>
-</tr>
-<tr>
-<td>$ \mid $</td>
-<td><script type="math/tex">\mid</script></td>
-<td>$ \parallel $</td>
-<td><script type="math/tex">\parallel</script></td>
-<td>$ \perp $</td>
-<td><script type="math/tex">\perp</script></td>
-</tr>
-<tr>
-<td>$ \smile $</td>
-<td><script type="math/tex">\smile</script></td>
-<td>$ \frown $</td>
-<td><script type="math/tex">\frown</script></td>
-<td>$ \asymp $</td>
-<td><script type="math/tex">\asymp</script></td>
-</tr>
-<tr>
-<td>$ : $</td>
-<td><script type="math/tex">:</script></td>
-<td>$ \notin $</td>
-<td><script type="math/tex">\notin</script></td>
-<td>$ \neq $</td>
-<td><script type="math/tex">\neq $ `或 `$ \ne</script></td>
-</tr>
-</tbody>
-</table>
-</div>
-<blockquote>
-<p>可以在上述符号的相应命令前加上<code>\not</code>，得到其否定形式，例如：<script type="math/tex">\not\subset</script>表示$\not\subset$</p>
-</blockquote>
-<h3 id="表3-4-二元运算符"><a href="#表3-4-二元运算符" class="headerlink" title="表3.4 二元运算符"></a>表3.4 二元运算符</h3><div class="table-container">
-<table>
-<thead>
-<tr>
-<th>符号</th>
-<th>命令</th>
-<th>符号</th>
-<th>命令</th>
-<th>符号</th>
-<th>命令</th>
-</tr>
-</thead>
-<tbody>
-<tr>
-<td>$ \unlhd $</td>
-<td><script type="math/tex">\unlhd</script></td>
-<td>$ - $</td>
-<td><script type="math/tex">-</script></td>
-<td></td>
-<td></td>
-</tr>
-<tr>
-<td>$ + $</td>
-<td><script type="math/tex">+</script></td>
-<td>$ \mp $</td>
-<td><script type="math/tex">\mp</script></td>
-<td>$ \triangleleft $</td>
-<td><script type="math/tex">\triangleleft</script></td>
-</tr>
-<tr>
-<td>$ \pm $</td>
-<td><script type="math/tex">\pm</script></td>
-<td>$ \div $</td>
-<td><script type="math/tex">\div</script></td>
-<td>$ \triangleright $</td>
-<td><script type="math/tex">\triangleright</script></td>
-</tr>
-<tr>
-<td>$ \cdot $</td>
-<td><script type="math/tex">\cdot</script></td>
-<td>$ \setminus $</td>
-<td><script type="math/tex">\setminus</script></td>
-<td>$ \star $</td>
-<td><script type="math/tex">\star</script></td>
-</tr>
-<tr>
-<td>$ \times $</td>
-<td><script type="math/tex">\times</script></td>
-<td>$ \cap $</td>
-<td><script type="math/tex">\cap</script></td>
-<td>$ \ast $</td>
-<td><script type="math/tex">\ast</script></td>
-</tr>
-<tr>
-<td>$ \cup $</td>
-<td><script type="math/tex">\cup</script></td>
-<td>$ \sqcap $</td>
-<td><script type="math/tex">\sqcap</script></td>
-<td>$ \circ $</td>
-<td><script type="math/tex">\circ</script></td>
-</tr>
-<tr>
-<td>$ \sqcup $</td>
-<td><script type="math/tex">\sqcup</script></td>
-<td>$ \land $</td>
-<td><script type="math/tex">\land</script>或<script type="math/tex">\wedege</script></td>
-<td>$ \bullet $</td>
-<td><script type="math/tex">\bullet</script></td>
-</tr>
-<tr>
-<td>$ \vee $</td>
-<td><script type="math/tex">\vee</script></td>
-<td>$ \ominus $</td>
-<td><script type="math/tex">\ominus</script></td>
-<td>$ \diamond $</td>
-<td><script type="math/tex">\diamond</script></td>
-</tr>
-<tr>
-<td>$ \oplus $</td>
-<td><script type="math/tex">\oplus</script></td>
-<td>$ \oslash $</td>
-<td><script type="math/tex">\oslash</script></td>
-<td>$ \uplus $</td>
-<td><script type="math/tex">\uplus</script></td>
-</tr>
-<tr>
-<td>$ \odot $</td>
-<td><script type="math/tex">\odot</script></td>
-<td>$ \bigcirc $</td>
-<td><script type="math/tex">\bigcirc</script></td>
-<td>$ \amalg $</td>
-<td><script type="math/tex">\amalg</script></td>
-</tr>
-<tr>
-<td>$ \otimes $</td>
-<td><script type="math/tex">\otimes</script></td>
-<td>$ \bigtriangledown $</td>
-<td><script type="math/tex">\bigtriangledown</script></td>
-<td>$ \dagger $</td>
-<td><script type="math/tex">\dagger</script></td>
-</tr>
-<tr>
-<td>$ \bigtriangleup $</td>
-<td><script type="math/tex">\bigtriangleup</script></td>
-<td>$ \rhd $</td>
-<td><script type="math/tex">\rhd</script></td>
-<td>$ \ddagger $</td>
-<td><script type="math/tex">\ddagger</script></td>
-</tr>
-<tr>
-<td>$ \lhd $</td>
-<td><script type="math/tex">\lhd</script></td>
-<td>$ \unrhd $</td>
-<td><script type="math/tex">\unrhd</script></td>
-<td>$ \wr $</td>
-<td>`$ \wr</td>
-</tr>
-</tbody>
-</table>
-</div>
-]]></content>
-      <categories>
-        <category>Latex</category>
-      </categories>
-      <tags>
-        <tag>Latex</tag>
-        <tag>Markdown</tag>
-      </tags>
-  </entry>
-  <entry>
-    <title>Git的基础使用</title>
-    <url>/2020/05/02/Git%E7%9A%84%E5%9F%BA%E7%A1%80%E4%BD%BF%E7%94%A8(%E4%B8%80)/</url>
-    <content><![CDATA[<blockquote>
-<p>关于Git的学习，参考书目《Github入门与实践》</p>
-</blockquote>
-<a id="more"></a>
-<h1 id="1-基本操作"><a href="#1-基本操作" class="headerlink" title="1.基本操作"></a>1.基本操作</h1><h2 id="git-init：初始化仓库"><a href="#git-init：初始化仓库" class="headerlink" title="git init：初始化仓库"></a>git init：初始化仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ mkdir git-tutorial 	// 在当前位置建立仓库，make directions</span><br><span class="line">$ <span class="built_in">cd</span> git-tutorial 	// 移至git-tutorial仓库</span><br><span class="line">$ git init</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>初始化后生成<code>.git</code>目录，用于存储着管理当前目录内容所需的仓库数据，称作“附属于该仓库的工作树”</p>
-</blockquote>
-<h2 id="git-status：查看仓库的状态"><a href="#git-status：查看仓库的状态" class="headerlink" title="git status：查看仓库的状态"></a>git status：查看仓库的状态</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git status</span><br><span class="line">On branch master</span><br><span class="line">nothing to commit, working tree clean</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>结果显示当前所在master分支下，commit是指“记录工作树中所有文件的当前状态”</p>
-<p>此外，通过<code>touch + 文件名.后缀名</code>可创建文件，如：<code>touch README.md</code></p>
-</blockquote>
-<h2 id="git-add：向暂存区中添加文件"><a href="#git-add：向暂存区中添加文件" class="headerlink" title="git add：向暂存区中添加文件"></a>git add：向暂存区中添加文件</h2><p>未使用git add命令时，文件显示在Untracked files中，使用后文件加入暂存区（提交之前的一个临时区域），使用方法<code>git add + 文件名.后缀名</code></p>
-<h2 id="git-commit：保存仓库的历史记录"><a href="#git-commit：保存仓库的历史记录" class="headerlink" title="git commit：保存仓库的历史记录"></a>git commit：保存仓库的历史记录</h2><p>git commit命令可以将当前暂存区的文件实际保存到仓库的历史记录中，通过记录可在工作树中复原文件</p>
-<ul>
-<li>记述一行提交信息</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git commit -m <span class="string">"First commit"</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>-m参数后的“First commit”称作提交信息</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git commit -m <span class="string">" </span></span><br><span class="line"><span class="string">&gt;1.xxxxx</span></span><br><span class="line"><span class="string">&gt;2.xxxxx</span></span><br><span class="line"><span class="string">&gt;"</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>也可按上述方法来提交多行信息</p>
-</blockquote>
-<ul>
-<li>记述详细提交信息</li>
-</ul>
-<blockquote>
-<p>不加-m，直接执行git commit命令后，编译器会自启动，显示如下信息</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line"> Please enter the commit message <span class="keyword">for</span> your changes. Lines starting</span><br><span class="line"><span class="comment"># with '#' will be ignored, and an empty message aborts the commit.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># On branch master</span></span><br><span class="line"><span class="comment"># Changes to be committed:</span></span><br><span class="line"><span class="comment">#       new file:   文件名.后缀名</span></span><br></pre></td></tr></table></figure>
-<p>提交方式：</p>
-<p>1.第一行：简要概括更改内容</p>
-<p>2.第二行：空行</p>
-<p>3.第三行：记述更改的原因和详细内容（#表示注释）</p>
-<ul>
-<li><p>终止提交：退出编译器提交终止</p>
-</li>
-<li><p>使用git status查看提交后的转台</p>
-</li>
-</ul>
-<h2 id="git-log：查看提交日志"><a href="#git-log：查看提交日志" class="headerlink" title="git log：查看提交日志"></a>git log：查看提交日志</h2><p>可查看提交日志，以及什么人什么时间进行提交和和合并，以及简要的提交信息</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span></span><br><span class="line">commit 14fe633b561ca5f5a195cd86bc663b3838fab308 (HEAD -&gt; master)</span><br><span class="line">Author: zcs159 &lt;zcs1596357@163.com&gt;</span><br><span class="line">Date:   Sat May 2 20:57:18 2020 +0800</span><br><span class="line"></span><br><span class="line">    First commit</span><br></pre></td></tr></table></figure>
-<ul>
-<li>只显示提交信息的第一行</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --pretty=short</span><br><span class="line">commit 14fe633b561ca5f5a195cd86bc663b3838fab308 (HEAD -&gt; master)</span><br><span class="line">Author: zcs159 &lt;zcs1596357@163.com&gt;</span><br><span class="line"></span><br><span class="line">    First commit</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>加上—pretty=short即可</p>
-</blockquote>
-<ul>
-<li>只显示指定目录、文件的日志</li>
-</ul>
-<blockquote>
-<p>git log命令后加上目录名或文件名即可</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> README.md</span><br></pre></td></tr></table></figure>
-<ul>
-<li>显示文件的改动</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> -p</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>加上-p参数后，文件提交前后的改动便会显示，末尾可加上文件名或目录名</p>
-</blockquote>
-<h2 id="git-diff：查看更改前后的差别"><a href="#git-diff：查看更改前后的差别" class="headerlink" title="git diff：查看更改前后的差别"></a>git diff：查看更改前后的差别</h2><p>可以查看工作树、暂存区、最新提交之间的差别</p>
-<p>例如在文件README.md中添加一行<code># Git教程</code></p>
-<ul>
-<li>查看工作树和暂存区的差别</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git diff</span><br><span class="line">diff --git a/README.md b/README.md</span><br><span class="line">index e69de29..cc3d3b2 100644</span><br><span class="line">--- a/README.md</span><br><span class="line">+++ b/README.md</span><br><span class="line">@@ -0,0 +1 @@</span><br><span class="line">+<span class="comment">#  Git教程</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>由于未使用git add命令向暂存区添加任何东西，所以只显示工作树与最新提交状态的之间的差别，其中“+”表示新增行，“-”表示被删除的行</p>
-</blockquote>
-<ul>
-<li>查看工作树和最新提交的差别</li>
-</ul>
-<blockquote>
-<p>在使用<code>git add README.md</code>后，执行git diff命令发现，工作树与暂存区无区别结果什么都不会显示，要查看最新提交的差别，执行<code>git diff HEAD</code>命令</p>
-</blockquote>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git diff HEAD</span><br><span class="line">diff --git a/README.md b/README.md</span><br><span class="line">index e69de29..cc3d3b2 100644</span><br><span class="line">--- a/README.md</span><br><span class="line">+++ b/README.md</span><br><span class="line">@@ -0,0 +1 @@</span><br><span class="line">+<span class="comment">#  Git教程</span></span><br></pre></td></tr></table></figure>
-<p><strong>建议：在执行git commit前执行git diff HEAD，查看本次提交与上次提交之间的区别，再进行git commit提交。并且可执行git log查看是否提交成功</strong></p>
-<h1 id="2-分支的操作"><a href="#2-分支的操作" class="headerlink" title="2.分支的操作"></a>2.分支的操作</h1><p>从master分支创建分支如图所示，不同分支可以同时进行完全不同的作业，完成后再与默认分支master合并</p>
-<p><img data-src="https://s1.ax1x.com/2020/05/02/Jx1swF.png" alt="Jx1swF.png" style="zoom:50%;" /></p>
-<p><img data-src="https://s1.ax1x.com/2020/05/02/Jx1reU.png" alt="Jx1reU.png" style="zoom:50%;" /></p>
-<h2 id="git-branch：显示分支一览表"><a href="#git-branch：显示分支一览表" class="headerlink" title="git branch：显示分支一览表"></a>git branch：显示分支一览表</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git branch</span><br><span class="line">* master</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>“*”表示当前所在分支</p>
-</blockquote>
-<ul>
-<li>git checkout -b：创建、切换分支</li>
-</ul>
-<p>也可以直接使用<code>git branch + 新分支名</code>创建分支，在使用<code>git checkout + 分支名</code>切换分支，常用命令：</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">git checkout -b feature-A	// 创建feature-A,并切换到feature-A分支</span><br><span class="line">git checkout -	// 切换到上一分支</span><br></pre></td></tr></table></figure>
-<h2 id="特性（Topic）分支"><a href="#特性（Topic）分支" class="headerlink" title="特性（Topic）分支"></a>特性（Topic）分支</h2><p>集中实现某一特性（主题），除此之外不进行任何作业的分支，master担任可随时发布软件的稳定分支</p>
-<p><img data-src="https://s1.ax1x.com/2020/05/03/JxvybF.png" alt="JxvybF.png" style="zoom:50%;" /></p>
-<h2 id="git-merge：合并分支"><a href="#git-merge：合并分支" class="headerlink" title="git merge：合并分支"></a>git merge：合并分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git merge --no-gg feature-A</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>合并时先切换至master分支，再执行命令并使用<code>--no-ff</code>参数，可在历史记录中明确记录下本次分支合并，并且编译器会自启动，用于录入合并提交的信息</p>
-</blockquote>
-<h2 id="git-log-—graph：以图表形式查看分支"><a href="#git-log-—graph：以图表形式查看分支" class="headerlink" title="git log —graph：以图表形式查看分支"></a>git log —graph：以图表形式查看分支</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git <span class="built_in">log</span> --graph</span><br><span class="line">*   commit 359bd0b86a8aa8858105bf874e661ebbf51647df (HEAD -&gt; master)</span><br><span class="line">|\  Merge: 5b0a6ff 576a4f8</span><br><span class="line">| | Author: zcs159 &lt;zcs1596357@163.com&gt;</span><br><span class="line">| | Date:   Sun May 3 09:31:10 2020 +0800</span><br><span class="line">| |</span><br><span class="line">| |     Merge branch <span class="string">'feature-A'</span></span><br><span class="line">| |</span><br><span class="line">| * commit 576a4f8494808f21afa6ccc5402f9b562de35e64 (feature-A)</span><br><span class="line">|/  Author: zcs159 &lt;zcs1596357@163.com&gt;</span><br><span class="line">|   Date:   Sun May 3 09:30:37 2020 +0800</span><br><span class="line">|</span><br><span class="line">|       Add feature-A</span><br><span class="line">|</span><br><span class="line">* commit 5b0a6ffb8bd1ba21aff89819d6bbc3b6e767a245</span><br><span class="line">  Author: zcs159 &lt;zcs1596357@163.com&gt;</span><br><span class="line">  Date:   Sun May 3 09:26:52 2020 +0800</span><br><span class="line"></span><br><span class="line">      First commit</span><br></pre></td></tr></table></figure>
-<h1 id="3-更改提交的操作"><a href="#3-更改提交的操作" class="headerlink" title="3.更改提交的操作"></a>3.更改提交的操作</h1><h2 id="git-reset：回溯历史版本"><a href="#git-reset：回溯历史版本" class="headerlink" title="git reset：回溯历史版本"></a>git reset：回溯历史版本</h2><p>回溯历史版本，创建一个名为fix-B的特性分支</p>
-<p><img data-src="https://s1.ax1x.com/2020/05/03/JxxfoQ.png" alt="JxxfoQ.png" style="zoom:50%;" /></p>
-<ul>
-<li>回溯到创建feature-A分支前</li>
-</ul>
-<p>回溯到feature-A分支创建前，创建一个fix-B的特性分支，并让仓库的HEAD、暂存区、当前工作树回溯到指定状态，需用<code>git reset --hard + 哈希值</code>（哈希值是相应时间点或者说相应提交命令时产生的特定的值，且各不相同，<strong>哈希值输入四位以上即可</strong>）</p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git reset --hard 5b0a6ffb8bd1ba21aff89819d6bbc3b6e767a245</span><br><span class="line">HEAD <span class="keyword">in</span> now at 5b0a6ff First commit</span><br></pre></td></tr></table></figure>
-<ul>
-<li>创建fix-B分支</li>
-</ul>
-<figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git checkout -b fix-B	&#x2F;&#x2F; 并在README.md文件中添加内容</span><br><span class="line">$ git add README.md</span><br><span class="line">$ git commit -m &quot;Fix-B&quot;</span><br></pre></td></tr></table></figure>
-<p>下图就是当前fix-B分支的状态：</p>
-<p><img data-src="https://s1.ax1x.com/2020/05/03/Jzpnqf.png" alt="Jzpnqf.png" style="zoom:50%;" /></p>
-<ul>
-<li>推进至feature-A分支合并后的状态</li>
-</ul>
-<p>git log只能查看以当前状态为终点的历史日志，使用git relog命令可查看回溯历史之前的哈希值，再用git reset —hard命令恢复到历史回溯前的状态</p>
-<p><img data-src="https://s1.ax1x.com/2020/05/03/JzpaZT.png" alt="JzpaZT.png" style="zoom:50%;" /></p>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git checkout master</span><br><span class="line"></span><br><span class="line">$ git reset --hard 359bd0b</span><br><span class="line">HEAD is now at 359bd0b Merge branch <span class="string">'feature-A'</span></span><br></pre></td></tr></table></figure>
-<p>回溯后：</p>
-<p><img data-src="https://s1.ax1x.com/2020/05/03/JzpgL6.png" alt="JzpgL6.png" style="zoom:50%;" /></p>
-<ul>
-<li>消除冲突</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git merge --no-ff fix-B</span><br><span class="line">Auto-merging README.md</span><br><span class="line">CONFLICT (content): Merge conflict <span class="keyword">in</span> README.md</span><br><span class="line">Recorded preimage <span class="keyword">for</span> <span class="string">'README.md'</span></span><br><span class="line">Automatic merge failed; fix conflicts and <span class="keyword">then</span> commit the result.</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>为解决上述冲突可用编译器打开README.md文件，修改文件内容成我们想要的样子即可，再进行提交</p>
-</blockquote>
-<ul>
-<li>git commit —amend：修改提交信息</li>
-</ul>
-<p>执行命令后，编译器会启动，修改提交信息成我们想要的即可</p>
-<h2 id="git-rebase-i：压缩历史"><a href="#git-rebase-i：压缩历史" class="headerlink" title="git rebase -i：压缩历史"></a>git rebase -i：压缩历史</h2><p>在合并特性分支之前，如果发现已提交内容存在拼写错误等（错字漏字称为typo）</p>
-<ul>
-<li><p>创建一个feature-C分支，并在README.md中留下拼写等错误，再提交</p>
-</li>
-<li><p>修改拼写错误，用编译器打开文件进行修改，再提交，可用<code>git commit -am “Fix typo”</code>直接完成添加和提交</p>
-</li>
-<li><p>更改历史</p>
-</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git rebase -i HEAD~2	//选定当前分支中包含HEAD（最新提交）在内的两个最新的历史记录为对象，并在编译器中打开</span><br><span class="line">pick 7a34294 Add feature-C</span><br><span class="line">pick 6fba227 Fix typo</span><br><span class="line"><span class="comment"># Rebase 2e7db6f..6fba227 onto 2e7db6f</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Commands:</span></span><br><span class="line"><span class="comment"># p, pick = use commit</span></span><br><span class="line"><span class="comment"># r, reword = use commit, but edit the commit message</span></span><br><span class="line"><span class="comment"># e, edit = use commit, but stop for amending</span></span><br><span class="line"><span class="comment"># s, squash = use commit, but meld into previous commit</span></span><br><span class="line"><span class="comment"># f, fixup = like "squash", but discard this commit's log message</span></span><br><span class="line"><span class="comment"># x, exec = run command (the rest of the line) using shell</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># These lines can be re-ordered; they are executed from top to bottom.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># If you remove a line here THAT COMMIT WILL BE LOST.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># However, if you remove everything, the rebase will be aborted.</span></span><br><span class="line"><span class="comment">#</span></span><br><span class="line"><span class="comment"># Note that empty commits are commented out</span></span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>将6fba227左侧的pick部分删除改为fixup，并保存退出即可</p>
-</blockquote>
-<ul>
-<li>合并至master分支</li>
-</ul>
-<h1 id="4-推送至远程仓库"><a href="#4-推送至远程仓库" class="headerlink" title="4.推送至远程仓库"></a>4.推送至远程仓库</h1><h2 id="git-remote-add：添加远程仓库"><a href="#git-remote-add：添加远程仓库" class="headerlink" title="git remote add：添加远程仓库"></a>git remote add：添加远程仓库</h2><figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git remote add origin git@github.com:zcs159/git-tutorial.git</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>在Github上创建仓库路径为“git@github.com:用户名/仓库名.git”，origin为标识符，<strong>执行该命令后，git-tutorial就会设置为本地仓库的远程仓库</strong></p>
-</blockquote>
-<h2 id="git-push：推送至远程仓库"><a href="#git-push：推送至远程仓库" class="headerlink" title="git push：推送至远程仓库"></a>git push：推送至远程仓库</h2><ul>
-<li>推送至master分支</li>
-</ul>
-<figure class="highlight bash"><table><tr><td class="code"><pre><span class="line">$ git push -u origin master</span><br></pre></td></tr></table></figure>
-<blockquote>
-<p>推送其他分支：git push -u origin + 分支名</p>
-</blockquote>
-<h1 id="5-从远程仓库获取"><a href="#5-从远程仓库获取" class="headerlink" title="5.从远程仓库获取"></a>5.从远程仓库获取</h1><h2 id="git-clone：获取远程仓库"><a href="#git-clone：获取远程仓库" class="headerlink" title="git clone：获取远程仓库"></a>git clone：获取远程仓库</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git clone git@github.com：zcs159&#x2F;git-tutorial.git</span><br></pre></td></tr></table></figure>
-<h2 id="git-pull：获取最新的远程仓库分支"><a href="#git-pull：获取最新的远程仓库分支" class="headerlink" title="git pull：获取最新的远程仓库分支"></a>git pull：获取最新的远程仓库分支</h2><figure class="highlight plain"><table><tr><td class="code"><pre><span class="line">$ git pull origin 分支名</span><br></pre></td></tr></table></figure>
-<center>END</center>]]></content>
-      <categories>
-        <category>Git</category>
-      </categories>
-      <tags>
-        <tag>Git</tag>
       </tags>
   </entry>
 </search>
